@@ -1,0 +1,3004 @@
+{
+  "hotels": [
+    {
+      "hotel_id": 1,
+      "name": "Grand Plaza Hotel",
+      "location": "Downtown City Center",
+      "description": "Luxury hotel with stunning views of the city."
+    },
+    {
+      "hotel_id": 2,
+      "name": "Oceanfront Resort & Spa",
+      "location": "Beachfront Paradise",
+      "description": "Relaxing resort with spa facilities, steps away from the ocean."
+    },
+    {
+      "hotel_id": 3,
+      "name": "Downtown Oasis Hotel",
+      "location": "City Center",
+      "description": "Modern hotel with a central location, perfect for business travelers."
+    },
+    {
+      "hotel_id": 4,
+      "name": "Seaside Retreat Lodge",
+      "location": "Coastal Area",
+      "description": "Scenic lodge offering a peaceful escape by the sea."
+    },
+    {
+      "hotel_id": 5,
+      "name": "Mountain View Hotel",
+      "location": "Mountainous Region",
+      "description": "Elegant hotel surrounded by breathtaking mountain views."
+    },
+    {
+      "hotel_id": 6,
+      "name": "Urban Skyline Suites",
+      "location": "Metropolitan Area",
+      "description": "Chic suites with panoramic views of the city skyline."
+    },
+    {
+      "hotel_id": 7,
+      "name": "Serenity Valley Resort",
+      "location": "Nature Retreat",
+      "description": "Tranquil resort nestled in a serene valley for nature enthusiasts."
+    },
+    {
+      "hotel_id": 8,
+      "name": "Historic Heritage Inn",
+      "location": "Historical District",
+      "description": "Charming inn showcasing rich cultural heritage."
+    },
+    {
+      "hotel_id": 9,
+      "name": "Snowy Peaks Chalet",
+      "location": "Mountain Resort",
+      "description": "Cozy chalet with a fireplace, perfect for winter getaways."
+    },
+    {
+      "hotel_id": 10,
+      "name": "Riverside Boutique Hotel",
+      "location": "Riverside District",
+      "description": "Boutique hotel offering a blend of comfort and style by the river."
+    },
+    {
+      "hotel_id": 11,
+      "name": "Grand Plaza Hotel",
+      "location": "Downtown City Center",
+      "description": "Luxury hotel with stunning views of the city."
+    },
+    {
+      "hotel_id": 12,
+      "name": "Oceanfront Resort & Spa",
+      "location": "Beachfront Paradise",
+      "description": "Relaxing resort with spa facilities, steps away from the ocean."
+    },
+    {
+      "hotel_id": 13,
+      "name": "Downtown Oasis Hotel",
+      "location": "City Center",
+      "description": "Modern hotel with a central location, perfect for business travelers."
+    },
+    {
+      "hotel_id": 14,
+      "name": "Seaside Retreat Lodge",
+      "location": "Coastal Area",
+      "description": "Scenic lodge offering a peaceful escape by the sea."
+    },
+    {
+      "hotel_id": 15,
+      "name": "Mountain View Hotel",
+      "location": "Mountainous Region",
+      "description": "Elegant hotel surrounded by breathtaking mountain views."
+    },
+    {
+      "hotel_id": 16,
+      "name": "Urban Skyline Suites",
+      "location": "Metropolitan Area",
+      "description": "Chic suites with panoramic views of the city skyline."
+    },
+    {
+      "hotel_id": 17,
+      "name": "Serenity Valley Resort",
+      "location": "Nature Retreat",
+      "description": "Tranquil resort nestled in a serene valley for nature enthusiasts."
+    },
+    {
+      "hotel_id": 18,
+      "name": "Historic Heritage Inn",
+      "location": "Historical District",
+      "description": "Charming inn showcasing rich cultural heritage."
+    },
+    {
+      "hotel_id": 19,
+      "name": "Snowy Peaks Chalet",
+      "location": "Mountain Resort",
+      "description": "Cozy chalet with a fireplace, perfect for winter getaways."
+    },
+    {
+      "hotel_id": 20,
+      "name": "Riverside Boutique Hotel",
+      "location": "Riverside District",
+      "description": "Boutique hotel offering a blend of comfort and style by the river."
+    },
+    {
+      "hotel_id": 21,
+      "name": "Grand Plaza Hotel",
+      "location": "Downtown City Center",
+      "description": "Luxury hotel with stunning views of the city."
+    },
+    {
+      "hotel_id": 22,
+      "name": "Oceanfront Resort & Spa",
+      "location": "Beachfront Paradise",
+      "description": "Relaxing resort with spa facilities, steps away from the ocean."
+    },
+    {
+      "hotel_id": 23,
+      "name": "Downtown Oasis Hotel",
+      "location": "City Center",
+      "description": "Modern hotel with a central location, perfect for business travelers."
+    },
+    {
+      "hotel_id": 24,
+      "name": "Seaside Retreat Lodge",
+      "location": "Coastal Area",
+      "description": "Scenic lodge offering a peaceful escape by the sea."
+    },
+    {
+      "hotel_id": 25,
+      "name": "Mountain View Hotel",
+      "location": "Mountainous Region",
+      "description": "Elegant hotel surrounded by breathtaking mountain views."
+    },
+    {
+      "hotel_id": 26,
+      "name": "Urban Skyline Suites",
+      "location": "Metropolitan Area",
+      "description": "Chic suites with panoramic views of the city skyline."
+    },
+    {
+      "hotel_id": 27,
+      "name": "Serenity Valley Resort",
+      "location": "Nature Retreat",
+      "description": "Tranquil resort nestled in a serene valley for nature enthusiasts."
+    },
+    {
+      "hotel_id": 28,
+      "name": "Historic Heritage Inn",
+      "location": "Historical District",
+      "description": "Charming inn showcasing rich cultural heritage."
+    },
+    {
+      "hotel_id": 29,
+      "name": "Snowy Peaks Chalet",
+      "location": "Mountain Resort",
+      "description": "Cozy chalet with a fireplace, perfect for winter getaways."
+    },
+    {
+      "hotel_id": 30,
+      "name": "Riverside Boutique Hotel",
+      "location": "Riverside District",
+      "description": "Boutique hotel offering a blend of comfort and style by the river."
+    },
+    {
+      "hotel_id": 31,
+      "name": "City Lights Hotel",
+      "location": "Downtown Core",
+      "description": "Captivating city lights view from every room."
+    },
+    {
+      "hotel_id": 32,
+      "name": "Island Paradise Resort",
+      "location": "Tropical Island",
+      "description": "Escape to a paradise resort surrounded by pristine beaches."
+    },
+    {
+      "hotel_id": 33,
+      "name": "Alpine Retreat Lodge",
+      "location": "Alpine Meadows",
+      "description": "Inviting lodge surrounded by alpine meadows and hiking trails."
+    },
+    {
+      "hotel_id": 34,
+      "name": "Business Traveler Inn",
+      "location": "Business District",
+      "description": "Tailored for the needs of business travelers."
+    },
+    {
+      "hotel_id": 35,
+      "name": "Golden Sands Resort",
+      "location": "Desert Oasis",
+      "description": "Luxurious resort oasis in the middle of the desert."
+    },
+    {
+      "hotel_id": 36,
+      "name": "Harbor View Hotel",
+      "location": "Harborfront District",
+      "description": "Enjoy scenic harbor views in this waterfront hotel."
+    },
+    {
+      "hotel_id": 37,
+      "name": "Sky High Tower Suites",
+      "location": "Skyscraper District",
+      "description": "Exclusive suites located in the tallest tower in the city."
+    },
+    {
+      "hotel_id": 38,
+      "name": "Hidden Valley Resort",
+      "location": "Hidden Valley",
+      "description": "Discover the hidden gem of a resort in a secluded valley."
+    },
+    {
+      "hotel_id": 39,
+      "name": "Colonial Heritage Inn",
+      "location": "Colonial District",
+      "description": "Step back in time at this colonial-style heritage inn."
+    },
+    {
+      "hotel_id": 40,
+      "name": "Mystic Forest Lodge",
+      "location": "Enchanted Forest",
+      "description": "Immerse yourself in the magic of a lodge nestled in a mystical forest."
+    },
+    {
+      "hotel_id": 41,
+      "name": "Sunny Meadows Hotel",
+      "location": "Meadowlands",
+      "description": "Bright and sunny hotel surrounded by picturesque meadows."
+    },
+    {
+      "hotel_id": 42,
+      "name": "Lakeside Serenity Resort",
+      "location": "Lakeside Retreat",
+      "description": "Find serenity by the lakeside in this peaceful resort."
+    },
+    {
+      "hotel_id": 43,
+      "name": "Penthouse Sky Suites",
+      "location": "Luxury Skyline",
+      "description": "Indulge in luxury with penthouse suites boasting skyline views."
+    },
+    {
+      "hotel_id": 44,
+      "name": "Palm Grove Resort",
+      "location": "Tropical Haven",
+      "description": "Relax under the palm trees in this tropical haven."
+    },
+    {
+      "hotel_id": 45,
+      "name": "Whispering Pines Inn",
+      "location": "Pine Forest",
+      "description": "Cozy inn surrounded by the whispering sounds of pine trees."
+    },
+    {
+      "hotel_id": 46,
+      "name": "Sapphire Shores Hotel",
+      "location": "Shorefront Paradise",
+      "description": "Experience luxury on the shores of a sapphire-blue ocean."
+    },
+    {
+      "hotel_id": 47,
+      "name": "Countryside Escape Lodge",
+      "location": "Countryside",
+      "description": "Escape to the countryside in this charming and rustic lodge."
+    },
+    {
+      "hotel_id": 48,
+      "name": "Cultural Heritage Hotel",
+      "location": "Cultural District",
+      "description": "Immerse yourself in the rich cultural heritage of this hotel."
+    },
+    {
+      "hotel_id": 49,
+      "name": "Coastal Breeze Resort",
+      "location": "Coastal Getaway",
+      "description": "Feel the coastal breeze in this relaxing and picturesque resort."
+    }
+  ],
+  "roomTypes": [
+    {
+      "room_type_id": 1,
+      "type_name": "Single",
+      "description": "Single bed room",
+      "max_occupancy": 1,
+      "price_per_night": 50.0
+    },
+    {
+      "room_type_id": 2,
+      "type_name": "Double",
+      "description": "Double bed room",
+      "max_occupancy": 2,
+      "price_per_night": 80.0
+    },
+    {
+      "room_type_id": 3,
+      "type_name": "Suite",
+      "description": "Luxury suite",
+      "max_occupancy": 4,
+      "price_per_night": 150.0
+    },
+    {
+      "room_type_id": 4,
+      "type_name": "Penthouse",
+      "description": "Exclusive penthouse",
+      "max_occupancy": 6,
+      "price_per_night": 300.0
+    },
+    {
+      "room_type_id": 5,
+      "type_name": "Deluxe Single",
+      "description": "Deluxe single bed room",
+      "max_occupancy": 1,
+      "price_per_night": 70.0
+    },
+    {
+      "room_type_id": 6,
+      "type_name": "Ocean View Double",
+      "description": "Double bed room with ocean view",
+      "max_occupancy": 2,
+      "price_per_night": 100.0
+    },
+    {
+      "room_type_id": 7,
+      "type_name": "Executive Suite",
+      "description": "Executive suite with city views",
+      "max_occupancy": 4,
+      "price_per_night": 200.0
+    },
+    {
+      "room_type_id": 8,
+      "type_name": "Royal Penthouse",
+      "description": "Royal penthouse with panoramic skyline views",
+      "max_occupancy": 6,
+      "price_per_night": 400.0
+    },
+    {
+      "room_type_id": 9,
+      "type_name": "Business Traveler Room",
+      "description": "Tailored for the needs of business travelers",
+      "max_occupancy": 1,
+      "price_per_night": 90.0
+    },
+    {
+      "room_type_id": 10,
+      "type_name": "Mountain Retreat Double",
+      "description": "Double bed room with mountain views",
+      "max_occupancy": 2,
+      "price_per_night": 120.0
+    },
+    {
+      "room_type_id": 11,
+      "type_name": "Presidential Suite",
+      "description": "Presidential suite with opulent amenities",
+      "max_occupancy": 6,
+      "price_per_night": 500.0
+    },
+    {
+      "room_type_id": 12,
+      "type_name": "Sky High Penthouse",
+      "description": "Penthouse in the tallest skyscraper",
+      "max_occupancy": 8,
+      "price_per_night": 600.0
+    },
+    {
+      "room_type_id": 13,
+      "type_name": "Tropical Paradise Single",
+      "description": "Single bed room in a tropical paradise",
+      "max_occupancy": 1,
+      "price_per_night": 80.0
+    },
+    {
+      "room_type_id": 14,
+      "type_name": "Lakeside Double",
+      "description": "Double bed room with lakeside views",
+      "max_occupancy": 2,
+      "price_per_night": 110.0
+    },
+    {
+      "room_type_id": 15,
+      "type_name": "Family Suite",
+      "description": "Spacious suite for the whole family",
+      "max_occupancy": 6,
+      "price_per_night": 250.0
+    },
+    {
+      "room_type_id": 16,
+      "type_name": "Luxury Spa Penthouse",
+      "description": "Penthouse with exclusive spa facilities",
+      "max_occupancy": 8,
+      "price_per_night": 700.0
+    },
+    {
+      "room_type_id": 17,
+      "type_name": "Business Class Single",
+      "description": "Business class single room with workspace",
+      "max_occupancy": 1,
+      "price_per_night": 100.0
+    },
+    {
+      "room_type_id": 18,
+      "type_name": "Forest View Double",
+      "description": "Double bed room with forest views",
+      "max_occupancy": 2,
+      "price_per_night": 130.0
+    },
+    {
+      "room_type_id": 19,
+      "type_name": "Grand Presidential Suite",
+      "description": "Grand presidential suite with lavish decor",
+      "max_occupancy": 8,
+      "price_per_night": 800.0
+    },
+    {
+      "room_type_id": 20,
+      "type_name": "Urban Escape Penthouse",
+      "description": "Penthouse offering an urban escape",
+      "max_occupancy": 6,
+      "price_per_night": 450.0
+    },
+    {
+      "room_type_id": 21,
+      "type_name": "Sunny Meadows Single",
+      "description": "Single bed room with views of sunny meadows",
+      "max_occupancy": 1,
+      "price_per_night": 90.0
+    },
+    {
+      "room_type_id": 22,
+      "type_name": "Lakefront Double",
+      "description": "Double bed room with lakefront views",
+      "max_occupancy": 2,
+      "price_per_night": 120.0
+    },
+    {
+      "room_type_id": 23,
+      "type_name": "Family Vacation Suite",
+      "description": "Suite perfect for a family vacation",
+      "max_occupancy": 6,
+      "price_per_night": 280.0
+    },
+    {
+      "room_type_id": 24,
+      "type_name": "Skyline Luxury Penthouse",
+      "description": "Luxury penthouse with stunning skyline views",
+      "max_occupancy": 8,
+      "price_per_night": 750.0
+    },
+    {
+      "room_type_id": 25,
+      "type_name": "Seaside Retreat Single",
+      "description": "Single bed room in a seaside retreat",
+      "max_occupancy": 1,
+      "price_per_night": 100.0
+    },
+    {
+      "room_type_id": 26,
+      "type_name": "Beachfront Double",
+      "description": "Double bed room with direct beach access",
+      "max_occupancy": 2,
+      "price_per_night": 130.0
+    },
+    {
+      "room_type_id": 27,
+      "type_name": "Honeymoon Suite",
+      "description": "Romantic suite ideal for honeymooners",
+      "max_occupancy": 2,
+      "price_per_night": 180.0
+    },
+    {
+      "room_type_id": 28,
+      "type_name": "City Lights Penthouse",
+      "description": "Penthouse with breathtaking city lights",
+      "max_occupancy": 6,
+      "price_per_night": 500.0
+    },
+    {
+      "room_type_id": 29,
+      "type_name": "Mountain Serenity Single",
+      "description": "Single bed room offering mountain serenity",
+      "max_occupancy": 1,
+      "price_per_night": 80.0
+    },
+    {
+      "room_type_id": 30,
+      "type_name": "River View Double",
+      "description": "Double bed room with picturesque river views",
+      "max_occupancy": 2,
+      "price_per_night": 110.0
+    },
+    {
+      "room_type_id": 31,
+      "type_name": "Executive Family Suite",
+      "description": "Executive suite designed for families",
+      "max_occupancy": 6,
+      "price_per_night": 260.0
+    },
+    {
+      "room_type_id": 32,
+      "type_name": "Luxury Skyline Penthouse",
+      "description": "Luxury penthouse with panoramic skyline views",
+      "max_occupancy": 8,
+      "price_per_night": 700.0
+    },
+    {
+      "room_type_id": 33,
+      "type_name": "Standard Single",
+      "description": "Basic single bed room",
+      "max_occupancy": 1,
+      "price_per_night": 55.0
+    },
+    {
+      "room_type_id": 34,
+      "type_name": "Double with a View",
+      "description": "Double bed room with scenic views",
+      "max_occupancy": 2,
+      "price_per_night": 90.0
+    },
+    {
+      "room_type_id": 35,
+      "type_name": "Executive Suite",
+      "description": "Spacious executive suite",
+      "max_occupancy": 4,
+      "price_per_night": 180.0
+    },
+    {
+      "room_type_id": 36,
+      "type_name": "Luxury Penthouse",
+      "description": "Luxurious penthouse with premium amenities",
+      "max_occupancy": 6,
+      "price_per_night": 350.0
+    },
+    {
+      "room_type_id": 37,
+      "type_name": "Premium Single",
+      "description": "Premium single bed room with extra amenities",
+      "max_occupancy": 1,
+      "price_per_night": 75.0
+    },
+    {
+      "room_type_id": 38,
+      "type_name": "Seaview Double",
+      "description": "Double bed room with stunning sea views",
+      "max_occupancy": 2,
+      "price_per_night": 110.0
+    },
+    {
+      "room_type_id": 39,
+      "type_name": "Cityscape Suite",
+      "description": "Suite with breathtaking cityscape views",
+      "max_occupancy": 4,
+      "price_per_night": 220.0
+    },
+    {
+      "room_type_id": 40,
+      "type_name": "Skyline Penthouse",
+      "description": "Penthouse with panoramic skyline views",
+      "max_occupancy": 6,
+      "price_per_night": 400.0
+    },
+    {
+      "room_type_id": 41,
+      "type_name": "Business Class Single",
+      "description": "Business class single room with workspace",
+      "max_occupancy": 1,
+      "price_per_night": 95.0
+    },
+    {
+      "room_type_id": 42,
+      "type_name": "Mountain Retreat Double",
+      "description": "Double bed room with mountain retreat vibes",
+      "max_occupancy": 2,
+      "price_per_night": 125.0
+    },
+    {
+      "room_type_id": 43,
+      "type_name": "Presidential Suite",
+      "description": "Presidential suite with opulent furnishings",
+      "max_occupancy": 6,
+      "price_per_night": 520.0
+    },
+    {
+      "room_type_id": 44,
+      "type_name": "Sky High Penthouse",
+      "description": "Penthouse on the highest floor",
+      "max_occupancy": 8,
+      "price_per_night": 620.0
+    },
+    {
+      "room_type_id": 45,
+      "type_name": "Tropical Escape Single",
+      "description": "Single bed room in a tropical escape",
+      "max_occupancy": 1,
+      "price_per_night": 85.0
+    },
+    {
+      "room_type_id": 46,
+      "type_name": "Lakeview Double",
+      "description": "Double bed room with serene lake views",
+      "max_occupancy": 2,
+      "price_per_night": 115.0
+    },
+    {
+      "room_type_id": 47,
+      "type_name": "Family Oasis Suite",
+      "description": "Suite designed for a family oasis",
+      "max_occupancy": 6,
+      "price_per_night": 260.0
+    },
+    {
+      "room_type_id": 48,
+      "type_name": "Spa Retreat Penthouse",
+      "description": "Penthouse with private spa retreat",
+      "max_occupancy": 8,
+      "price_per_night": 720.0
+    },
+    {
+      "room_type_id": 49,
+      "type_name": "Business Traveler Single",
+      "description": "Ideal room for business travelers",
+      "max_occupancy": 1,
+      "price_per_night": 105.0
+    },
+    {
+      "room_type_id": 50,
+      "type_name": "Forest View Double",
+      "description": "Double bed room with forest views",
+      "max_occupancy": 2,
+      "price_per_night": 135.0
+    },
+    {
+      "room_type_id": 51,
+      "type_name": "Grand Presidential Suite",
+      "description": "Grand presidential suite with grandeur",
+      "max_occupancy": 8,
+      "price_per_night": 830.0
+    },
+    {
+      "room_type_id": 52,
+      "type_name": "Urban Oasis Penthouse",
+      "description": "Penthouse offering an urban oasis",
+      "max_occupancy": 6,
+      "price_per_night": 480.0
+    },
+    {
+      "room_type_id": 53,
+      "type_name": "Sunset Meadows Single",
+      "description": "Single bed room with views of sunset meadows",
+      "max_occupancy": 1,
+      "price_per_night": 95.0
+    },
+    {
+      "room_type_id": 54,
+      "type_name": "Lakeside Luxury Double",
+      "description": "Luxury double bed room with lakeside views",
+      "max_occupancy": 2,
+      "price_per_night": 125.0
+    },
+    {
+      "room_type_id": 55,
+      "type_name": "Family Adventure Suite",
+      "description": "Adventure-themed suite for the family",
+      "max_occupancy": 6,
+      "price_per_night": 270.0
+    },
+    {
+      "room_type_id": 56,
+      "type_name": "Panoramic Skyline Penthouse",
+      "description": "Penthouse with panoramic skyline views",
+      "max_occupancy": 8,
+      "price_per_night": 770.0
+    },
+    {
+      "room_type_id": 57,
+      "type_name": "Coastal Serenity Single",
+      "description": "Single bed room with coastal serenity",
+      "max_occupancy": 1,
+      "price_per_night": 105.0
+    },
+    {
+      "room_type_id": 58,
+      "type_name": "Beachfront Bliss Double",
+      "description": "Double bed room with direct beachfront access",
+      "max_occupancy": 2,
+      "price_per_night": 135.0
+    },
+    {
+      "room_type_id": 59,
+      "type_name": "Romantic Escape Suite",
+      "description": "Suite designed for a romantic escape",
+      "max_occupancy": 2,
+      "price_per_night": 185.0
+    },
+    {
+      "room_type_id": 60,
+      "type_name": "City Lights Penthouse",
+      "description": "Penthouse with mesmerizing city lights",
+      "max_occupancy": 6,
+      "price_per_night": 520.0
+    },
+    {
+      "room_type_id": 61,
+      "type_name": "Mountain Tranquility Single",
+      "description": "Single bed room offering mountain tranquility",
+      "max_occupancy": 1,
+      "price_per_night": 85.0
+    },
+    {
+      "room_type_id": 62,
+      "type_name": "Riverside Double",
+      "description": "Double bed room with views of the picturesque river",
+      "max_occupancy": 2,
+      "price_per_night": 115.0
+    },
+    {
+      "room_type_id": 63,
+      "type_name": "Executive Family Suite",
+      "description": "Executive suite perfect for families",
+      "max_occupancy": 6,
+      "price_per_night": 250.0
+    },
+    {
+      "room_type_id": 64,
+      "type_name": "Luxury Skyline Penthouse",
+      "description": "Luxury penthouse with sweeping skyline views",
+      "max_occupancy": 8,
+      "price_per_night": 690.0
+    }
+  ],
+  "rooms": [
+    {
+      "room_id": 1,
+      "room_number": 101,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 2,
+      "room_number": 102,
+      "room_type_id": 2,
+      "is_available": false
+    },
+    {
+      "room_id": 3,
+      "room_number": 201,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 4,
+      "room_number": 301,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 5,
+      "room_number": 103,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 6,
+      "room_number": 104,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 7,
+      "room_number": 105,
+      "room_type_id": 3,
+      "is_available": false
+    },
+    {
+      "room_id": 8,
+      "room_number": 106,
+      "room_type_id": 4,
+      "is_available": true
+    },
+    {
+      "room_id": 9,
+      "room_number": 107,
+      "room_type_id": 1,
+      "is_available": false
+    },
+    {
+      "room_id": 10,
+      "room_number": 108,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 11,
+      "room_number": 109,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 12,
+      "room_number": 110,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 13,
+      "room_number": 201,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 14,
+      "room_number": 202,
+      "room_type_id": 2,
+      "is_available": false
+    },
+    {
+      "room_id": 15,
+      "room_number": 203,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 16,
+      "room_number": 204,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 17,
+      "room_number": 205,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 18,
+      "room_number": 206,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 19,
+      "room_number": 207,
+      "room_type_id": 3,
+      "is_available": false
+    },
+    {
+      "room_id": 20,
+      "room_number": 208,
+      "room_type_id": 4,
+      "is_available": true
+    },
+    {
+      "room_id": 21,
+      "room_number": 209,
+      "room_type_id": 1,
+      "is_available": false
+    },
+    {
+      "room_id": 22,
+      "room_number": 210,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 23,
+      "room_number": 301,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 24,
+      "room_number": 302,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 25,
+      "room_number": 303,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 26,
+      "room_number": 304,
+      "room_type_id": 2,
+      "is_available": false
+    },
+    {
+      "room_id": 27,
+      "room_number": 305,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 28,
+      "room_number": 306,
+      "room_type_id": 4,
+      "is_available": true
+    },
+    {
+      "room_id": 29,
+      "room_number": 307,
+      "room_type_id": 1,
+      "is_available": false
+    },
+    {
+      "room_id": 30,
+      "room_number": 308,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 31,
+      "room_number": 309,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 32,
+      "room_number": 310,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 33,
+      "room_number": 401,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 34,
+      "room_number": 402,
+      "room_type_id": 2,
+      "is_available": false
+    },
+    {
+      "room_id": 35,
+      "room_number": 403,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 36,
+      "room_number": 404,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 37,
+      "room_number": 405,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 38,
+      "room_number": 406,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 39,
+      "room_number": 407,
+      "room_type_id": 3,
+      "is_available": false
+    },
+    {
+      "room_id": 40,
+      "room_number": 408,
+      "room_type_id": 4,
+      "is_available": true
+    },
+    {
+      "room_id": 41,
+      "room_number": 409,
+      "room_type_id": 1,
+      "is_available": false
+    },
+    {
+      "room_id": 42,
+      "room_number": 410,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 43,
+      "room_number": 501,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 44,
+      "room_number": 502,
+      "room_type_id": 4,
+      "is_available": false
+    },
+    {
+      "room_id": 45,
+      "room_number": 503,
+      "room_type_id": 1,
+      "is_available": true
+    },
+    {
+      "room_id": 46,
+      "room_number": 504,
+      "room_type_id": 2,
+      "is_available": false
+    },
+    {
+      "room_id": 47,
+      "room_number": 505,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 48,
+      "room_number": 506,
+      "room_type_id": 4,
+      "is_available": true
+    },
+    {
+      "room_id": 49,
+      "room_number": 507,
+      "room_type_id": 1,
+      "is_available": false
+    },
+    {
+      "room_id": 50,
+      "room_number": 508,
+      "room_type_id": 2,
+      "is_available": true
+    },
+    {
+      "room_id": 51,
+      "room_number": 509,
+      "room_type_id": 3,
+      "is_available": true
+    },
+    {
+      "room_id": 52,
+      "room_number": 510,
+      "room_type_id": 4,
+      "is_available": false
+    }
+  ],
+  "reservations": [
+    {
+      "reservation_id": 1,
+      "guest_name": "John Doe",
+      "guest_email": "john@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2024-01-01",
+      "check_out_date": "2024-01-05",
+      "room_id": 1
+    },
+    {
+      "reservation_id": 2,
+      "guest_name": "Jane Smith",
+      "guest_email": "jane@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2024-02-01",
+      "check_out_date": "2024-02-05",
+      "room_id": 2
+    },
+    {
+      "reservation_id": 3,
+      "guest_name": "Mike Johnson",
+      "guest_email": "mike@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2024-03-01",
+      "check_out_date": "2024-03-05",
+      "room_id": 3
+    },
+    {
+      "reservation_id": 4,
+      "guest_name": "Alice Lee",
+      "guest_email": "alice@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2024-04-01",
+      "check_out_date": "2024-04-05",
+      "room_id": 4
+    },
+    {
+      "reservation_id": 5,
+      "guest_name": "Ethan Brown",
+      "guest_email": "ethan@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2024-05-01",
+      "check_out_date": "2024-05-05",
+      "room_id": 5
+    },
+    {
+      "reservation_id": 6,
+      "guest_name": "Olivia Wilson",
+      "guest_email": "olivia@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2024-06-01",
+      "check_out_date": "2024-06-05",
+      "room_id": 6
+    },
+    {
+      "reservation_id": 7,
+      "guest_name": "Liam Davis",
+      "guest_email": "liam@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2024-07-01",
+      "check_out_date": "2024-07-05",
+      "room_id": 7
+    },
+    {
+      "reservation_id": 8,
+      "guest_name": "Ava Miller",
+      "guest_email": "ava@example.com",
+      "guest_phone": "4445556666",
+      "check_in_date": "2024-08-01",
+      "check_out_date": "2024-08-05",
+      "room_id": 8
+    },
+    {
+      "reservation_id": 9,
+      "guest_name": "Noah Martinez",
+      "guest_email": "noah@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2024-09-01",
+      "check_out_date": "2024-09-05",
+      "room_id": 9
+    },
+    {
+      "reservation_id": 10,
+      "guest_name": "Sophia Jones",
+      "guest_email": "sophia@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2024-10-01",
+      "check_out_date": "2024-10-05",
+      "room_id": 10
+    },
+    {
+      "reservation_id": 11,
+      "guest_name": "Jackson Taylor",
+      "guest_email": "jackson@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2024-11-01",
+      "check_out_date": "2024-11-05",
+      "room_id": 11
+    },
+    {
+      "reservation_id": 12,
+      "guest_name": "Emma White",
+      "guest_email": "emma@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2024-12-01",
+      "check_out_date": "2024-12-05",
+      "room_id": 12
+    },
+    {
+      "reservation_id": 13,
+      "guest_name": "Aiden Harris",
+      "guest_email": "aiden@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2025-01-01",
+      "check_out_date": "2025-01-05",
+      "room_id": 13
+    },
+    {
+      "reservation_id": 14,
+      "guest_name": "Mia Garcia",
+      "guest_email": "mia@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2025-02-01",
+      "check_out_date": "2025-02-05",
+      "room_id": 14
+    },
+    {
+      "reservation_id": 15,
+      "guest_name": "Lucas Rodriguez",
+      "guest_email": "lucas@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2025-03-01",
+      "check_out_date": "2025-03-05",
+      "room_id": 15
+    },
+    {
+      "reservation_id": 16,
+      "guest_name": "Aria Martinez",
+      "guest_email": "aria@example.com",
+      "guest_phone": "4445556666",
+      "check_in_date": "2025-04-01",
+      "check_out_date": "2025-04-05",
+      "room_id": 16
+    },
+    {
+      "reservation_id": 17,
+      "guest_name": "Liam Davis",
+      "guest_email": "liam@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2025-05-01",
+      "check_out_date": "2025-05-05",
+      "room_id": 17
+    },
+    {
+      "reservation_id": 18,
+      "guest_name": "Sophia Smith",
+      "guest_email": "sophia@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2025-06-01",
+      "check_out_date": "2025-06-05",
+      "room_id": 18
+    },
+    {
+      "reservation_id": 19,
+      "guest_name": "Logan Taylor",
+      "guest_email": "logan@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2025-07-01",
+      "check_out_date": "2025-07-05",
+      "room_id": 19
+    },
+    {
+      "reservation_id": 20,
+      "guest_name": "Olivia Johnson",
+      "guest_email": "olivia@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2025-08-01",
+      "check_out_date": "2025-08-05",
+      "room_id": 20
+    },
+    {
+      "reservation_id": 21,
+      "guest_name": "Ethan Brown",
+      "guest_email": "ethan@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2025-09-01",
+      "check_out_date": "2025-09-05",
+      "room_id": 21
+    },
+    {
+      "reservation_id": 22,
+      "guest_name": "Ava Wilson",
+      "guest_email": "ava@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2025-10-01",
+      "check_out_date": "2025-10-05",
+      "room_id": 22
+    },
+    {
+      "reservation_id": 23,
+      "guest_name": "Jackson Davis",
+      "guest_email": "jackson@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2025-11-01",
+      "check_out_date": "2025-11-05",
+      "room_id": 23
+    },
+    {
+      "reservation_id": 24,
+      "guest_name": "Emma Miller",
+      "guest_email": "emma@example.com",
+      "guest_phone": "4445556666",
+      "check_in_date": "2025-12-01",
+      "check_out_date": "2025-12-05",
+      "room_id": 24
+    },
+    {
+      "reservation_id": 25,
+      "guest_name": "Noah Harris",
+      "guest_email": "noah@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2026-01-01",
+      "check_out_date": "2026-01-05",
+      "room_id": 25
+    },
+    {
+      "reservation_id": 26,
+      "guest_name": "Mia Jones",
+      "guest_email": "mia@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2026-02-01",
+      "check_out_date": "2026-02-05",
+      "room_id": 26
+    },
+    {
+      "reservation_id": 27,
+      "guest_name": "Lucas Taylor",
+      "guest_email": "lucas@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2026-03-01",
+      "check_out_date": "2026-03-05",
+      "room_id": 27
+    },
+    {
+      "reservation_id": 28,
+      "guest_name": "Aria White",
+      "guest_email": "aria@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2026-04-01",
+      "check_out_date": "2026-04-05",
+      "room_id": 28
+    },
+    {
+      "reservation_id": 29,
+      "guest_name": "Aiden Johnson",
+      "guest_email": "aiden@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2026-05-01",
+      "check_out_date": "2026-05-05",
+      "room_id": 29
+    },
+    {
+      "reservation_id": 30,
+      "guest_name": "Sophia Garcia",
+      "guest_email": "sophia@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2026-06-01",
+      "check_out_date": "2026-06-05",
+      "room_id": 30
+    },
+    {
+      "reservation_id": 31,
+      "guest_name": "Logan Rodriguez",
+      "guest_email": "logan@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2026-07-01",
+      "check_out_date": "2026-07-05",
+      "room_id": 31
+    },
+    {
+      "reservation_id": 32,
+      "guest_name": "Olivia Martinez",
+      "guest_email": "olivia@example.com",
+      "guest_phone": "4445556666",
+      "check_in_date": "2026-08-01",
+      "check_out_date": "2026-08-05",
+      "room_id": 32
+    },
+    {
+      "reservation_id": 33,
+      "guest_name": "Ethan Davis",
+      "guest_email": "ethan@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2026-09-01",
+      "check_out_date": "2026-09-05",
+      "room_id": 33
+    },
+    {
+      "reservation_id": 34,
+      "guest_name": "Ava Smith",
+      "guest_email": "ava@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2026-10-01",
+      "check_out_date": "2026-10-05",
+      "room_id": 34
+    },
+    {
+      "reservation_id": 35,
+      "guest_name": "Jackson Taylor",
+      "guest_email": "jackson@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2026-11-01",
+      "check_out_date": "2026-11-05",
+      "room_id": 35
+    },
+    {
+      "reservation_id": 36,
+      "guest_name": "Emma Johnson",
+      "guest_email": "emma@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2026-12-01",
+      "check_out_date": "2026-12-05",
+      "room_id": 36
+    },
+    {
+      "reservation_id": 37,
+      "guest_name": "Noah Miller",
+      "guest_email": "noah@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2027-01-01",
+      "check_out_date": "2027-01-05",
+      "room_id": 37
+    },
+    {
+      "reservation_id": 38,
+      "guest_name": "Mia Harris",
+      "guest_email": "mia@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2027-02-01",
+      "check_out_date": "2027-02-05",
+      "room_id": 38
+    },
+    {
+      "reservation_id": 39,
+      "guest_name": "Lucas Garcia",
+      "guest_email": "lucas@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2027-03-01",
+      "check_out_date": "2027-03-05",
+      "room_id": 39
+    },
+    {
+      "reservation_id": 40,
+      "guest_name": "Aria Martinez",
+      "guest_email": "aria@example.com",
+      "guest_phone": "4445556666",
+      "check_in_date": "2027-04-01",
+      "check_out_date": "2027-04-05",
+      "room_id": 40
+    },
+    {
+      "reservation_id": 41,
+      "guest_name": "Liam Davis",
+      "guest_email": "liam@example.com",
+      "guest_phone": "1234567890",
+      "check_in_date": "2027-05-01",
+      "check_out_date": "2027-05-05",
+      "room_id": 41
+    },
+    {
+      "reservation_id": 42,
+      "guest_name": "Sophia Smith",
+      "guest_email": "sophia@example.com",
+      "guest_phone": "9876543210",
+      "check_in_date": "2027-06-01",
+      "check_out_date": "2027-06-05",
+      "room_id": 42
+    },
+    {
+      "reservation_id": 43,
+      "guest_name": "Logan Taylor",
+      "guest_email": "logan@example.com",
+      "guest_phone": "5551234567",
+      "check_in_date": "2027-07-01",
+      "check_out_date": "2027-07-05",
+      "room_id": 43
+    },
+    {
+      "reservation_id": 44,
+      "guest_name": "Olivia Johnson",
+      "guest_email": "olivia@example.com",
+      "guest_phone": "1112223333",
+      "check_in_date": "2027-08-01",
+      "check_out_date": "2027-08-05",
+      "room_id": 44
+    },
+    {
+      "reservation_id": 45,
+      "guest_name": "Ethan Brown",
+      "guest_email": "ethan@example.com",
+      "guest_phone": "7778889999",
+      "check_in_date": "2027-09-01",
+      "check_out_date": "2027-09-05",
+      "room_id": 45
+    },
+    {
+      "reservation_id": 46,
+      "guest_name": "Sophie Anderson",
+      "guest_email": "sophie@example.com",
+      "guest_phone": "5556667777",
+      "check_in_date": "2027-11-01",
+      "check_out_date": "2027-11-05",
+      "room_id": 46
+    },
+    {
+      "reservation_id": 47,
+      "guest_name": "Carter Wilson",
+      "guest_email": "carter@example.com",
+      "guest_phone": "8889990000",
+      "check_in_date": "2027-12-01",
+      "check_out_date": "2027-12-05",
+      "room_id": 47
+    },
+    {
+      "reservation_id": 48,
+      "guest_name": "Madison Davis",
+      "guest_email": "madison@example.com",
+      "guest_phone": "2223334444",
+      "check_in_date": "2028-01-01",
+      "check_out_date": "2028-01-05",
+      "room_id": 48
+    },
+    {
+      "reservation_id": 49,
+      "guest_name": "Elijah White",
+      "guest_email": "elijah@example.com",
+      "guest_phone": "9990001111",
+      "check_in_date": "2028-02-01",
+      "check_out_date": "2028-02-05",
+      "room_id": 49
+    },
+    {
+      "reservation_id": 50,
+      "guest_name": "Grace Taylor",
+      "guest_email": "grace@example.com",
+      "guest_phone": "3334445555",
+      "check_in_date": "2028-03-01",
+      "check_out_date": "2028-03-05",
+      "room_id": 50
+    }
+  ],
+  "amenities": [
+    {
+      "amenity_id": 1,
+      "name": "Wi-Fi",
+      "description": "High-speed internet access"
+    },
+    {
+      "amenity_id": 2,
+      "name": "Pool",
+      "description": "Swimming pool with lounge area"
+    },
+    {
+      "amenity_id": 3,
+      "name": "Gym",
+      "description": "Fully equipped fitness center"
+    },
+    {
+      "amenity_id": 4,
+      "name": "Spa",
+      "description": "Relaxing spa and wellness services"
+    },
+    {
+      "amenity_id": 5,
+      "name": "Parking",
+      "description": "Secure parking facilities"
+    },
+    {
+      "amenity_id": 6,
+      "name": "Restaurant",
+      "description": "On-site restaurant serving a variety of cuisines"
+    },
+    {
+      "amenity_id": 7,
+      "name": "Conference Room",
+      "description": "Meeting and conference room facilities"
+    },
+    {
+      "amenity_id": 8,
+      "name": "Shuttle Service",
+      "description": "Complimentary shuttle service for guests"
+    },
+    {
+      "amenity_id": 9,
+      "name": "Pet-Friendly",
+      "description": "Pet-friendly accommodations"
+    },
+    {
+      "amenity_id": 10,
+      "name": "24-Hour Reception",
+      "description": "Round-the-clock reception desk services"
+    },
+    {
+      "amenity_id": 11,
+      "name": "Laundry Service",
+      "description": "In-house laundry and dry-cleaning services"
+    },
+    {
+      "amenity_id": 12,
+      "name": "Business Center",
+      "description": "Dedicated business center with office amenities"
+    },
+    {
+      "amenity_id": 13,
+      "name": "Childcare Services",
+      "description": "Professional childcare services for guests with children"
+    },
+    {
+      "amenity_id": 14,
+      "name": "Outdoor Terrace",
+      "description": "Scenic outdoor terrace for relaxation"
+    },
+    {
+      "amenity_id": 15,
+      "name": "Bar/Lounge",
+      "description": "Lounge bar offering a selection of beverages"
+    },
+    {
+      "amenity_id": 16,
+      "name": "Concierge Service",
+      "description": "Concierge assistance for guest convenience"
+    },
+    {
+      "amenity_id": 17,
+      "name": "Valet Parking",
+      "description": "Valet parking services for added convenience"
+    },
+    {
+      "amenity_id": 18,
+      "name": "In-Room Safe",
+      "description": "Secure in-room safes for valuables"
+    },
+    {
+      "amenity_id": 19,
+      "name": "Airport Shuttle",
+      "description": "Convenient airport shuttle services"
+    },
+    {
+      "amenity_id": 20,
+      "name": "Bicycle Rental",
+      "description": "Bicycle rental services for exploring the area"
+    },
+    {
+      "amenity_id": 21,
+      "name": "Wheelchair Accessible",
+      "description": "Wheelchair-accessible rooms and facilities"
+    },
+    {
+      "amenity_id": 22,
+      "name": "Fitness Classes",
+      "description": "Scheduled fitness classes for guests"
+    },
+    {
+      "amenity_id": 23,
+      "name": "Library",
+      "description": "Cozy library with a collection of books"
+    },
+    {
+      "amenity_id": 24,
+      "name": "Karaoke Lounge",
+      "description": "Entertainment lounge with karaoke facilities"
+    },
+    {
+      "amenity_id": 25,
+      "name": "Gift Shop",
+      "description": "On-site gift shop for souvenirs and essentials"
+    },
+    {
+      "amenity_id": 26,
+      "name": "Luggage Storage",
+      "description": "Secure luggage storage facilities"
+    },
+    {
+      "amenity_id": 27,
+      "name": "Express Check-In/Check-Out",
+      "description": "Efficient express check-in and check-out services"
+    },
+    {
+      "amenity_id": 28,
+      "name": "Catering Services",
+      "description": "Event catering services for special occasions"
+    },
+    {
+      "amenity_id": 29,
+      "name": "Outdoor Pool Bar",
+      "description": "Bar service by the outdoor pool"
+    },
+    {
+      "amenity_id": 30,
+      "name": "Fireplace in Lobby",
+      "description": "Warm and welcoming fireplace in the lobby area"
+    },
+    {
+      "amenity_id": 31,
+      "name": "Garden Views",
+      "description": "Rooms with picturesque garden views"
+    },
+    {
+      "amenity_id": 32,
+      "name": "Beach Access",
+      "description": "Direct access to a private beach area"
+    },
+    {
+      "amenity_id": 33,
+      "name": "Tea/Coffee Maker",
+      "description": "In-room tea and coffee making facilities"
+    },
+    {
+      "amenity_id": 34,
+      "name": "Game Room",
+      "description": "Recreation room with various games"
+    },
+    {
+      "amenity_id": 35,
+      "name": "Live Entertainment",
+      "description": "Scheduled live entertainment events"
+    },
+    {
+      "amenity_id": 36,
+      "name": "Sun Deck",
+      "description": "Sunny deck for sunbathing and relaxation"
+    },
+    {
+      "amenity_id": 37,
+      "name": "Tennis Courts",
+      "description": "On-site tennis courts for sports enthusiasts"
+    },
+    {
+      "amenity_id": 38,
+      "name": "Guest Lounge",
+      "description": "Comfortable lounge area for guests"
+    },
+    {
+      "amenity_id": 39,
+      "name": "Family-Friendly",
+      "description": "Family-oriented amenities and services"
+    },
+    {
+      "amenity_id": 40,
+      "name": "Roof Terrace",
+      "description": "Elevated terrace with panoramic views"
+    },
+    {
+      "amenity_id": 41,
+      "name": "Outdoor Picnic Area",
+      "description": "Designated outdoor area for picnics"
+    },
+    {
+      "amenity_id": 42,
+      "name": "Steam Room",
+      "description": "Invigorating steam room facilities"
+    },
+    {
+      "amenity_id": 43,
+      "name": "Juice Bar",
+      "description": "Healthy juice bar with refreshing drinks"
+    },
+    {
+      "amenity_id": 44,
+      "name": "Rooftop Garden",
+      "description": "Lush rooftop garden for tranquility"
+    },
+    {
+      "amenity_id": 45,
+      "name": "Wine Cellar",
+      "description": "In-house wine cellar with a curated selection"
+    },
+    {
+      "amenity_id": 46,
+      "name": "Yoga Classes",
+      "description": "Guided yoga classes for guests"
+    },
+    {
+      "amenity_id": 47,
+      "name": "Observation Deck",
+      "description": "Observation deck with scenic views"
+    },
+    {
+      "amenity_id": 48,
+      "name": "Private Cinema",
+      "description": "Exclusive private cinema for movie nights"
+    },
+    {
+      "amenity_id": 49,
+      "name": "Indoor Pool",
+      "description": "Heated indoor pool for year-round enjoyment"
+    },
+    {
+      "amenity_id": 50,
+      "name": "Car Rental Desk",
+      "description": "On-site car rental desk services"
+    },
+    {
+      "amenity_id": 51,
+      "name": "Billiards Room",
+      "description": "Recreational room with billiards tables"
+    },
+    {
+      "amenity_id": 52,
+      "name": "Craft Beer Pub",
+      "description": "Pub serving a variety of craft beers"
+    },
+    {
+      "amenity_id": 53,
+      "name": "Art Gallery",
+      "description": "On-site art gallery showcasing local artists"
+    },
+    {
+      "amenity_id": 54,
+      "name": "Sky Bar",
+      "description": "Stylish sky bar with cityscape views"
+    },
+    {
+      "amenity_id": 55,
+      "name": "Electric Vehicle Charging",
+      "description": "Charging stations for electric vehicles"
+    }
+  ],
+  "roomAmenities": [
+    {
+      "id": 1,
+      "room_id": 1,
+      "amenity_id": 1
+    },
+    {
+      "id": 2,
+      "room_id": 1,
+      "amenity_id": 2
+    },
+    {
+      "id": 3,
+      "room_id": 2,
+      "amenity_id": 3
+    },
+    {
+      "id": 4,
+      "room_id": 3,
+      "amenity_id": 4
+    },
+    {
+      "id": 5,
+      "room_id": 4,
+      "amenity_id": 5
+    },
+    {
+      "id": 6,
+      "room_id": 5,
+      "amenity_id": 6
+    },
+    {
+      "id": 7,
+      "room_id": 6,
+      "amenity_id": 7
+    },
+    {
+      "id": 8,
+      "room_id": 7,
+      "amenity_id": 8
+    },
+    {
+      "id": 9,
+      "room_id": 8,
+      "amenity_id": 9
+    },
+    {
+      "id": 10,
+      "room_id": 9,
+      "amenity_id": 10
+    },
+    {
+      "id": 11,
+      "room_id": 10,
+      "amenity_id": 11
+    },
+    {
+      "id": 12,
+      "room_id": 11,
+      "amenity_id": 12
+    },
+    {
+      "id": 13,
+      "room_id": 12,
+      "amenity_id": 13
+    },
+    {
+      "id": 14,
+      "room_id": 13,
+      "amenity_id": 14
+    },
+    {
+      "id": 15,
+      "room_id": 14,
+      "amenity_id": 15
+    },
+    {
+      "id": 16,
+      "room_id": 15,
+      "amenity_id": 16
+    },
+    {
+      "id": 17,
+      "room_id": 16,
+      "amenity_id": 17
+    },
+    {
+      "id": 18,
+      "room_id": 17,
+      "amenity_id": 18
+    },
+    {
+      "id": 19,
+      "room_id": 18,
+      "amenity_id": 19
+    },
+    {
+      "id": 20,
+      "room_id": 19,
+      "amenity_id": 20
+    },
+    {
+      "id": 21,
+      "room_id": 20,
+      "amenity_id": 21
+    },
+    {
+      "id": 22,
+      "room_id": 21,
+      "amenity_id": 22
+    },
+    {
+      "id": 23,
+      "room_id": 22,
+      "amenity_id": 23
+    },
+    {
+      "id": 24,
+      "room_id": 23,
+      "amenity_id": 24
+    },
+    {
+      "id": 25,
+      "room_id": 24,
+      "amenity_id": 25
+    },
+    {
+      "id": 26,
+      "room_id": 25,
+      "amenity_id": 26
+    },
+    {
+      "id": 27,
+      "room_id": 26,
+      "amenity_id": 27
+    },
+    {
+      "id": 28,
+      "room_id": 27,
+      "amenity_id": 28
+    },
+    {
+      "id": 29,
+      "room_id": 28,
+      "amenity_id": 29
+    },
+    {
+      "id": 30,
+      "room_id": 29,
+      "amenity_id": 30
+    },
+    {
+      "id": 31,
+      "room_id": 30,
+      "amenity_id": 31
+    },
+    {
+      "id": 32,
+      "room_id": 31,
+      "amenity_id": 32
+    },
+    {
+      "id": 33,
+      "room_id": 32,
+      "amenity_id": 33
+    },
+    {
+      "id": 34,
+      "room_id": 33,
+      "amenity_id": 34
+    },
+    {
+      "id": 35,
+      "room_id": 34,
+      "amenity_id": 35
+    },
+    {
+      "id": 36,
+      "room_id": 35,
+      "amenity_id": 36
+    },
+    {
+      "id": 37,
+      "room_id": 36,
+      "amenity_id": 37
+    },
+    {
+      "id": 38,
+      "room_id": 37,
+      "amenity_id": 38
+    },
+    {
+      "id": 39,
+      "room_id": 38,
+      "amenity_id": 39
+    },
+    {
+      "id": 40,
+      "room_id": 39,
+      "amenity_id": 40
+    },
+    {
+      "id": 41,
+      "room_id": 40,
+      "amenity_id": 41
+    },
+    {
+      "id": 42,
+      "room_id": 41,
+      "amenity_id": 42
+    },
+    {
+      "id": 43,
+      "room_id": 42,
+      "amenity_id": 43
+    },
+    {
+      "id": 44,
+      "room_id": 43,
+      "amenity_id": 44
+    },
+    {
+      "id": 45,
+      "room_id": 44,
+      "amenity_id": 45
+    },
+    {
+      "id": 46,
+      "room_id": 45,
+      "amenity_id": 46
+    },
+    {
+      "id": 47,
+      "room_id": 46,
+      "amenity_id": 47
+    },
+    {
+      "id": 48,
+      "room_id": 47,
+      "amenity_id": 48
+    },
+    {
+      "id": 49,
+      "room_id": 48,
+      "amenity_id": 49
+    },
+    {
+      "id": 50,
+      "room_id": 49,
+      "amenity_id": 50
+    },
+    {
+      "id": 51,
+      "room_id": 50,
+      "amenity_id": 1
+    }
+  ],
+  "hotelAmenities": [
+    {
+      "id": 1,
+      "hotel_id": 1,
+      "amenity_id": 1
+    },
+    {
+      "id": 2,
+      "hotel_id": 1,
+      "amenity_id": 2
+    },
+    {
+      "id": 3,
+      "hotel_id": 2,
+      "amenity_id": 3
+    },
+    {
+      "id": 4,
+      "hotel_id": 3,
+      "amenity_id": 4
+    },
+    {
+      "id": 5,
+      "hotel_id": 4,
+      "amenity_id": 5
+    },
+    {
+      "id": 6,
+      "hotel_id": 5,
+      "amenity_id": 6
+    },
+    {
+      "id": 7,
+      "hotel_id": 6,
+      "amenity_id": 7
+    },
+    {
+      "id": 8,
+      "hotel_id": 7,
+      "amenity_id": 8
+    },
+    {
+      "id": 9,
+      "hotel_id": 8,
+      "amenity_id": 9
+    },
+    {
+      "id": 10,
+      "hotel_id": 9,
+      "amenity_id": 10
+    },
+    {
+      "id": 11,
+      "hotel_id": 10,
+      "amenity_id": 11
+    },
+    {
+      "id": 12,
+      "hotel_id": 11,
+      "amenity_id": 12
+    },
+    {
+      "id": 13,
+      "hotel_id": 12,
+      "amenity_id": 13
+    },
+    {
+      "id": 14,
+      "hotel_id": 13,
+      "amenity_id": 14
+    },
+    {
+      "id": 15,
+      "hotel_id": 14,
+      "amenity_id": 15
+    },
+    {
+      "id": 16,
+      "hotel_id": 15,
+      "amenity_id": 16
+    },
+    {
+      "id": 17,
+      "hotel_id": 16,
+      "amenity_id": 17
+    },
+    {
+      "id": 18,
+      "hotel_id": 17,
+      "amenity_id": 18
+    },
+    {
+      "id": 19,
+      "hotel_id": 18,
+      "amenity_id": 19
+    },
+    {
+      "id": 20,
+      "hotel_id": 19,
+      "amenity_id": 20
+    },
+    {
+      "id": 21,
+      "hotel_id": 20,
+      "amenity_id": 21
+    },
+    {
+      "id": 22,
+      "hotel_id": 21,
+      "amenity_id": 22
+    },
+    {
+      "id": 23,
+      "hotel_id": 22,
+      "amenity_id": 23
+    },
+    {
+      "id": 24,
+      "hotel_id": 23,
+      "amenity_id": 24
+    },
+    {
+      "id": 25,
+      "hotel_id": 24,
+      "amenity_id": 25
+    },
+    {
+      "id": 26,
+      "hotel_id": 25,
+      "amenity_id": 26
+    },
+    {
+      "id": 27,
+      "hotel_id": 26,
+      "amenity_id": 27
+    },
+    {
+      "id": 28,
+      "hotel_id": 27,
+      "amenity_id": 28
+    },
+    {
+      "id": 29,
+      "hotel_id": 28,
+      "amenity_id": 29
+    },
+    {
+      "id": 30,
+      "hotel_id": 29,
+      "amenity_id": 30
+    },
+    {
+      "id": 31,
+      "hotel_id": 30,
+      "amenity_id": 31
+    },
+    {
+      "id": 32,
+      "hotel_id": 31,
+      "amenity_id": 32
+    },
+    {
+      "id": 33,
+      "hotel_id": 32,
+      "amenity_id": 33
+    },
+    {
+      "id": 34,
+      "hotel_id": 33,
+      "amenity_id": 34
+    },
+    {
+      "id": 35,
+      "hotel_id": 34,
+      "amenity_id": 35
+    },
+    {
+      "id": 36,
+      "hotel_id": 35,
+      "amenity_id": 36
+    },
+    {
+      "id": 37,
+      "hotel_id": 36,
+      "amenity_id": 37
+    },
+    {
+      "id": 38,
+      "hotel_id": 37,
+      "amenity_id": 38
+    },
+    {
+      "id": 39,
+      "hotel_id": 38,
+      "amenity_id": 39
+    },
+    {
+      "id": 40,
+      "hotel_id": 39,
+      "amenity_id": 40
+    },
+    {
+      "id": 41,
+      "hotel_id": 40,
+      "amenity_id": 41
+    },
+    {
+      "id": 42,
+      "hotel_id": 41,
+      "amenity_id": 42
+    },
+    {
+      "id": 43,
+      "hotel_id": 42,
+      "amenity_id": 43
+    },
+    {
+      "id": 44,
+      "hotel_id": 43,
+      "amenity_id": 44
+    },
+    {
+      "id": 45,
+      "hotel_id": 44,
+      "amenity_id": 45
+    },
+    {
+      "id": 46,
+      "hotel_id": 45,
+      "amenity_id": 46
+    },
+    {
+      "id": 47,
+      "hotel_id": 46,
+      "amenity_id": 47
+    },
+    {
+      "id": 48,
+      "hotel_id": 47,
+      "amenity_id": 48
+    },
+    {
+      "id": 49,
+      "hotel_id": 48,
+      "amenity_id": 49
+    },
+    {
+      "id": 50,
+      "hotel_id": 49,
+      "amenity_id": 50
+    }
+  ],
+  "reviews": [
+    {
+      "review_id": 1,
+      "reservation_id": 1,
+      "rating": 4,
+      "comment": "Great experience!",
+      "review_date": "2023-05-15"
+    },
+    {
+      "review_id": 2,
+      "reservation_id": 2,
+      "rating": 5,
+      "comment": "Amazing service!",
+      "review_date": "2023-04-12"
+    },
+    {
+      "review_id": 3,
+      "reservation_id": 3,
+      "rating": 3,
+      "comment": "Room was okay, could be better.",
+      "review_date": "2023-06-20"
+    },
+    {
+      "review_id": 4,
+      "reservation_id": 4,
+      "rating": 4,
+      "comment": "Enjoyed my stay!",
+      "review_date": "2023-05-15"
+    },
+    {
+      "review_id": 5,
+      "reservation_id": 5,
+      "rating": 5,
+      "comment": "Fantastic hotel!",
+      "review_date": "2023-04-12"
+    },
+    {
+      "review_id": 6,
+      "reservation_id": 6,
+      "rating": 2,
+      "comment": "Disappointing experience.",
+      "review_date": "2022-11-20"
+    },
+    {
+      "review_id": 7,
+      "reservation_id": 7,
+      "rating": 3,
+      "comment": "Average service, needs improvement.",
+      "review_date": "2023-03-25"
+    },
+    {
+      "review_id": 8,
+      "reservation_id": 8,
+      "rating": 5,
+      "comment": "Exceeded expectations!",
+      "review_date": "2022-12-10"
+    },
+    {
+      "review_id": 9,
+      "reservation_id": 9,
+      "rating": 4,
+      "comment": "Lovely atmosphere, great amenities.",
+      "review_date": "2023-01-18"
+    },
+    {
+      "review_id": 10,
+      "reservation_id": 10,
+      "rating": 3,
+      "comment": "Decent stay, could be cleaner.",
+      "review_date": "2022-10-05"
+    },
+    {
+      "review_id": 11,
+      "reservation_id": 11,
+      "rating": 5,
+      "comment": "Perfect getaway!",
+      "review_date": "2021-09-28"
+    },
+    {
+      "review_id": 12,
+      "reservation_id": 12,
+      "rating": 4,
+      "comment": "Impressive service and facilities.",
+      "review_date": "2021-08-14"
+    },
+    {
+      "review_id": 13,
+      "reservation_id": 13,
+      "rating": 2,
+      "comment": "Not recommended, poor service.",
+      "review_date": "2022-09-22"
+    },
+    {
+      "review_id": 14,
+      "reservation_id": 14,
+      "rating": 4,
+      "comment": "Great experience!",
+      "review_date": "2023-07-08"
+    },
+    {
+      "review_id": 15,
+      "reservation_id": 15,
+      "rating": 5,
+      "comment": "Amazing service!",
+      "review_date": "2023-06-14"
+    },
+    {
+      "review_id": 16,
+      "reservation_id": 16,
+      "rating": 3,
+      "comment": "Room was okay, could be better.",
+      "review_date": "2021-07-19"
+    },
+    {
+      "review_id": 17,
+      "reservation_id": 17,
+      "rating": 4,
+      "comment": "Enjoyed my stay!",
+      "review_date": "2022-02-12"
+    },
+    {
+      "review_id": 18,
+      "reservation_id": 18,
+      "rating": 5,
+      "comment": "Fantastic hotel!",
+      "review_date": "2023-10-30"
+    },
+    {
+      "review_id": 19,
+      "reservation_id": 19,
+      "rating": 2,
+      "comment": "Disappointing experience.",
+      "review_date": "2020-12-05"
+    },
+    {
+      "review_id": 20,
+      "reservation_id": 20,
+      "rating": 3,
+      "comment": "Average service, needs improvement.",
+      "review_date": "2022-01-30"
+    },
+    {
+      "review_id": 21,
+      "reservation_id": 21,
+      "rating": 5,
+      "comment": "Exceeded expectations!",
+      "review_date": "2020-11-15"
+    },
+    {
+      "review_id": 22,
+      "reservation_id": 22,
+      "rating": 4,
+      "comment": "Lovely atmosphere, great amenities.",
+      "review_date": "2022-05-24"
+    },
+    {
+      "review_id": 23,
+      "reservation_id": 23,
+      "rating": 3,
+      "comment": "Decent stay, could be cleaner.",
+      "review_date": "2022-03-07"
+    },
+    {
+      "review_id": 24,
+      "reservation_id": 24,
+      "rating": 5,
+      "comment": "Perfect getaway!",
+      "review_date": "2022-04-18"
+    },
+    {
+      "review_id": 25,
+      "reservation_id": 25,
+      "rating": 4,
+      "comment": "Impressive service and facilities.",
+      "review_date": "2021-05-03"
+    },
+    {
+      "review_id": 26,
+      "reservation_id": 26,
+      "rating": 2,
+      "comment": "Not recommended, poor service.",
+      "review_date": "2023-08-01"
+    },
+    {
+      "review_id": 27,
+      "reservation_id": 27,
+      "rating": 4,
+      "comment": "Great experience!",
+      "review_date": "2022-08-28"
+    },
+    {
+      "review_id": 28,
+      "reservation_id": 28,
+      "rating": 5,
+      "comment": "Amazing service!",
+      "review_date": "2022-07-04"
+    },
+    {
+      "review_id": 29,
+      "reservation_id": 29,
+      "rating": 3,
+      "comment": "Room was okay, could be better.",
+      "review_date": "2021-06-09"
+    },
+    {
+      "review_id": 30,
+      "reservation_id": 30,
+      "rating": 4,
+      "comment": "Enjoyed my stay!",
+      "review_date": "2020-09-12"
+    },
+    {
+      "review_id": 31,
+      "reservation_id": 31,
+      "rating": 5,
+      "comment": "Absolutely outstanding!",
+      "review_date": "2021-11-22"
+    },
+    {
+      "review_id": 32,
+      "reservation_id": 32,
+      "rating": 3,
+      "comment": "Mixed feelings about the stay.",
+      "review_date": "2020-10-14"
+    },
+    {
+      "review_id": 33,
+      "reservation_id": 33,
+      "rating": 4,
+      "comment": "Great value for the price.",
+      "review_date": "2022-06-30"
+    },
+    {
+      "review_id": 34,
+      "reservation_id": 34,
+      "rating": 5,
+      "comment": "Exquisite service and amenities.",
+      "review_date": "2023-09-19"
+    },
+    {
+      "review_id": 35,
+      "reservation_id": 35,
+      "rating": 2,
+      "comment": "Not up to expectations.",
+      "review_date": "2021-12-08"
+    },
+    {
+      "review_id": 36,
+      "reservation_id": 36,
+      "rating": 4,
+      "comment": "Nice hotel, friendly staff.",
+      "review_date": "2022-05-01"
+    },
+    {
+      "review_id": 37,
+      "reservation_id": 37,
+      "rating": 5,
+      "comment": "Memorable experience!",
+      "review_date": "2023-02-25"
+    },
+    {
+      "review_id": 38,
+      "reservation_id": 38,
+      "rating": 3,
+      "comment": "Could use some improvements.",
+      "review_date": "2022-04-02"
+    },
+    {
+      "review_id": 39,
+      "reservation_id": 39,
+      "rating": 4,
+      "comment": "Pleasant stay with great views.",
+      "review_date": "2021-03-15"
+    },
+    {
+      "review_id": 40,
+      "reservation_id": 40,
+      "rating": 5,
+      "comment": "Highly recommended!",
+      "review_date": "2023-08-11"
+    },
+    {
+      "review_id": 41,
+      "reservation_id": 41,
+      "rating": 2,
+      "comment": "Disappointing service.",
+      "review_date": "2020-07-27"
+    },
+    {
+      "review_id": 42,
+      "reservation_id": 42,
+      "rating": 4,
+      "comment": "Clean rooms, friendly staff.",
+      "review_date": "2022-09-06"
+    },
+    {
+      "review_id": 43,
+      "reservation_id": 43,
+      "rating": 5,
+      "comment": "Exceptional service!",
+      "review_date": "2023-01-14"
+    },
+    {
+      "review_id": 44,
+      "reservation_id": 44,
+      "rating": 3,
+      "comment": "Average experience overall.",
+      "review_date": "2020-08-22"
+    },
+    {
+      "review_id": 45,
+      "reservation_id": 45,
+      "rating": 4,
+      "comment": "Would stay again!",
+      "review_date": "2022-03-05"
+    },
+    {
+      "review_id": 46,
+      "reservation_id": 46,
+      "rating": 5,
+      "comment": "Perfect for a weekend getaway.",
+      "review_date": "2021-02-18"
+    },
+    {
+      "review_id": 47,
+      "reservation_id": 47,
+      "rating": 2,
+      "comment": "Not the best, but okay.",
+      "review_date": "2023-04-30"
+    },
+    {
+      "review_id": 48,
+      "reservation_id": 48,
+      "rating": 4,
+      "comment": "Beautiful hotel with great views.",
+      "review_date": "2021-06-19"
+    },
+    {
+      "review_id": 49,
+      "reservation_id": 49,
+      "rating": 5,
+      "comment": "Unforgettable stay!",
+      "review_date": "2022-12-10"
+    },
+    {
+      "review_id": 50,
+      "reservation_id": 50,
+      "rating": 3,
+      "comment": "Needs improvement in cleanliness.",
+      "review_date": "2023-07-08"
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": 1,
+      "reservation_id": 1,
+      "amount": 100.0,
+      "payment_date": "2024-01-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 2,
+      "reservation_id": 2,
+      "amount": 160.0,
+      "payment_date": "2024-02-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 3,
+      "reservation_id": 3,
+      "amount": 300.0,
+      "payment_date": "2024-03-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 4,
+      "reservation_id": 4,
+      "amount": 120.0,
+      "payment_date": "2023-04-10",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 5,
+      "reservation_id": 5,
+      "amount": 200.0,
+      "payment_date": "2023-05-15",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 6,
+      "reservation_id": 6,
+      "amount": 250.0,
+      "payment_date": "2023-06-20",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 7,
+      "reservation_id": 7,
+      "amount": 180.0,
+      "payment_date": "2023-07-25",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 8,
+      "reservation_id": 8,
+      "amount": 300.0,
+      "payment_date": "2023-08-30",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 9,
+      "reservation_id": 9,
+      "amount": 150.0,
+      "payment_date": "2023-09-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 10,
+      "reservation_id": 10,
+      "amount": 220.0,
+      "payment_date": "2023-10-10",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 11,
+      "reservation_id": 11,
+      "amount": 270.0,
+      "payment_date": "2023-11-15",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 12,
+      "reservation_id": 12,
+      "amount": 350.0,
+      "payment_date": "2023-12-20",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 13,
+      "reservation_id": 13,
+      "amount": 180.0,
+      "payment_date": "2024-01-25",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 14,
+      "reservation_id": 14,
+      "amount": 250.0,
+      "payment_date": "2024-02-01",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 15,
+      "reservation_id": 15,
+      "amount": 300.0,
+      "payment_date": "2024-03-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 16,
+      "reservation_id": 16,
+      "amount": 200.0,
+      "payment_date": "2023-04-10",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 17,
+      "reservation_id": 17,
+      "amount": 220.0,
+      "payment_date": "2023-05-15",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 18,
+      "reservation_id": 18,
+      "amount": 280.0,
+      "payment_date": "2023-06-20",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 19,
+      "reservation_id": 19,
+      "amount": 230.0,
+      "payment_date": "2023-07-25",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 20,
+      "reservation_id": 20,
+      "amount": 320.0,
+      "payment_date": "2023-08-30",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 21,
+      "reservation_id": 21,
+      "amount": 270.0,
+      "payment_date": "2023-09-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 22,
+      "reservation_id": 22,
+      "amount": 380.0,
+      "payment_date": "2023-10-10",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 23,
+      "reservation_id": 23,
+      "amount": 400.0,
+      "payment_date": "2023-11-15",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 24,
+      "reservation_id": 24,
+      "amount": 280.0,
+      "payment_date": "2023-12-20",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 25,
+      "reservation_id": 25,
+      "amount": 350.0,
+      "payment_date": "2024-01-25",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 26,
+      "reservation_id": 26,
+      "amount": 260.0,
+      "payment_date": "2024-02-01",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 27,
+      "reservation_id": 27,
+      "amount": 330.0,
+      "payment_date": "2024-03-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 28,
+      "reservation_id": 28,
+      "amount": 240.0,
+      "payment_date": "2023-04-10",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 29,
+      "reservation_id": 29,
+      "amount": 290.0,
+      "payment_date": "2023-05-15",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 30,
+      "reservation_id": 30,
+      "amount": 180.0,
+      "payment_date": "2023-06-20",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 31,
+      "reservation_id": 31,
+      "amount": 190.0,
+      "payment_date": "2022-07-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 32,
+      "reservation_id": 32,
+      "amount": 310.0,
+      "payment_date": "2022-08-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 33,
+      "reservation_id": 33,
+      "amount": 240.0,
+      "payment_date": "2022-09-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 34,
+      "reservation_id": 34,
+      "amount": 360.0,
+      "payment_date": "2021-10-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 35,
+      "reservation_id": 35,
+      "amount": 290.0,
+      "payment_date": "2021-11-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 36,
+      "reservation_id": 36,
+      "amount": 180.0,
+      "payment_date": "2022-12-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 37,
+      "reservation_id": 37,
+      "amount": 320.0,
+      "payment_date": "2022-01-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 38,
+      "reservation_id": 38,
+      "amount": 270.0,
+      "payment_date": "2022-02-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 39,
+      "reservation_id": 39,
+      "amount": 420.0,
+      "payment_date": "2021-03-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 40,
+      "reservation_id": 40,
+      "amount": 330.0,
+      "payment_date": "2021-04-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 41,
+      "reservation_id": 41,
+      "amount": 250.0,
+      "payment_date": "2022-05-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 42,
+      "reservation_id": 42,
+      "amount": 290.0,
+      "payment_date": "2022-06-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 43,
+      "reservation_id": 43,
+      "amount": 310.0,
+      "payment_date": "2021-07-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 44,
+      "reservation_id": 44,
+      "amount": 350.0,
+      "payment_date": "2021-08-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 45,
+      "reservation_id": 45,
+      "amount": 180.0,
+      "payment_date": "2022-09-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 46,
+      "reservation_id": 46,
+      "amount": 400.0,
+      "payment_date": "2022-10-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 47,
+      "reservation_id": 47,
+      "amount": 260.0,
+      "payment_date": "2021-11-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 48,
+      "reservation_id": 48,
+      "amount": 320.0,
+      "payment_date": "2021-12-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 49,
+      "reservation_id": 49,
+      "amount": 230.0,
+      "payment_date": "2022-01-05",
+      "payment_status": "Paid"
+    },
+    {
+      "payment_id": 50,
+      "reservation_id": 50,
+      "amount": 310.0,
+      "payment_date": "2022-02-05",
+      "payment_status": "Paid"
+    }
+  ]
+}
