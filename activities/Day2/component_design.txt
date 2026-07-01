@@ -1,0 +1,15 @@
+components:-
+	AuthContext(
+		
+		Home.jsx
+		Navbar.jsx	
+		HotelList.jsx
+		HotelCard.jsx({hotelDetail})
+		FilterPanel
+		AboutUs.jsx
+		TopRatedHCards.jsx({topHotel})
+		Login.jsx
+		SignUp.jsx
+		Payment.jsx
+	)
+    NotFound.jsx

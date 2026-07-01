@@ -9,4 +9,7 @@ Application Stories:
 	7) created github repo
 	8) added members as contributors
 	9) pushed the folder to github
-	10) 
+	10) add some libraries to the setup for testing :-
+		vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom msw
+	
+	11)

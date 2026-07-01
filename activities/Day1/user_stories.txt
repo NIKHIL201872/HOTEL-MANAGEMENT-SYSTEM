@@ -1,5 +1,5 @@
 Admin  Stories:
-	Login
+	Login/SignUp
 	Admin Dashboard
 	Add Hotel
 	Edit Hotel
@@ -19,7 +19,7 @@ Admin  Stories:
 User:
 	Login
 	User Dashboard
-	Display Hotels
+	Display  Hotels
 	Show Room Availability
 	View Rooms
 	Store Reservation Details

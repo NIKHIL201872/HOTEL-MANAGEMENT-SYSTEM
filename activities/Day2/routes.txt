@@ -1,0 +1,36 @@
+routes = [
+  {
+    path: "/",
+    element: <RootLayout />, //navbar + outlet
+    children: [
+      { index: true, element: <Home /> }, //landing: hero, top hotels, offers, about, contact
+
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <SignUp /> },
+
+      { path: "hotels", element: <ProtectedRoute> <HotelSearch /> </ProtectedRoute> }, //sort by + choose list
+
+      { path: "hotels/:hotelId", element:<ProtectedRoute> <HotelDetails /> </ProtectedRoute>}, // individual hotel page
+
+      {
+        path: "payment/:hotelId",
+        element: (
+          <ProtectedRoute>
+            <Payment />
+          </ProtectedRoute>
+        ),
+      },
+
+      {
+        path: "profile",
+        element: (
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        ),
+      },
+
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]
