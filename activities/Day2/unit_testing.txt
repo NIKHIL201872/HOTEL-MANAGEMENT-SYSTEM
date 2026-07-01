@@ -1,0 +1,107 @@
+HOTEL MANAGEMENT SYSTEM   REACT FRONTEND UNIT TESTING PLAN
+
+STACK
+ 
+Vitest + React Testing Library (RTL) + MSW (mock API) + jest dom matchers.
+Runs on Vite, no extra runtime deps, pure CPU/JS work.
+
+INSTALL
+   
+npm i  D vitest @testing library/react @testing library/jest dom @testing library/user event jsdom msw @vitest/coverage v8
+
+
+VITE CONFIG
+   
+vite.config.js
+
+  test: {
+    environment: "jsdom",
+    setupFiles: "./src/test/setup.js",
+    globals: true,
+  }
+
+
+TEST SETUP FILE
+    
+File: src/test/setup.js
+
+import "@testing library/jest dom";
+
+
+FOLDER STRUCTURE
+    
+src/
+  components/
+    Login.test.jsx
+    SignUp.test.jsx
+    HotelList.test.jsx
+    HotelCard.test.jsx
+    FilterPanel.test.jsx
+    TopRatedHCards.test.jsx
+    Payment.test.jsx
+    Navbar.test.jsx
+    NotFound.test.jsx
+  context/
+    AuthContext.test.jsx
+  routes/
+    ProtectedRoute.test.jsx
+  test/
+    setup.js
+    mocks/
+      handlers.js
+      server.js
+
+
+TEST MATRIX :  COMPONENT  > WHAT TO CHECK
+         
+AuthContext
+    login() sets token and localStorage correctly
+    logout() clears token and localStorage
+    initial state reads existing token from localStorage on mount
+
+ProtectedRoute
+    renders children when token is present
+    redirects to /login when token is absent
+
+Login.jsx
+    renders email and password fields
+    calls login() with correct payload on submit
+    shows error message on 401 / invalid credentials
+    navigates to intended page on successful login
+
+SignUp.jsx
+    validates required fields (email, password, name)
+    calls signup API with correct payload
+    shows duplicate user error message on failure
+
+HotelList.jsx
+    renders list of hotel cards from fetched data
+    shows empty state message when list is empty
+    FilterPanel narrows the rendered results correctly
+
+HotelCard.jsx
+    renders hotel name, price, and image from props
+    clicking card navigates to /hotels/:hotelId
+
+FilterPanel.jsx
+    onChange fires callback with correct filter object
+    resets filters correctly on clear action
+
+TopRatedHCards.jsx
+    renders top N hotels sorted by rating descending
+    handles empty top hotel list gracefully
+
+Payment.jsx
+    renders card input form fields
+    submitting form hits /api/payment/post with correct payload
+    shows checkout confirmation on success
+    shows error banner on payment failure
+
+Navbar.jsx
+    shows Login/Signup links when logged out
+    shows Profile/Logout when token is present
+    logout button clears auth state
+
+NotFound.jsx
+    renders fallback UI on unmatched route
+
