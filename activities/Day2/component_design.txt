@@ -7,9 +7,11 @@ components:-
 		HotelCard.jsx({hotelDetail})
 		FilterPanel
 		AboutUs.jsx
+		TopRatedHotels.jsx
 		TopRatedHCards.jsx({topHotel})
 		Login.jsx
 		SignUp.jsx
 		Payment.jsx
+		SpecialOffer.jsx
 	)
     NotFound.jsx
