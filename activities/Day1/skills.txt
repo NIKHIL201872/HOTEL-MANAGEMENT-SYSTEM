@@ -1,0 +1,9 @@
+Akshay Raj Saxena - Handling  Git Repo, Routing, Zustand and Tanstack and springboot (for backend)
+
+Nikhil Sharma: Java Springboot, React(routing, zustand,tanstack,css)
+
+Ipsita Lenka - Routing , Zustand, context API ,Tanstack, Bootstrap
+
+Satayu Nanda - Git-GitHub, Tailwind css, Zustand, Spring boot(for backend)
+
+Animesh Palui - Git-GitHub, Tailwind css, Zustand, Tanstack, Redux, Bootstrap Css, Optimization, Spring boot(for backend)

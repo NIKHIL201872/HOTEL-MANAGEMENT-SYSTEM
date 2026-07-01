@@ -1,0 +1,31 @@
+Admin  Stories:
+	Login
+	Admin Dashboard
+	Add Hotel
+	Edit Hotel
+	Delete Hotel
+	View Rooms
+	Add Room
+	Update Room
+	Manage Room Types
+	Manage Amenities
+	Create Reservation
+	Cancel Reservation
+	View All Payments
+	View All Reviews
+
+--------------------------------------------------------------------
+    
+User:
+	Login
+	User Dashboard
+	Display Hotels
+	Show Room Availability
+	View Rooms
+	Store Reservation Details
+	Create Reservation
+	Cancel Reservation
+	View Reviews
+	Search Records
+	Filter Data
+    View Own Payments

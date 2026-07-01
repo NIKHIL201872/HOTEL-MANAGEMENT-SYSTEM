@@ -1,0 +1,62 @@
+HOTEL MANAGEMENT SYSTEM - SPRINT 1 (5 WORKING DAYS)
+
+TEAM:
+Member 1 (Leader) - Animesh
+Member 2 - Ipsita (Hotel & Amenity module)
+Member 3 - Nikhil(Room & RoomType module)
+Member 4 - Satayu(Reservation module)
+Member 5 - Akshay(Payment & Review module)
+
+DAY 1 - Setup & Requirement Analysis
+
+Member 1 (Leader): Create GitHub repo, React project, routing setup,
+draft db.json + routes.json skeleton (from ER diagram)
+Member 2: Analyze Hotel & Amenity requirements, review/refine db.json
+Member 3: Analyze Room & RoomType requirements, review/refine db.json
+Member 4: Analyze Reservation requirements, review/refine db.json
+Member 5: Analyze Payment & Review requirements, review/refine db.json
+
+Daily Outcome: Requirement analysis done, GitHub repo live,
+project scaffolded, db.json + routes.json finalized
+
+DAY 2 - Page Layouts
+
+Member 1: Build Dashboard & main routing/navigation
+Member 2: Create Hotel pages UI  
+Member 3: Create Room pages UI  
+Member 4: Create Reservation pages UI  
+Member 5: Create Payment & Review pages UI  
+
+Daily Outcome: All page layouts ready with navigation wired
+
+DAY 3 - CRUD + JSON Server Integration
+
+Member 1: Integrate common components, code review, fix routes.json issues
+Member 2: Hotel CRUD UI + connect to JSON Server
+Member 3: Room CRUD UI + connect to JSON Server
+Member 4: Reservation CRUD UI + connect to JSON Server
+Member 5: Payment & Review CRUD UI + connect to JSON Server
+
+Daily Outcome: All modules connected with JSON Server, basic CRUD working
+
+DAY 4 - Polish & Integration
+
+Member 1: Merge branches, resolve conflicts, integration testing
+Member 2: Improve Hotel UI - validation, search, amenity linking
+Member 3: Improve Room UI - availability badges, filters (location/amenity)
+Member 4: Improve Reservation forms, date-range filter, validation
+Member 5: Improve Payment status filter, revenue summary, Review ratings
+
+Daily Outcome: Fully integrated application with polished UI
+
+DAY 5 - Testing & Demo Prep
+
+Member 1: Final integration, GitHub merge, presentation prep
+Member 2: Testing Hotel & Amenity modules
+Member 3: Testing Room modules
+Member 4: Testing Reservation module
+Member 5: Testing Payment & Review modules
+
+Daily Outcome: demo, proper UI, sprint review ready
+
+
