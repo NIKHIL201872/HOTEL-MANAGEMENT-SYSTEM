@@ -29,3 +29,12 @@ User:
 	Search Records
 	Filter Data
     View Own Payments
+
+Display Hotels
+	Show Room Availability
+	Store Reservation Details
+	Store Payments
+	Display Reviews
+	Show Dashboard Statistics
+	Search Records
+	Filter Data

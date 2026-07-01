@@ -1,10 +1,12 @@
 Application Stories:
 
-	Display Hotels
-	Show Room Availability
-	Store Reservation Details
-	Store Payments
-	Display Reviews
-	Show Dashboard Statistics
-	Search Records
-	Filter Data
+	1) created react project with vite
+	2) cleaned up the basic code given by vite
+	3) installed react-router-dom, axios, tailwindcss, zustand
+	4) folder structure 
+	5) db.json added
+	6) dev env setup completed
+	7) created github repo
+	8) added members as contributors
+	9) pushed the folder to github
+	10) 
