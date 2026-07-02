@@ -1,25 +1,20 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ReservationRegistration from './pages/ReservationRegistration';
 
-import UserDashboard from "./components/dashboards/UserDashboard";
-import RoomsDashboard from "./components/rooms/RoomsDashboard";
-import HotelSearch from "./components/hotel/HotelSearch";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import ReservationRegistration from "./pages/ReservationRegistration";
-
-const App = () => {
+export default function App() {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-[#FDF2DF] font-mono ">
-      <UserDashboard />
-      <HotelSearch />
-      <RoomsDashboard />
-      <Login />
-      <Signup />
-      <ReservationRegistration />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/reservations" element={<ReservationRegistration />} />
+
+        {/* Temporary: send the root to login until the real landing page lands */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default App;
-
-
-
+}
