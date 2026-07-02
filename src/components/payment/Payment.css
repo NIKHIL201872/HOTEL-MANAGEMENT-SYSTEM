@@ -1,0 +1,56 @@
+@reference "../../index.css";
+
+.payment-page{
+    @apply min-h-screen p-8;
+    background-color:#f2e4cf;
+}
+
+.payment-title{
+    @apply text-4xl font-bold mb-10 text-center;
+    color:#4a2c1d;
+}
+
+.payment-container{
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.payment-card{
+    @apply rounded-2xl shadow-xl p-6;
+    background-color: #fbf3e7;
+    border: 1px solid #d8bfa0;
+}
+
+.payment-method{
+    @apply text-lg font-semibold mb-5;
+}
+
+.payment-method-name{
+    @apply ml-2 text-amber-600 capitalize font-semibold;
+}
+
+.payment-buttons{
+    @apply flex gap-4 mb-8;
+}
+
+.payment-button{
+    @apply px-6 py-2 rounded-lg font-semibold transition duration-300;
+}
+
+.payment-button-upi{
+    @apply text-white;
+    background: #6b2d2d;
+}
+
+.payment-button-card{
+    @apply text-white;
+    background: #6b2d2d;
+}
+
+.payment-button-inactive{
+    @apply text-white;
+    background:#a14444;
+}
+
+.payment-form{
+    @apply mt-6;
+}

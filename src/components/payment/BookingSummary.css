@@ -1,0 +1,50 @@
+@reference "../../index.css";
+
+.booking-card{
+    @apply rounded-2xl shadow-xl p-6;
+    background-color: #fbf3e7;
+    border: 1px solid #d8bfa0
+}
+
+.booking-title{
+    @apply text-2xl font-bold mb-6 text-center;
+    color:#4a2c1d;
+}
+
+.booking-details{
+    @apply space-y-4;
+}
+
+.booking-row{
+    @apply flex justify-between items-center border-b border-stone-200 py-3;
+}
+
+.booking-label{
+    @apply font-semibold text-slate-700;
+}
+
+.booking-divider{
+    @apply my-6 border-stone-200; 
+    border-color:black;
+}
+
+.booking-summary{
+    @apply space-y-3;
+}
+
+.booking-summary-row{
+    @apply flex justify-between items-center py-2;
+}
+
+.booking-total{
+    @apply flex justify-between items-center;
+}
+
+.booking-total-label{
+    @apply text-xl font-bold text-slate-800;
+}
+
+.booking-total-price{
+    @apply text-3xl font-bold;
+    color:#3F2E24;
+}

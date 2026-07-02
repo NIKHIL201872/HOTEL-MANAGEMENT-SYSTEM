@@ -1,0 +1,39 @@
+@reference "../../index.css";
+
+.card-form{
+    @apply space-y-6 rounded-2xl p-6 shadow-lg;
+    background-color: #d8a48f;
+}
+
+.card-title{
+    @apply text-2xl font-bold;
+    color: #4a2c1d;
+}
+
+.card-label{
+    @apply block text-sm font-semibold mb-2;
+    color: #3F2E24;
+}
+
+.card-input{
+    @apply w-full rounded-xl px-4 py-3 bg-white outline-none;
+    border: 2px solid #3F2E24;
+}
+
+.card-input:focus{
+    border-color: #3F2E24;
+    box-shadow: 0 0 0 3px rgba(63,46,36,0.2);
+}
+
+.card-grid{
+    @apply grid grid-cols-2 gap-4;
+}
+
+.card-button{
+    @apply w-full text-white font-semibold py-3 rounded-xl shadow-md transition duration-300;
+    background:#a14444;
+}
+
+.card-button:hover{
+    background:#6b2d2d;
+}
