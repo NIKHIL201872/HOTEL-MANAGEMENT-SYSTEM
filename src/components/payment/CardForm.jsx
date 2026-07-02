@@ -23,7 +23,7 @@ function CardForm() {
 
     return (
         <div className="card-form">
-            <h2 className="card-title"> Card Payment</h2>
+            <h2 className="card-title">Card Payment</h2>
             <div>
                 <label className="card-label"> Card Number </label>
                 <input name="cardNumber" type="text" value={cardDetails.cardNumber} onChange={cardHandler} placeholder="1234 5678 9012 3456" className="card-input"/>

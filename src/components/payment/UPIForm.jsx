@@ -10,7 +10,7 @@ function UPIForm() {
     }
 
     function payHandler() {
-        <Receipt />
+        // <Receipt />
     }
 
     return (
