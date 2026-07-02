@@ -118973,5 +118973,15 @@
       "desc": "Limited time flash discount on select hotels.",
       "status": "Expired"
     }
+  ],
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$3cl3RPhvg3MUWlx.x0YPC.wrzT8Rcd3pWAXvTRod7fbKnHOlPwqFa",
+      "name": "Test User",
+      "phone": "1234567890",
+      "role": "user",
+      "id": 1
+    }
   ]
 }
