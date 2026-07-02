@@ -1,3 +1,16 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import HotelSearch from "./components/Hotel/HotelSearch";
+
+function App() {
+  return (
+    <div className="App">
+      <HotelSearch />
+    </div>
+  );
+}
+
+export default App;
 // src/App.jsx
 import React from 'react'
 import RoomsDashboard from './components/rooms/RoomsDashboard'
