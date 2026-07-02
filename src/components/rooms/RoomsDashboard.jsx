@@ -1,80 +1,84 @@
 import React, { useState } from 'react';
-import RoomCard from './RoomCard';
-import RoomFilterSidebar from './RoomFilterSidebar';
 
-const MOCK_ROOMS = [
-  {
-    room_id: 1,
-    type_name: "Deluxe Suite",
-    price_per_night: 240,
-    is_available: true,
-    description: "A spacious room featuring ocean views and premium comfort bedding layouts.",
-    amenities: ["Free Wi-Fi", "Mini Bar", "Air Conditioning"]
-  },
-  {
-    room_id: 2,
-    type_name: "Penthouse Core",
-    price_per_night: 550,
-    is_available: false,
-    description: "Top floor elite layout with localized balcony configurations.",
-    amenities: ["Jacuzzi", "Private Kitchen", "City View"]
-  },
-  {
-    room_id: 3,
-    type_name: "Standard Double",
-    price_per_night: 120,
-    is_available: true,
-    description: "Perfect stay layout option for traveling pairs and light utilities.",
-    amenities: ["Free Wi-Fi", "TV", "Coffee Maker"]
-  }
-];
+import RoomTypeConfig from './RoomTypeConfig';
+import HotelSelector from './HotelSelector';
+import AdminRooms from './AdminRooms';
+import UserRooms from './UserRooms';
+import SelectedHotelBanner from './SelectedHotelBanner';
 
 export default function RoomsDashboard() {
-  const [selectedType, setSelectedType] = useState('All');
-  const [showOnlyAvailable, setShowOnlyAvailable] = useState(false);
-
-  // Compute filtered listings
-  const filteredRooms = MOCK_ROOMS.filter(room => {
-    const matchesType = selectedType === 'All' || room.type_name.toLowerCase().includes(selectedType.toLowerCase());
-    const matchesAvailability = !showOnlyAvailable || room.is_available;
-    return matchesType && matchesAvailability;
-  });
+  const [activeTab, setActiveTab] = useState('inventory'); // 'inventory' | 'types'
+  const [userRole, setUserRole] = useState('client'); // 'client' | 'admin'
 
   return (
-    <div className="min-h-screen p-6 font-sans text-[#3F2E24]" style={{ backgroundColor: '#FDF2DF' }}>
+    <div className="min-h-screen p-6 font-sans text-[#2B1D14] bg-[#F3E4C6]">
       
-      {/* Header */}
-      <div className="max-w-7xl mx-auto mb-8">
-        <h1 className="text-3xl font-black uppercase tracking-tight">Available Stays & Lodging</h1>
-        <p className="text-xs font-medium opacity-70 mt-1">Day 1 UI Showcase: Basic interactive filtering.</p>
-      </div>
+      {/* Universal Control Header */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center border-b border-[#2B1D14]/10 pb-5 mb-8 gap-4">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap gap-2">
+            <button 
+              onClick={() => setActiveTab('inventory')}
+              className={`px-5 py-2 font-bold text-sm uppercase rounded-xl transition cursor-pointer ${
+                activeTab === 'inventory' ? 'bg-[#2B1D14] text-[#F3E4C6] shadow-sm' : 'text-[#2B1D14] hover:bg-[#2B1D14]/10'
+              }`}
+            >
+              Live Room Catalog
+            </button>
+            <button 
+              onClick={() => setActiveTab('types')}
+              className={`px-5 py-2 font-bold text-sm uppercase rounded-xl transition cursor-pointer ${
+                activeTab === 'types' ? 'bg-[#2B1D14] text-[#F3E4C6] shadow-sm' : 'text-[#2B1D14] hover:bg-[#2B1D14]/10'
+              }`}
+            >
+              Configure Room Types
+            </button>
+          </div>
 
-      {/* Main Grid Layout */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
-        
-        {/* Extracted Sidebar Component */}
-        <RoomFilterSidebar 
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-          showOnlyAvailable={showOnlyAvailable}
-          setShowOnlyAvailable={setShowOnlyAvailable}
-        />
-
-        {/* Dynamic Card Display Grid */}
-        <div className="lg:col-span-3">
-          {filteredRooms.length === 0 ? (
-            <div className="bg-white rounded-2xl p-12 text-center border border-[#3F2E24]/10">
-              <p className="font-bold text-gray-500">No rooms match your selections.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredRooms.map((room, idx) => (
-                <RoomCard key={room.room_id} room={room} index={idx} />
-              ))}
-            </div>
-          )}
+          {/* Premium View Switching Control */}
+          <div className="flex items-center self-start bg-white/60 p-1 rounded-xl border border-[#2B1D14]/10">
+            <button
+              onClick={() => setUserRole('client')}
+              className={`px-4 py-1.5 rounded-lg text-xs font-black uppercase transition cursor-pointer ${
+                userRole === 'client' ? 'bg-[#2B1D14] text-white shadow' : 'text-[#2B1D14] hover:bg-[#2B1D14]/5'
+              }`}
+            >
+              Customer View
+            </button>
+            <button
+              onClick={() => setUserRole('admin')}
+              className={`px-4 py-1.5 rounded-lg text-xs font-black uppercase transition cursor-pointer ${
+                userRole === 'admin' ? 'bg-[#2B1D14] text-white shadow' : 'text-[#2B1D14] hover:bg-[#2B1D14]/5'
+              }`}
+            >
+              Admin View
+            </button>
+          </div>
         </div>
 
+        {/* Cleaned Top Right Corner */}
+        <div className="lg:self-center">
+          <HotelSelector />
+        </div>
+      </div>
+
+      {/* Title & Filter Context Pipeline Block */}
+      <div className="max-w-7xl mx-auto mb-6">
+        
+        
+        {/* Banner repositioned beneath title text */}
+        <SelectedHotelBanner />
+      </div>
+
+      {/* Main Render Pipeline router */}
+      <div className="max-w-7xl mx-auto">
+        {activeTab === 'types' ? (
+          <RoomTypeConfig />
+        ) : userRole === 'admin' ? (
+          <AdminRooms />
+        ) : (
+          <UserRooms />
+        )}
       </div>
     </div>
   );
