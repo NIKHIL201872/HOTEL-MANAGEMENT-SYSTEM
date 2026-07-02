@@ -2,12 +2,12 @@
 
 .payment-page{
     @apply min-h-screen p-8;
-    background-color:#FDF2DF;
+    background-color:#f2e4cf;
 }
 
 .payment-title{
     @apply text-4xl font-bold mb-10 text-center;
-    color:#3F2E24;
+    color:#4a2c1d;
 }
 
 .payment-container{
@@ -16,7 +16,8 @@
 
 .payment-card{
     @apply rounded-2xl shadow-xl p-6;
-    background:#D7F3B4;
+    background-color: #fbf3e7;
+    border: 1px solid #d8bfa0;
 }
 
 .payment-method{
@@ -37,17 +38,17 @@
 
 .payment-button-upi{
     @apply text-white;
-    background:#3F2E24;
+    background: #6b2d2d;
 }
 
 .payment-button-card{
     @apply text-white;
-    background:#3F2E24;
+    background: #6b2d2d;
 }
 
 .payment-button-inactive{
-    @apply text-gray-700;
-    background:#EADCC8;
+    @apply text-white;
+    background:#a14444;
 }
 
 .payment-form{

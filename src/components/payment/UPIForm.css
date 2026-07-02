@@ -6,7 +6,7 @@
 
 .upi-title{
     @apply text-2xl font-bold;
-    color:#3F2E24;
+    color:#4a2c1d;
 }
 
 .upi-label{
@@ -21,9 +21,9 @@
 
 .upi-button{
     @apply text-white px-2 py-3 rounded-xl transition;
-    background:#3F2E24;
+    background:#a14444;
 }
 
 .upi-button:hover{
-    background:#2E2119;
+    background:#6b2d2d;
 }

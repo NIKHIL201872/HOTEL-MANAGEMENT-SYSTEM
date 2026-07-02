@@ -2,12 +2,13 @@
 
 .receipt-page{
     @apply min-h-screen flex items-center justify-center p-8;
-    background-color: #FDF2DF;
+    background-color: #f2e4cf;
 }
 
 .receipt-card{
     @apply w-full max-w-3xl rounded-2xl shadow-xl p-8;
-    background-color: #FF9E5B;
+    background-color: #fbf3e7;
+    border: 1px solid #d8bfa0;
 }
 
 .receipt-header{
@@ -16,7 +17,7 @@
 
 .receipt-title{
     @apply text-4xl font-bold;
-    color: #3F2E24;
+    color: #4a2c1d;
 }
 
 .receipt-subtitle{
@@ -73,9 +74,9 @@
 
 .receipt-button{
     @apply text-white px-8 py-3 rounded-xl font-semibold transition duration-300 shadow-lg;
-    background-color: #3F2E24;
+    background-color: #a14444;
 }
 
 .receipt-button:hover{
-    background-color: #2C2019;
+    background-color: #6b2d2d;;
 }

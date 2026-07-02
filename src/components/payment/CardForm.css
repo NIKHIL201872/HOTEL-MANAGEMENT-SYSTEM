@@ -2,12 +2,12 @@
 
 .card-form{
     @apply space-y-6 rounded-2xl p-6 shadow-lg;
-    background-color: #FFDB78;
+    background-color: #d8a48f;
 }
 
 .card-title{
     @apply text-2xl font-bold;
-    color: #3F2E24;
+    color: #4a2c1d;
 }
 
 .card-label{
@@ -31,9 +31,9 @@
 
 .card-button{
     @apply w-full text-white font-semibold py-3 rounded-xl shadow-md transition duration-300;
-    background-color: #3F2E24;
+    background:#a14444;
 }
 
 .card-button:hover{
-    background-color: #2C2019;
+    background:#6b2d2d;
 }
