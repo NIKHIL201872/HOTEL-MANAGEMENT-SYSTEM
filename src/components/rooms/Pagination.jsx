@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
-export default function Pagination({ currentPage, totalPages, onPageChange }) {
+function Pagination({ currentPage, totalPages, onPageChange }) {
+  const pageNumbers = useMemo(
+    () => Array.from({ length: totalPages }, (_, i) => i + 1),
+    [totalPages]
+  );
+
   if (totalPages <= 1) return null;
 
   return (
@@ -12,17 +17,17 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       >
         Prev
       </button>
-      {[...Array(totalPages)].map((_, i) => (
+      {pageNumbers.map((page) => (
         <button
-          key={i}
-          onClick={() => onPageChange(i + 1)}
+          key={page}
+          onClick={() => onPageChange(page)}
           className={`w-9 h-9 rounded-lg font-bold text-xs transition cursor-pointer ${
-            currentPage === i + 1
+            currentPage === page
               ? 'bg-[#2B1D14] text-white shadow-sm'
               : 'bg-white border border-[#2B1D14]/15 text-[#2B1D14] hover:bg-[#2B1D14]/5'
           }`}
         >
-          {i + 1}
+          {page}
         </button>
       ))}
       <button 
@@ -35,3 +40,5 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
     </div>
   );
 }
+
+export default React.memo(Pagination);

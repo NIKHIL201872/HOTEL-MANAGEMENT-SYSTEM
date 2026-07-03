@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 
 // Sample structural rotation arrays for different angle view slots
 const SAMPLE_ROOM_ANGLES = [
@@ -7,8 +7,21 @@ const SAMPLE_ROOM_ANGLES = [
   "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"  // Balcony/Detail view
 ];
 
-export default function RoomDetailView({ room, onBack, onRedirectToReservation }) {
+function RoomDetailView({ room, onBack, onRedirectToReservation }) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
+
+  const handleReserve = useCallback(() => {
+    onRedirectToReservation(room);
+  }, [onRedirectToReservation, room]);
+
+  const amenityBadges = useMemo(
+    () => room ? room.amenities.map((amenity, idx) => (
+      <span key={idx} className="bg-[#2B1D14]/5 text-[#2B1D14] text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+        {amenity}
+      </span>
+    )) : null,
+    [room]
+  );
 
   if (!room) return null;
 
@@ -89,11 +102,7 @@ export default function RoomDetailView({ room, onBack, onRedirectToReservation }
             <div className="space-y-2.5 pt-2">
               <h4 className="text-xs font-black uppercase tracking-widest text-gray-400">Included Utilities & Perks</h4>
               <div className="flex flex-wrap gap-2">
-                {room.amenities.map((amenity, idx) => (
-                  <span key={idx} className="bg-[#2B1D14]/5 text-[#2B1D14] text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
-                    {amenity}
-                  </span>
-                ))}
+                {amenityBadges}
               </div>
             </div>
           </div>
@@ -106,7 +115,7 @@ export default function RoomDetailView({ room, onBack, onRedirectToReservation }
             </p>
             
             <button 
-              onClick={() => onRedirectToReservation(room)}
+              onClick={handleReserve}
               className="w-full bg-[#2B1D14] text-[#F3E4C6] hover:opacity-90 active:scale-[0.99] transition font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-sm text-center block cursor-pointer"
             >
               Proceed to Booking Window →
@@ -118,3 +127,5 @@ export default function RoomDetailView({ room, onBack, onRedirectToReservation }
     </div>
   );
 }
+
+export default React.memo(RoomDetailView);

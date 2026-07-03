@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useRoomStore } from '../../store/roomStore';
 
 export default function SelectedHotelBanner() {
   const { selectedHotelId, hotels } = useRoomStore();
 
-  const selectedHotel = selectedHotelId !== 'all'
-    ? hotels.find(h => String(h.hotel_id) === String(selectedHotelId))
-    : null;
+  const selectedHotel = useMemo(
+    () => selectedHotelId !== 'all'
+      ? hotels.find(h => String(h.hotel_id) === String(selectedHotelId))
+      : null,
+    [selectedHotelId, hotels]
+  );
 
   const label = selectedHotel ? selectedHotel.name : 'All Connected Properties';
 

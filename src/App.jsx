@@ -1,29 +1,16 @@
-import UserDashboard from "./components/UserDashboard";
+
+import React from 'react'
 import RoomsDashboard from './components/rooms/RoomsDashboard'
-import HotelSearch from "./components/Hotel/HotelSearch";
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ReservationRegistration from './pages/ReservationRegistration';
 
-const App = () => {
+function App() {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-[#FDF2DF] font-mono ">
-      <UserDashboard />
-        <HotelSearch />
+    <div className="min-h-screen bg-gray-100">
+      {/* If your team is using a navbar component, you can put it here */}
+      
+      <main>
         <RoomsDashboard />
-        <BrowserRouter>
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/reservations" element={<ReservationRegistration />} />
-
-                {/* Temporary: send the root to login until the real landing page lands */}
-                <Route path="/" element={<Navigate to="/login" replace />} />
-            </Routes>
-        </BrowserRouter>
+      </main>
     </div>
-  );
-};
-
+  )
+}
 export default App;

@@ -6,6 +6,13 @@ export function useFilteredRooms({
   selectedHotelId,
   filters
 }) {
+  // Lowercase the selected type strings once per filter change instead of
+  // once per (room * selected type) pair inside the hot filter loop below.
+  const loweredTypes = useMemo(
+    () => filters.selectedTypes.map(t => t.toLowerCase()),
+    [filters.selectedTypes]
+  );
+
   return useMemo(() => {
     return rooms.filter(room => {
       // 1. Role Enforcement Check
@@ -24,7 +31,10 @@ export function useFilteredRooms({
       // Room -> Hotel relationship. Do not fabricate one client-side.
 
       // 3. Room Type Category Text Match
-      if (filters.selectedTypes.length > 0 && !filters.selectedTypes.some(t => room.type_name.toLowerCase().includes(t.toLowerCase()))) return false;
+      if (loweredTypes.length > 0) {
+        const roomTypeLower = room.type_name.toLowerCase();
+        if (!loweredTypes.some(t => roomTypeLower.includes(t))) return false;
+      }
 
       // 4. Rating Match
       if (filters.minRating > 0) {
@@ -38,5 +48,5 @@ export function useFilteredRooms({
 
       return true;
     });
-  }, [rooms, userRole, selectedHotelId, filters]);
+  }, [rooms, userRole, selectedHotelId, filters, loweredTypes]);
 }

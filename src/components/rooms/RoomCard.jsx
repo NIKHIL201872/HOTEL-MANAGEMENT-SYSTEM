@@ -7,9 +7,9 @@ const ROOM_IMGS = [
   "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
 ];
 
-// FIXED: Destructured onEdit from the component arguments
-export default function RoomCard({ room, index, userRole, onSelect, onEdit }) {
+function RoomCard({ room, index, userRole, onSelect, onEdit, onDelete }) {
   const cardBackground = CARD_COLORS[index % CARD_COLORS.length];
+  const roomImg = ROOM_IMGS[index % ROOM_IMGS.length];
 
   return (
     <div 
@@ -20,10 +20,11 @@ export default function RoomCard({ room, index, userRole, onSelect, onEdit }) {
       <div>
         {/* Image Container Context Viewport */}
         <div className="relative h-44 w-full bg-gray-100">
-          <img src={ROOM_IMGS[index % ROOM_IMGS.length]} alt={room.type_name} className="w-full h-full object-cover" />
+          <img src={roomImg} alt={room.type_name} className="w-full h-full object-cover" />
 
           {/* EDIT BUTTON FOR ADMINS ONLY */}
           {userRole === 'admin' && (
+            <>
             <button
               onClick={(e) => {
                 e.stopPropagation(); // Stops parent container click from navigating to item details view
@@ -33,7 +34,19 @@ export default function RoomCard({ room, index, userRole, onSelect, onEdit }) {
             >
               ✏️ Edit
             </button>
+            
+            <button
+              onClick={(e) => {
+                  e.stopPropagation();
+                  onDelete && onDelete(room);
+              }}
+              className="absolute top-12 left-3 bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm transition duration-200 z-10 cursor-pointer"
+          >
+              🗑 Delete
+          </button>
+          </>
           )}
+          
 
           <span className={`absolute top-3 right-3 text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-md text-white shadow-sm ${room.is_available ? 'bg-emerald-600' : 'bg-rose-600'}`}>
             {room.is_available ? 'Available' : 'Booked'}
@@ -64,7 +77,7 @@ export default function RoomCard({ room, index, userRole, onSelect, onEdit }) {
             <span>({room.reviewsCount || 0} guest ratings)</span>
           </div>
         </div>
-      </div> {/* FIXED: Correctly closed structural details wrapper wrapper here */}
+      </div>
 
       {/* Badges Panel Footer Segment */}
       <div className="px-5 pb-5 pt-2">
@@ -79,3 +92,7 @@ export default function RoomCard({ room, index, userRole, onSelect, onEdit }) {
     </div>
   );
 }
+
+// Props are now stable references from parents (useCallback), so memo
+// actually prevents re-renders instead of being a no-op.
+export default React.memo(RoomCard);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DashboardHeader({ title, subtitle, children }) {
+function DashboardHeader({ title, subtitle, children }) {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
       <div className="min-w-0">
@@ -15,3 +15,5 @@ export default function DashboardHeader({ title, subtitle, children }) {
     </div>
   );
 }
+
+export default React.memo(DashboardHeader);

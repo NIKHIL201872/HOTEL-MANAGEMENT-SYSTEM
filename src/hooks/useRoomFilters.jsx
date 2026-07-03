@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 
 export function useRoomFilters() {
   const [selectedTypes, setSelectedTypes] = useState([]);
@@ -7,21 +7,24 @@ export function useRoomFilters() {
   const [minOccupancy, setMinOccupancy] = useState(1);
   const [adminAvailabilityFilter, setAdminAvailabilityFilter] = useState('all');
 
-  const handleTypeCheckboxChange = (type) => {
-    setSelectedTypes(prev => 
+  const handleTypeCheckboxChange = useCallback((type) => {
+    setSelectedTypes(prev =>
       prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]
     );
-  };
+  }, []);
 
-  const clearFilters = () => {
+  const clearFilters = useCallback(() => {
     setSelectedTypes([]);
     setMinRating(0);
     setMaxPrice(900);
     setMinOccupancy(1);
     setAdminAvailabilityFilter('all');
-  };
+  }, []);
 
-  return {
+  // Memoized so consumers (e.g. useFilteredRooms) get a stable reference
+  // unless a value actually changed - otherwise a new object was created
+  // on every render, which silently defeated any downstream useMemo.
+  return useMemo(() => ({
     selectedTypes,
     minRating,
     maxPrice,
@@ -34,5 +37,13 @@ export function useRoomFilters() {
     setAdminAvailabilityFilter,
     handleTypeCheckboxChange,
     clearFilters
-  };
+  }), [
+    selectedTypes,
+    minRating,
+    maxPrice,
+    minOccupancy,
+    adminAvailabilityFilter,
+    handleTypeCheckboxChange,
+    clearFilters
+  ]);
 }

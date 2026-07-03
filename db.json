@@ -904,9 +904,18 @@
     {
       "room_id": 7,
       "room_number": 105,
-      "room_type_id": 3,
-      "is_available": false,
-      "id": "ndZo72xNhhU"
+      "room_type_id": 4,
+      "is_available": true,
+      "id": "ndZo72xNhhU",
+      "type_name": "Penthouse",
+      "description": "Exclusive penthouse",
+      "price_per_night": 300,
+      "max_occupancy": 6,
+      "amenities": [
+        "Shuttle Service"
+      ],
+      "reviewsCount": 1,
+      "rating": "3.0"
     },
     {
       "room_id": 8,
@@ -1229,13 +1238,6 @@
       "room_type_id": 5,
       "is_available": true,
       "id": "test-deluxe-single"
-    },
-    {
-      "room_id": 54,
-      "room_number": 602,
-      "room_type_id": 37,
-      "is_available": true,
-      "id": "test-premium-single"
     }
   ],
   "reservations": [

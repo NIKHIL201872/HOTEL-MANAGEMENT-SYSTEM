@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRoomStore } from '../../store/roomStore';
 import { useRoomFilters } from '../../hooks/useRoomFilters';
 import { useFilteredRooms } from '../../hooks/useRoomFilterPipeline';
@@ -8,6 +8,9 @@ import RoomCard from './RoomCard';
 import RoomManagementModal from './RoomManagementModal';
 import Pagination from './Pagination';
 import RoomDetailView from './RoomDetailView'; // Imported Detail View
+import AdminReview from '../review/AdminReview';
+
+const ITEMS_PER_PAGE = 6;
 
 export default function AdminRooms() {
   const { rooms, loading, selectedHotelId, fetchModuleData } = useRoomStore();
@@ -16,7 +19,7 @@ export default function AdminRooms() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRoomView, setSelectedRoomView] = useState(null); // Added view state
   const [roomToEdit, setRoomToEdit] = useState(null); // Added edit state
-  const itemsPerPage = 6;
+  const [modalMode, setModalMode] = useState("create");
 
   useEffect(() => {
     fetchModuleData();
@@ -29,25 +32,60 @@ export default function AdminRooms() {
     filters
   });
 
-  const totalPages = Math.ceil(filteredRooms.length / itemsPerPage);
-  const currentRooms = filteredRooms.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const totalPages = Math.ceil(filteredRooms.length / ITEMS_PER_PAGE);
+  const currentRooms = useMemo(
+    () => filteredRooms.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE),
+    [filteredRooms, currentPage]
+  );
 
-  const handleFilterChange = (setter, val) => {
+  const handleFilterChange = useCallback((setter, val) => {
     setter(val);
     setCurrentPage(1);
-  };
+  }, []);
 
-  const handleRedirectToBooking = (room) => {
+  const handleRedirectToBooking = useCallback((room) => {
     // Standard routing redirect action target
     window.location.href = `/reservations?room=${room.room_id}`;
-  };
+  }, []);
+
+  const openModalFor = useCallback((mode, room = null) => {
+    setModalMode(mode);
+    setRoomToEdit(room);
+    setIsModalOpen(true);
+  }, []);
+
+  const handleCreate = useCallback(() => openModalFor("create"), [openModalFor]);
+  const handleEdit = useCallback((room) => openModalFor("edit", room), [openModalFor]);
+  const handleDelete = useCallback((room) => openModalFor("delete", room), [openModalFor]);
+  const handleSelectRoom = useCallback((room) => setSelectedRoomView(room), []);
+  const handleBack = useCallback(() => setSelectedRoomView(null), []);
+
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+    setRoomToEdit(null); // Clears targets when closed
+    setModalMode("create");
+  }, []);
+
+  const handleTypeCheckboxChange = useCallback((type) => {
+    filters.handleTypeCheckboxChange(type);
+    setCurrentPage(1);
+  }, [filters]);
+
+  const handleSetMaxPrice = useCallback((val) => handleFilterChange(filters.setMaxPrice, val), [filters, handleFilterChange]);
+  const handleSetMinRating = useCallback((val) => handleFilterChange(filters.setMinRating, val), [filters, handleFilterChange]);
+  const handleSetMinOccupancy = useCallback((val) => handleFilterChange(filters.setMinOccupancy, val), [filters, handleFilterChange]);
+  const handleSetAdminAvailabilityFilter = useCallback((val) => handleFilterChange(filters.setAdminAvailabilityFilter, val), [filters, handleFilterChange]);
+  const handleClearFilters = useCallback(() => {
+    filters.clearFilters();
+    setCurrentPage(1);
+  }, [filters]);
 
   // Conditional Flipkart Detail Intercept Matrix
   if (selectedRoomView) {
     return (
       <RoomDetailView 
         room={selectedRoomView}
-        onBack={() => setSelectedRoomView(null)}
+        onBack={handleBack}
         onRedirectToReservation={handleRedirectToBooking}
       />
     );
@@ -60,10 +98,7 @@ export default function AdminRooms() {
         subtitle="Full operational controls, scheduling status modifications, and profile indexing flags."
       >
         <button 
-          onClick={() => {
-            setRoomToEdit(null); // Clear previous edit selection so modal registers as a fresh entry form
-            setIsModalOpen(true);
-          }}
+          onClick={handleCreate}
           className="text-[#F3E4C6] font-bold px-6 py-3 rounded-xl transition duration-200 text-xs uppercase tracking-wider cursor-pointer shadow-sm bg-[#2B1D14] whitespace-nowrap hover:opacity-90 hover:shadow-md"
         >
           + Create New Room Entry
@@ -74,16 +109,16 @@ export default function AdminRooms() {
         <RoomFilterSidebar 
           userRole="admin"
           selectedTypes={filters.selectedTypes}
-          handleTypeCheckboxChange={(type) => { filters.handleTypeCheckboxChange(type); setCurrentPage(1); }}
+          handleTypeCheckboxChange={handleTypeCheckboxChange}
           maxPrice={filters.maxPrice}
-          setMaxPrice={(val) => handleFilterChange(filters.setMaxPrice, val)}
+          setMaxPrice={handleSetMaxPrice}
           minRating={filters.minRating}
-          setMinRating={(val) => handleFilterChange(filters.setMinRating, val)}
+          setMinRating={handleSetMinRating}
           minOccupancy={filters.minOccupancy}
-          setMinOccupancy={(val) => handleFilterChange(filters.setMinOccupancy, val)}
+          setMinOccupancy={handleSetMinOccupancy}
           adminAvailabilityFilter={filters.adminAvailabilityFilter}
-          setAdminAvailabilityFilter={(val) => handleFilterChange(filters.setAdminAvailabilityFilter, val)}
-          clearFilters={() => { filters.clearFilters(); setCurrentPage(1); }}
+          setAdminAvailabilityFilter={handleSetAdminAvailabilityFilter}
+          clearFilters={handleClearFilters}
         />
 
         <div className="lg:col-span-3 space-y-6">
@@ -102,11 +137,9 @@ export default function AdminRooms() {
                     room={room} 
                     index={idx} 
                     userRole="admin" 
-                    onSelect={(chosenRoom) => setSelectedRoomView(chosenRoom)}
-                    onEdit={(chosenRoom) => {
-                      setRoomToEdit(chosenRoom); // Sets the current asset targeted for editing
-                      setIsModalOpen(true); // Triggers modal setup window
-                    }}
+                    onSelect={handleSelectRoom}
+                    onEdit={handleEdit}
+                    onDelete={handleDelete}
                   />
                 ))}
               </div>
@@ -122,13 +155,12 @@ export default function AdminRooms() {
 
       {isModalOpen && (
         <RoomManagementModal 
+          mode={modalMode}
           roomToEdit={roomToEdit}
-          onClose={() => {
-            setIsModalOpen(false);
-            setRoomToEdit(null); // Clears targets when closed
-          }} 
+          onClose={handleCloseModal} 
         />
       )}
+      <AdminReview></AdminReview>
     </div>
   );
 }

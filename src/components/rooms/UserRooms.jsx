@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRoomStore } from '../../store/roomStore';
 import { useRoomFilters } from '../../hooks/useRoomFilters';
 import { useFilteredRooms } from '../../hooks/useRoomFilterPipeline';
@@ -7,13 +7,15 @@ import RoomFilterSidebar from './RoomFilterSidebar';
 import RoomCard from './RoomCard';
 import Pagination from './Pagination';
 import RoomDetailView from './RoomDetailView'; // Imported Detail View
+import UserReview from '../review/UserReview';
+
+const ITEMS_PER_PAGE = 6;
 
 export default function UserRooms() {
   const { rooms, loading, selectedHotelId, fetchModuleData } = useRoomStore();
   const filters = useRoomFilters();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedRoomView, setSelectedRoomView] = useState(null); // Added view state
-  const itemsPerPage = 6;
 
   useEffect(() => {
     fetchModuleData();
@@ -26,25 +28,44 @@ export default function UserRooms() {
     filters
   });
 
-  const totalPages = Math.ceil(filteredRooms.length / itemsPerPage);
-  const currentRooms = filteredRooms.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const totalPages = Math.ceil(filteredRooms.length / ITEMS_PER_PAGE);
+  const currentRooms = useMemo(
+    () => filteredRooms.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE),
+    [filteredRooms, currentPage]
+  );
 
-  const handleFilterChange = (setter, val) => {
+  const handleFilterChange = useCallback((setter, val) => {
     setter(val);
     setCurrentPage(1);
-  };
+  }, []);
 
-  const handleRedirectToBooking = (room) => {
+  const handleRedirectToBooking = useCallback((room) => {
     // Standard routing redirect action target
     window.location.href = `/reservations?room=${room.room_id}`;
-  };
+  }, []);
+
+  const handleSelectRoom = useCallback((room) => setSelectedRoomView(room), []);
+  const handleBack = useCallback(() => setSelectedRoomView(null), []);
+
+  const handleTypeCheckboxChange = useCallback((type) => {
+    filters.handleTypeCheckboxChange(type);
+    setCurrentPage(1);
+  }, [filters]);
+
+  const handleSetMaxPrice = useCallback((val) => handleFilterChange(filters.setMaxPrice, val), [filters, handleFilterChange]);
+  const handleSetMinRating = useCallback((val) => handleFilterChange(filters.setMinRating, val), [filters, handleFilterChange]);
+  const handleSetMinOccupancy = useCallback((val) => handleFilterChange(filters.setMinOccupancy, val), [filters, handleFilterChange]);
+  const handleClearFilters = useCallback(() => {
+    filters.clearFilters();
+    setCurrentPage(1);
+  }, [filters]);
 
   // Conditional Flipkart Detail Intercept Matrix
   if (selectedRoomView) {
     return (
       <RoomDetailView 
         room={selectedRoomView}
-        onBack={() => setSelectedRoomView(null)}
+        onBack={handleBack}
         onRedirectToReservation={handleRedirectToBooking}
       />
     );
@@ -61,14 +82,14 @@ export default function UserRooms() {
         <RoomFilterSidebar 
           userRole="client"
           selectedTypes={filters.selectedTypes}
-          handleTypeCheckboxChange={(type) => { filters.handleTypeCheckboxChange(type); setCurrentPage(1); }}
+          handleTypeCheckboxChange={handleTypeCheckboxChange}
           maxPrice={filters.maxPrice}
-          setMaxPrice={(val) => handleFilterChange(filters.setMaxPrice, val)}
+          setMaxPrice={handleSetMaxPrice}
           minRating={filters.minRating}
-          setMinRating={(val) => handleFilterChange(filters.setMinRating, val)}
+          setMinRating={handleSetMinRating}
           minOccupancy={filters.minOccupancy}
-          setMinOccupancy={(val) => handleFilterChange(filters.setMinOccupancy, val)}
-          clearFilters={() => { filters.clearFilters(); setCurrentPage(1); }}
+          setMinOccupancy={handleSetMinOccupancy}
+          clearFilters={handleClearFilters}
         />
 
         <div className="lg:col-span-3 space-y-6">
@@ -87,7 +108,7 @@ export default function UserRooms() {
                     room={room} 
                     index={idx} 
                     userRole="client" 
-                    onSelect={(chosenRoom) => setSelectedRoomView(chosenRoom)} // Added selector link
+                    onSelect={handleSelectRoom} // Added selector link
                   />
                 ))}
               </div>
@@ -98,6 +119,7 @@ export default function UserRooms() {
               />
             </>
           )}
+          <UserReview></UserReview>
         </div>
       </div>
     </div>

@@ -1,6 +1,11 @@
 import React from 'react';
 
-export default function RoomFilterSidebar({ 
+const CORE_TYPES = ['Single', 'Double', 'Suite', 'Penthouse'];
+const OCCUPANCY_OPTIONS = [1, 2, 4, 6, 8];
+const RATING_OPTIONS = [0, 2, 3, 4, 5];
+const ADMIN_STATUS_OPTIONS = ['all', 'available', 'booked'];
+
+function RoomFilterSidebar({ 
   userRole,
   selectedTypes, 
   handleTypeCheckboxChange, 
@@ -14,9 +19,6 @@ export default function RoomFilterSidebar({
   setAdminAvailabilityFilter,
   clearFilters 
 }) {
-  const coreTypes = ['Single', 'Double', 'Suite', 'Penthouse'];
-  const occupancyOptions = [1, 2, 4, 6, 8]; 
-
   return (
     <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#2B1D14]/10 space-y-6">
       <div className="border-b border-[#2B1D14]/10 pb-3 flex justify-between items-center">
@@ -33,7 +35,7 @@ export default function RoomFilterSidebar({
             Booking Status (Admin Only)
           </label>
           <div className="flex flex-col gap-1.5">
-            {['all', 'available', 'booked'].map((status) => (
+            {ADMIN_STATUS_OPTIONS.map((status) => (
               <label key={status} className="flex items-center gap-2 text-xs font-bold capitalize text-[#2B1D14] cursor-pointer">
                 <input 
                   type="radio"
@@ -55,7 +57,7 @@ export default function RoomFilterSidebar({
           Room Category
         </label>
         <div className="space-y-2">
-          {coreTypes.map(type => (
+          {CORE_TYPES.map(type => (
             <label key={type} className="flex items-center gap-2 text-xs font-bold text-[#2B1D14] cursor-pointer select-none">
               <input 
                 type="checkbox"
@@ -88,7 +90,7 @@ export default function RoomFilterSidebar({
           Minimum Rating
         </label>
         <div className="grid grid-cols-5 gap-1">
-          {[0, 2, 3, 4, 5].map((stars) => (
+          {RATING_OPTIONS.map((stars) => (
             <button
               key={stars} onClick={() => setMinRating(stars)}
               className={`py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${minRating === stars ? 'bg-[#2B1D14] text-white' : 'bg-[#2B1D14]/[0.06] text-[#2B1D14] hover:bg-[#2B1D14]/10'}`}
@@ -105,7 +107,7 @@ export default function RoomFilterSidebar({
           Min Occupancy
         </label>
         <div className="grid grid-cols-5 gap-1">
-          {occupancyOptions.map((num) => (
+          {OCCUPANCY_OPTIONS.map((num) => (
             <button
               key={num} type="button" onClick={() => setMinOccupancy(num)}
               className={`py-2 rounded-lg text-xs font-black transition cursor-pointer ${minOccupancy === num ? 'bg-[#2B1D14] text-white' : 'bg-white border border-[#2B1D14]/15 text-[#2B1D14] hover:bg-[#2B1D14]/5'}`}
@@ -118,3 +120,5 @@ export default function RoomFilterSidebar({
     </div>
   );
 }
+
+export default React.memo(RoomFilterSidebar);
