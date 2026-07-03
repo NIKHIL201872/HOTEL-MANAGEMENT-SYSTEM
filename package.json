@@ -47,9 +47,5 @@
     "tailwindcss": "^4.3.2",
     "vite": "^8.1.0",
     "vitest": "^4.1.9"
-  },
-  "scripts": {
-  "dev": "vite",
-  "server": "json-server-auth db.json --port 3001"
-}
+  }
 }
