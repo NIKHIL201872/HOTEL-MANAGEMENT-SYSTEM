@@ -1,10 +1,10 @@
-import  { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuthStore } from "../store/authStore";
 
 const ROLES = [
-  { id: 'user', label: 'User' },
-  { id: 'admin', label: 'Admin' },
+  { id: "user", label: "User" },
+  { id: "admin", label: "Admin" },
 ];
 
 export default function Login() {
@@ -14,8 +14,8 @@ export default function Login() {
   const error = useAuthStore((s) => s.error);
   const clearError = useAuthStore((s) => s.clearError);
 
-  const [role, setRole] = useState('user');
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [role, setRole] = useState("user");
+  const [form, setForm] = useState({ email: "", password: "" });
   const [touched, setTouched] = useState(false);
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
@@ -44,7 +44,7 @@ export default function Login() {
     });
 
     if (result.success) {
-      navigate(result.role === 'admin' ? '/admin/dashboard' : '/', {
+      navigate(result.role === "admin" ? "/admin-dashboard" : "/", {
         replace: true,
       });
     }
@@ -77,8 +77,8 @@ export default function Login() {
               onClick={() => handleRoleChange(r.id)}
               className={`py-2.5 rounded-lg text-sm font-bold transition-colors ${
                 role === r.id
-                  ? 'bg-[#3F2E24] text-white'
-                  : 'text-[#8B6A52] hover:text-[#3F2E24]'
+                  ? "bg-[#3F2E24] text-white"
+                  : "text-[#8B6A52] hover:text-[#3F2E24]"
               }`}
             >
               {r.label}
@@ -100,7 +100,9 @@ export default function Login() {
               value={form.email}
               onChange={handleChange}
               placeholder="you@example.com"
-              aria-describedby={touched && !emailValid ? 'email-error' : undefined}
+              aria-describedby={
+                touched && !emailValid ? "email-error" : undefined
+              }
               className="w-full px-4 py-3 rounded-xl border-[1.5px] border-[#ECDFC9] bg-[#FDF2DF] text-[#3F2E24] font-medium placeholder:text-[#B9A48D] focus:outline-none focus:border-[#FF9E5B] focus:ring-4 focus:ring-[#FF9E5B]/20 focus:bg-white transition-all"
             />
             {touched && !emailValid && (
@@ -128,7 +130,7 @@ export default function Login() {
               onChange={handleChange}
               placeholder="••••••••"
               aria-describedby={
-                touched && !passwordValid ? 'password-error' : undefined
+                touched && !passwordValid ? "password-error" : undefined
               }
               className="w-full px-4 py-3 rounded-xl border-[1.5px] border-[#ECDFC9] bg-[#FDF2DF] text-[#3F2E24] font-medium placeholder:text-[#B9A48D] focus:outline-none focus:border-[#FF9E5B] focus:ring-4 focus:ring-[#FF9E5B]/20 focus:bg-white transition-all"
             />
@@ -157,12 +159,14 @@ export default function Login() {
             disabled={!canSubmit}
             className="w-full bg-[#3F2E24] hover:bg-[#2C2019] disabled:bg-[#C9BCAE] disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl transition-colors"
           >
-            {isLoading ? 'Signing in…' : `Sign in as ${role === 'admin' ? 'Admin' : 'User'}`}
+            {isLoading
+              ? "Signing in…"
+              : `Sign in as ${role === "admin" ? "Admin" : "User"}`}
           </button>
         </form>
 
         <p className="text-center text-sm text-[#8B6A52] mt-6">
-          Don&apos;t have an account?{' '}
+          Don&apos;t have an account?{" "}
           <Link
             to="/signup"
             className="font-bold text-[#E8823A] hover:text-[#3F2E24]"

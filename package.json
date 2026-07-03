@@ -10,7 +10,8 @@
     "test:watch": "vitest --watch",
     "preview": "vite preview",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "server": "node server.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
@@ -24,7 +25,11 @@
     "react-router-dom": "^7.18.1",
     "recharts": "^3.9.1",
     "tailwindcss": "^4.3.2",
-    "zustand": "^5.0.14"
+    "zustand": "^5.0.14",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
