@@ -1,6 +1,8 @@
-import  { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useReservationStore } from "../store/reservationStore";
 
-import './registration.css';
+import "./registration.css";
 
 const NIGHTLY_RATE = 299;
 
@@ -13,23 +15,39 @@ function getNights(checkIn, checkOut) {
 }
 
 export default function ReservationForm() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const roomId = searchParams.get("room");
+
+  const { room, roomType, fetchRoomForBooking, createReservation, error } =
+    useReservationStore();
+
   const [formData, setFormData] = useState({
-    guest_name: '',
-    guest_email: '',
-    guest_phone: '',
-    check_in_date: '',
-    check_out_date: '',
-    room_id: '1',
+    guest_name: "",
+    guest_email: "",
+    guest_phone: "",
+    check_in_date: "",
+    check_out_date: "",
+    room_id: roomId || "1",
   });
   const [submitted, setSubmitted] = useState(false);
 
+  // pull the actual room this reservation is for, based on ?room=xx in the URL
+  useEffect(() => {
+    if (roomId) {
+      fetchRoomForBooking(roomId);
+    }
+  }, [roomId, fetchRoomForBooking]);
+
   const nights = useMemo(
     () => getNights(formData.check_in_date, formData.check_out_date),
-    [formData.check_in_date, formData.check_out_date]
+    [formData.check_in_date, formData.check_out_date],
   );
   const dateOrderInvalid =
     formData.check_in_date && formData.check_out_date && nights === 0;
-  const total = nights > 0 ? nights * NIGHTLY_RATE : NIGHTLY_RATE;
+
+  const nightlyRate = roomType?.price_per_night || NIGHTLY_RATE;
+  const total = nights > 0 ? nights * nightlyRate : nightlyRate;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,12 +55,21 @@ export default function ReservationForm() {
     setSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (dateOrderInvalid) return;
-    // Payload matches the reservation schema for the booking API.
-    console.log('Reservation ready for API:', formData);
-    setSubmitted(true);
+
+    const payload = {
+      ...formData,
+      room_id: roomId || formData.room_id,
+    };
+
+    const result = await createReservation(payload);
+
+    if (result.success) {
+      setSubmitted(true);
+      navigate(`/payment?reservation=${result.reservation.reservation_id}`);
+    }
   };
 
   return (
@@ -52,7 +79,8 @@ export default function ReservationForm() {
           <p className="eyebrow">Book your stay</p>
           <h1 className="heading">Complete your reservation</h1>
           <p className="subheading">
-            A few details and the Grand Ocean Suite is yours.
+            A few details and the {roomType?.type_name || "Grand Ocean Suite"}{" "}
+            is yours.
           </p>
 
           <form onSubmit={handleSubmit} noValidate>
@@ -128,7 +156,9 @@ export default function ReservationForm() {
                     id="check_out_date"
                     name="check_out_date"
                     required
-                    aria-describedby={dateOrderInvalid ? 'date-error' : undefined}
+                    aria-describedby={
+                      dateOrderInvalid ? "date-error" : undefined
+                    }
                     value={formData.check_out_date}
                     onChange={handleChange}
                   />
@@ -164,7 +194,17 @@ export default function ReservationForm() {
               </p>
             </div>
 
-            <button type="submit" className="submit-button" disabled={dateOrderInvalid}>
+            {error && (
+              <p className="field-error" role="alert">
+                {error}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              className="submit-button"
+              disabled={dateOrderInvalid}
+            >
               Confirm reservation
             </button>
 
@@ -179,8 +219,12 @@ export default function ReservationForm() {
         <aside className="card-summary" aria-label="Booking summary">
           <div className="summary-top">
             <span className="room-tag">Selected room</span>
-            <h2 className="room-name">Grand Ocean Suite</h2>
-            <p className="room-id">Room {formData.room_id}</p>
+            <h2 className="room-name">
+              {roomType?.type_name || "Grand Ocean Suite"}
+            </h2>
+            <p className="room-id">
+              Room {room?.room_number || formData.room_id}
+            </p>
 
             <ul className="amenity-list">
               <li>Ocean view</li>
@@ -191,14 +235,14 @@ export default function ReservationForm() {
 
           <div className="summary-bottom">
             <div className="stay-length">
-              <span>{nights > 0 ? nights : '—'}</span>
+              <span>{nights > 0 ? nights : "—"}</span>
               <span className="stay-length-label">
-                {nights === 1 ? 'night' : 'nights'}
+                {nights === 1 ? "night" : "nights"}
               </span>
             </div>
             <div className="price">
               <p className="price-label">
-                {nights > 0 ? 'Total for stay' : 'Starting from'}
+                {nights > 0 ? "Total for stay" : "Starting from"}
               </p>
               <p className="price-value">
                 ${total.toLocaleString()}

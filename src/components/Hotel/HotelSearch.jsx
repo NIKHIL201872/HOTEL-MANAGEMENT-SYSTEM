@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
-import { getAllHotels, getAllAmenities, getHotelAmenityLinks, getHotelRatings } from "../../utils/hotelApi";
+import {
+  getAllHotels,
+  getAllAmenities,
+  getHotelAmenityLinks,
+  getHotelRatings,
+} from "../../utils/hotelApi";
 import { HotelAmenity } from "./HotelAmenity";
 import { hotelImageFolder } from "./HotelImage";
 import "./HotelSearch.css";
+import { useNavigate } from "react-router-dom";
+import { useRoomStore } from "../../store/roomStore";
 
 const cardColors = ["#d8a48f", "#e8c39e", "#c9a66b"];
 const HOTELS_PER_PAGE = 3;
@@ -13,7 +20,7 @@ function getHotelImagePath(hotelName, imageNumber) {
   const folderNumber = hotelImageFolder[hotelName];
   return new URL(
     "../../assests/hotel/" + folderNumber + "/" + imageNumber + ".jpg",
-    import.meta.url
+    import.meta.url,
   ).href;
 }
 
@@ -49,6 +56,14 @@ function HotelCard({ hotel, index, onCardClick }) {
 function HotelDetails({ hotel, amenityList, hotelAmenityList, ratingList }) {
   const amenities = HotelAmenity(hotel.hotel_id, amenityList, hotelAmenityList);
   const rating = getRatingForHotel(hotel.hotel_id, ratingList);
+  const navigate = useNavigate();
+  const setSelectedHotelId = useRoomStore((state) => state.setSelectedHotelId);
+
+  const handleViewRooms = () => {
+    setSelectedHotelId(hotel.hotel_id);
+    console.log("hotel_id: ", hotel.hotel_id);
+    navigate("/rooms");
+  };
 
   const image1 = getHotelImagePath(hotel.name, 1);
   const image2 = getHotelImagePath(hotel.name, 2);
@@ -70,9 +85,7 @@ function HotelDetails({ hotel, amenityList, hotelAmenityList, ratingList }) {
         <p className="hotel-location">{hotel.location}</p>
         <p className="hotel-description">{hotel.description}</p>
 
-        {rating && (
-          <p className="hotel-rating">⭐ {rating} out of 5</p>
-        )}
+        {rating && <p className="hotel-rating">⭐ {rating} out of 5</p>}
 
         <div className="amenity-tags">
           {amenities.length > 0 ? (
@@ -82,11 +95,15 @@ function HotelDetails({ hotel, amenityList, hotelAmenityList, ratingList }) {
               </span>
             ))
           ) : (
-            <span className="amenity-tag amenity-tag-empty">no amenities listed</span>
+            <span className="amenity-tag amenity-tag-empty">
+              no amenities listed
+            </span>
           )}
         </div>
 
-        <button className="view-rooms-btn">View Rooms</button>
+        <button className="view-rooms-btn" onClick={handleViewRooms}>
+          View Rooms
+        </button>
       </div>
     </div>
   );
@@ -111,13 +128,18 @@ function HotelSearch() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [hotelsResponse, amenitiesResponse, linksResponse, ratingsResponse] = await Promise.all([
+        const [
+          hotelsResponse,
+          amenitiesResponse,
+          linksResponse,
+          ratingsResponse,
+        ] = await Promise.all([
           getAllHotels(),
           getAllAmenities(),
           getHotelAmenityLinks(),
           getHotelRatings(),
         ]);
-
+        console.log(hotelsResponse);
         setHotels(hotelsResponse.data);
         setAmenityList(amenitiesResponse.data);
         setHotelAmenityList(linksResponse.data);
@@ -186,10 +208,17 @@ function HotelSearch() {
         {currentView === "search" && (
           <>
             <div className="search-bar-row">
-              <input type="text" className="search-input" placeholder="Search location / hotel name here"
-                value={searchText} onChange={(e) => setSearchText(e.target.value)}
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Search location / hotel name here"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
               />
-              <button className="search-btn" onClick={goToSearchPage}> Search </button>
+              <button className="search-btn" onClick={goToSearchPage}>
+                {" "}
+                Search{" "}
+              </button>
             </div>
 
             <div className="preview-panel">
@@ -197,7 +226,11 @@ function HotelSearch() {
                 {topThreeHotels.length > 0 ? (
                   topThreeHotels.map((hotel, index) => (
                     <div className="col-12 col-md-4" key={hotel.hotel_id}>
-                      <HotelCard hotel={hotel} index={index} onCardClick={openSingleHotel} />
+                      <HotelCard
+                        hotel={hotel}
+                        index={index}
+                        onCardClick={openSingleHotel}
+                      />
                     </div>
                   ))
                 ) : (
@@ -207,7 +240,10 @@ function HotelSearch() {
 
               {searchResults.length > 3 && (
                 <div className="text-end mt-4">
-                  <button className="view-all-btn" onClick={() => setCurrentView("viewAll")}>
+                  <button
+                    className="view-all-btn"
+                    onClick={() => setCurrentView("viewAll")}
+                  >
                     View All
                   </button>
                 </div>
@@ -224,7 +260,9 @@ function HotelSearch() {
               </button>
             </div>
 
-            <h2 className="single-hotel-tagline">Stay Where Comfort Meets Luxury</h2>
+            <h2 className="single-hotel-tagline">
+              Stay Where Comfort Meets Luxury
+            </h2>
 
             <HotelDetails
               hotel={selectedHotel}
@@ -241,7 +279,9 @@ function HotelSearch() {
               <button className="back-btn" onClick={goToSearchPage}>
                 ← Back
               </button>
-              <h4 className="section-heading m-0">All Hotels ({searchResults.length})</h4>
+              <h4 className="section-heading m-0">
+                All Hotels ({searchResults.length})
+              </h4>
             </div>
 
             <div className="d-flex flex-column gap-4">
@@ -260,7 +300,8 @@ function HotelSearch() {
               <button
                 className="app-btn-outline"
                 disabled={page === 1}
-                onClick={() => setPage(page - 1)}>
+                onClick={() => setPage(page - 1)}
+              >
                 Previous
               </button>
 

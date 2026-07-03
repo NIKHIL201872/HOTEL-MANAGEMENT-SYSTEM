@@ -25,6 +25,204 @@
       "role": "user"
     }
   ],
+  "hotelRatings": [
+    {
+      "hotel_id": 1,
+      "rating": 4.5
+    },
+    {
+      "hotel_id": 2,
+      "rating": 4.2
+    },
+    {
+      "hotel_id": 3,
+      "rating": 3.8
+    },
+    {
+      "hotel_id": 4,
+      "rating": 4.7
+    },
+    {
+      "hotel_id": 5,
+      "rating": 4.1
+    },
+    {
+      "hotel_id": 6,
+      "rating": 3.9
+    },
+    {
+      "hotel_id": 7,
+      "rating": 4.6
+    },
+    {
+      "hotel_id": 8,
+      "rating": 4
+    },
+    {
+      "hotel_id": 9,
+      "rating": 4.8
+    },
+    {
+      "hotel_id": 10,
+      "rating": 3.7
+    },
+    {
+      "hotel_id": 11,
+      "rating": 4.3
+    },
+    {
+      "hotel_id": 12,
+      "rating": 4.9
+    },
+    {
+      "hotel_id": 13,
+      "rating": 3.6
+    },
+    {
+      "hotel_id": 14,
+      "rating": 4.4
+    },
+    {
+      "hotel_id": 15,
+      "rating": 4.1
+    },
+    {
+      "hotel_id": 16,
+      "rating": 3.8
+    },
+    {
+      "hotel_id": 17,
+      "rating": 4.7
+    },
+    {
+      "hotel_id": 18,
+      "rating": 4
+    },
+    {
+      "hotel_id": 19,
+      "rating": 4.6
+    },
+    {
+      "hotel_id": 20,
+      "rating": 3.9
+    },
+    {
+      "hotel_id": 21,
+      "rating": 4.8
+    },
+    {
+      "hotel_id": 22,
+      "rating": 4.2
+    },
+    {
+      "hotel_id": 23,
+      "rating": 3.7
+    },
+    {
+      "hotel_id": 24,
+      "rating": 4.5
+    },
+    {
+      "hotel_id": 25,
+      "rating": 4.3
+    },
+    {
+      "hotel_id": 26,
+      "rating": 4.1
+    },
+    {
+      "hotel_id": 27,
+      "rating": 3.9
+    },
+    {
+      "hotel_id": 28,
+      "rating": 4.6
+    },
+    {
+      "hotel_id": 29,
+      "rating": 4.4
+    },
+    {
+      "hotel_id": 30,
+      "rating": 3.8
+    },
+    {
+      "hotel_id": 31,
+      "rating": 4.7
+    },
+    {
+      "hotel_id": 32,
+      "rating": 4.2
+    },
+    {
+      "hotel_id": 33,
+      "rating": 4
+    },
+    {
+      "hotel_id": 34,
+      "rating": 3.6
+    },
+    {
+      "hotel_id": 35,
+      "rating": 4.9
+    },
+    {
+      "hotel_id": 36,
+      "rating": 4.5
+    },
+    {
+      "hotel_id": 37,
+      "rating": 4.3
+    },
+    {
+      "hotel_id": 38,
+      "rating": 3.9
+    },
+    {
+      "hotel_id": 39,
+      "rating": 4.1
+    },
+    {
+      "hotel_id": 40,
+      "rating": 4.8
+    },
+    {
+      "hotel_id": 41,
+      "rating": 4.2
+    },
+    {
+      "hotel_id": 42,
+      "rating": 4.6
+    },
+    {
+      "hotel_id": 43,
+      "rating": 4.4
+    },
+    {
+      "hotel_id": 44,
+      "rating": 3.7
+    },
+    {
+      "hotel_id": 45,
+      "rating": 4
+    },
+    {
+      "hotel_id": 46,
+      "rating": 4.9
+    },
+    {
+      "hotel_id": 47,
+      "rating": 3.8
+    },
+    {
+      "hotel_id": 48,
+      "rating": 4.5
+    },
+    {
+      "hotel_id": 49,
+      "rating": 4.3
+    }
+  ],
   "hotels": [
     {
       "hotel_id": 1,
@@ -890,378 +1088,432 @@
       "room_number": 101,
       "room_type_id": 1,
       "is_available": true,
-      "id": "c8EY35IU4Vc"
+      "id": "c8EY35IU4Vc",
+      "hotel_id": 1
     },
     {
       "room_id": 2,
       "room_number": 102,
       "room_type_id": 2,
       "is_available": false,
-      "id": "jset8gV8N6A"
+      "id": "jset8gV8N6A",
+      "hotel_id": 2
     },
     {
       "room_id": 3,
       "room_number": 201,
       "room_type_id": 3,
       "is_available": true,
-      "id": "ZJFovNckd08"
+      "id": "ZJFovNckd08",
+      "hotel_id": 3
     },
     {
       "room_id": 4,
       "room_number": 301,
       "room_type_id": 4,
       "is_available": false,
-      "id": "MIkIPTEcvlI"
+      "id": "MIkIPTEcvlI",
+      "hotel_id": 4
     },
     {
       "room_id": 5,
       "room_number": 103,
       "room_type_id": 1,
       "is_available": true,
-      "id": "d9AuG9URZR8"
+      "id": "d9AuG9URZR8",
+      "hotel_id": 5
     },
     {
       "room_id": 6,
       "room_number": 104,
       "room_type_id": 2,
       "is_available": true,
-      "id": "CqwbBFgpGi0"
+      "id": "CqwbBFgpGi0",
+      "hotel_id": 6
     },
     {
       "room_id": 7,
       "room_number": 105,
       "room_type_id": 3,
       "is_available": false,
-      "id": "ndZo72xNhhU"
+      "id": "ndZo72xNhhU",
+      "hotel_id": 7
     },
     {
       "room_id": 8,
       "room_number": 106,
       "room_type_id": 4,
       "is_available": true,
-      "id": "wSDtEMEyFck"
+      "id": "wSDtEMEyFck",
+      "hotel_id": 8
     },
     {
       "room_id": 9,
       "room_number": 107,
       "room_type_id": 1,
       "is_available": false,
-      "id": "MWO1wutdDzw"
+      "id": "MWO1wutdDzw",
+      "hotel_id": 9
     },
     {
       "room_id": 10,
       "room_number": 108,
       "room_type_id": 2,
       "is_available": true,
-      "id": "ySutrWRbfdg"
+      "id": "ySutrWRbfdg",
+      "hotel_id": 10
     },
     {
       "room_id": 11,
       "room_number": 109,
       "room_type_id": 3,
       "is_available": true,
-      "id": "B_QLQDvKCyM"
+      "id": "B_QLQDvKCyM",
+      "hotel_id": 11
     },
     {
       "room_id": 12,
       "room_number": 110,
       "room_type_id": 4,
       "is_available": false,
-      "id": "VndV5wHWXm0"
+      "id": "VndV5wHWXm0",
+      "hotel_id": 12
     },
     {
       "room_id": 13,
       "room_number": 201,
       "room_type_id": 1,
       "is_available": true,
-      "id": "MeQE2IfGRzI"
+      "id": "MeQE2IfGRzI",
+      "hotel_id": 13
     },
     {
       "room_id": 14,
       "room_number": 202,
       "room_type_id": 2,
       "is_available": false,
-      "id": "6eYuVpwHEuQ"
+      "id": "6eYuVpwHEuQ",
+      "hotel_id": 14
     },
     {
       "room_id": 15,
       "room_number": 203,
       "room_type_id": 3,
       "is_available": true,
-      "id": "vSZ0oZD0sAs"
+      "id": "vSZ0oZD0sAs",
+      "hotel_id": 15
     },
     {
       "room_id": 16,
       "room_number": 204,
       "room_type_id": 4,
       "is_available": false,
-      "id": "oaX5AiK_brg"
+      "id": "oaX5AiK_brg",
+      "hotel_id": 16
     },
     {
       "room_id": 17,
       "room_number": 205,
       "room_type_id": 1,
       "is_available": true,
-      "id": "8844opnejvU"
+      "id": "8844opnejvU",
+      "hotel_id": 17
     },
     {
       "room_id": 18,
       "room_number": 206,
       "room_type_id": 2,
       "is_available": true,
-      "id": "IBAjp4vu-tU"
+      "id": "IBAjp4vu-tU",
+      "hotel_id": 18
     },
     {
       "room_id": 19,
       "room_number": 207,
       "room_type_id": 3,
       "is_available": false,
-      "id": "i2aEx_lR1n0"
+      "id": "i2aEx_lR1n0",
+      "hotel_id": 19
     },
     {
       "room_id": 20,
       "room_number": 208,
       "room_type_id": 4,
       "is_available": true,
-      "id": "0yglFIwZxM4"
+      "id": "0yglFIwZxM4",
+      "hotel_id": 20
     },
     {
       "room_id": 21,
       "room_number": 209,
       "room_type_id": 1,
       "is_available": false,
-      "id": "NJWMjtU8Qj8"
+      "id": "NJWMjtU8Qj8",
+      "hotel_id": 21
     },
     {
       "room_id": 22,
       "room_number": 210,
       "room_type_id": 2,
       "is_available": true,
-      "id": "nCazaPI2Z0E"
+      "id": "nCazaPI2Z0E",
+      "hotel_id": 22
     },
     {
       "room_id": 23,
       "room_number": 301,
       "room_type_id": 3,
       "is_available": true,
-      "id": "RFzVAtZQQ7s"
+      "id": "RFzVAtZQQ7s",
+      "hotel_id": 23
     },
     {
       "room_id": 24,
       "room_number": 302,
       "room_type_id": 4,
       "is_available": false,
-      "id": "JcadsTqOQKE"
+      "id": "JcadsTqOQKE",
+      "hotel_id": 24
     },
     {
       "room_id": 25,
       "room_number": 303,
       "room_type_id": 1,
       "is_available": true,
-      "id": "Mdnoh6Hz36g"
+      "id": "Mdnoh6Hz36g",
+      "hotel_id": 25
     },
     {
       "room_id": 26,
       "room_number": 304,
       "room_type_id": 2,
       "is_available": false,
-      "id": "JJk4dJbfcYw"
+      "id": "JJk4dJbfcYw",
+      "hotel_id": 26
     },
     {
       "room_id": 27,
       "room_number": 305,
       "room_type_id": 3,
       "is_available": true,
-      "id": "Lq5Rp2k4npg"
+      "id": "Lq5Rp2k4npg",
+      "hotel_id": 27
     },
     {
       "room_id": 28,
       "room_number": 306,
       "room_type_id": 4,
       "is_available": true,
-      "id": "pNJovj1-ypw"
+      "id": "pNJovj1-ypw",
+      "hotel_id": 28
     },
     {
       "room_id": 29,
       "room_number": 307,
       "room_type_id": 1,
       "is_available": false,
-      "id": "U52L4oe5mdY"
+      "id": "U52L4oe5mdY",
+      "hotel_id": 29
     },
     {
       "room_id": 30,
       "room_number": 308,
       "room_type_id": 2,
       "is_available": true,
-      "id": "E3nLUkd1I9A"
+      "id": "E3nLUkd1I9A",
+      "hotel_id": 30
     },
     {
       "room_id": 31,
       "room_number": 309,
       "room_type_id": 3,
       "is_available": true,
-      "id": "f7U5liDdiws"
+      "id": "f7U5liDdiws",
+      "hotel_id": 31
     },
     {
       "room_id": 32,
       "room_number": 310,
       "room_type_id": 4,
       "is_available": false,
-      "id": "0PmEz1cqlFI"
+      "id": "0PmEz1cqlFI",
+      "hotel_id": 32
     },
     {
       "room_id": 33,
       "room_number": 401,
       "room_type_id": 1,
       "is_available": true,
-      "id": "eXZsUgR-NNA"
+      "id": "eXZsUgR-NNA",
+      "hotel_id": 33
     },
     {
       "room_id": 34,
       "room_number": 402,
       "room_type_id": 2,
       "is_available": false,
-      "id": "MExhJlwCyRs"
+      "id": "MExhJlwCyRs",
+      "hotel_id": 34
     },
     {
       "room_id": 35,
       "room_number": 403,
       "room_type_id": 3,
       "is_available": true,
-      "id": "Ef9-vJ_pluQ"
+      "id": "Ef9-vJ_pluQ",
+      "hotel_id": 35
     },
     {
       "room_id": 36,
       "room_number": 404,
       "room_type_id": 4,
       "is_available": false,
-      "id": "6MJ7UCt-n3g"
+      "id": "6MJ7UCt-n3g",
+      "hotel_id": 36
     },
     {
       "room_id": 37,
       "room_number": 405,
       "room_type_id": 1,
       "is_available": true,
-      "id": "6lJLiAAcSSU"
+      "id": "6lJLiAAcSSU",
+      "hotel_id": 37
     },
     {
       "room_id": 38,
       "room_number": 406,
       "room_type_id": 2,
       "is_available": true,
-      "id": "8Ma6pO3fpoQ"
+      "id": "8Ma6pO3fpoQ",
+      "hotel_id": 38
     },
     {
       "room_id": 39,
       "room_number": 407,
       "room_type_id": 3,
       "is_available": false,
-      "id": "xEFxTAUPWQc"
+      "id": "xEFxTAUPWQc",
+      "hotel_id": 39
     },
     {
       "room_id": 40,
       "room_number": 408,
       "room_type_id": 4,
       "is_available": true,
-      "id": "dbzudVq2Ym0"
+      "id": "dbzudVq2Ym0",
+      "hotel_id": 40
     },
     {
       "room_id": 41,
       "room_number": 409,
       "room_type_id": 1,
       "is_available": false,
-      "id": "1mij5sYJK2Y"
+      "id": "1mij5sYJK2Y",
+      "hotel_id": 41
     },
     {
       "room_id": 42,
       "room_number": 410,
       "room_type_id": 2,
       "is_available": true,
-      "id": "qgpGiRsjt6M"
+      "id": "qgpGiRsjt6M",
+      "hotel_id": 42
     },
     {
       "room_id": 43,
       "room_number": 501,
       "room_type_id": 3,
       "is_available": true,
-      "id": "va3QAYScZkQ"
+      "id": "va3QAYScZkQ",
+      "hotel_id": 43
     },
     {
       "room_id": 44,
       "room_number": 502,
       "room_type_id": 4,
       "is_available": false,
-      "id": "wdaJIeaQC3k"
+      "id": "wdaJIeaQC3k",
+      "hotel_id": 44
     },
     {
       "room_id": 45,
       "room_number": 503,
       "room_type_id": 1,
       "is_available": true,
-      "id": "dHm5xpQhoA8"
+      "id": "dHm5xpQhoA8",
+      "hotel_id": 45
     },
     {
       "room_id": 46,
       "room_number": 504,
       "room_type_id": 2,
       "is_available": false,
-      "id": "0UsKj241-5A"
+      "id": "0UsKj241-5A",
+      "hotel_id": 46
     },
     {
       "room_id": 47,
       "room_number": 505,
       "room_type_id": 3,
       "is_available": true,
-      "id": "9D3BXzoXXYw"
+      "id": "9D3BXzoXXYw",
+      "hotel_id": 47
     },
     {
       "room_id": 48,
       "room_number": 506,
       "room_type_id": 4,
       "is_available": true,
-      "id": "i9tbSCo-oBI"
+      "id": "i9tbSCo-oBI",
+      "hotel_id": 48
     },
     {
       "room_id": 49,
       "room_number": 507,
       "room_type_id": 1,
       "is_available": false,
-      "id": "9Hix9-u03hE"
+      "id": "9Hix9-u03hE",
+      "hotel_id": 49
     },
     {
       "room_id": 50,
       "room_number": 508,
       "room_type_id": 2,
       "is_available": true,
-      "id": "LhoVlTaYoCY"
+      "id": "LhoVlTaYoCY",
+      "hotel_id": 1
     },
     {
       "room_id": 51,
       "room_number": 509,
       "room_type_id": 3,
       "is_available": true,
-      "id": "dDjCn2d6jFQ"
+      "id": "dDjCn2d6jFQ",
+      "hotel_id": 2
     },
     {
       "room_id": 52,
       "room_number": 510,
       "room_type_id": 4,
       "is_available": false,
-      "id": "IERwGnR-87k"
+      "id": "IERwGnR-87k",
+      "hotel_id": 3
     },
     {
       "room_id": 53,
       "room_number": 601,
       "room_type_id": 5,
       "is_available": true,
-      "id": "test-deluxe-single"
+      "id": "test-deluxe-single",
+      "hotel_id": 4
     },
     {
       "room_id": 54,
       "room_number": 602,
       "room_type_id": 37,
       "is_available": true,
-      "id": "test-premium-single"
+      "id": "test-premium-single",
+      "hotel_id": 5
     }
   ],
   "reservations": [
@@ -1764,6 +2016,69 @@
       "check_out_date": "2028-03-05",
       "room_id": 50,
       "id": "dTZ7wsSOets"
+    },
+    {
+      "guest_name": "ads",
+      "guest_email": "das",
+      "guest_phone": "das",
+      "check_in_date": "2026-07-23",
+      "check_out_date": "2026-07-25",
+      "room_id": "51",
+      "reservation_id": "mj62212nj7"
+    },
+    {
+      "guest_name": "dasds",
+      "guest_email": "dasdasd",
+      "guest_phone": "dasasdds",
+      "check_in_date": "2026-07-09",
+      "check_out_date": "2026-07-15",
+      "room_id": "8",
+      "reservation_id": "xpploqm35o"
+    },
+    {
+      "guest_name": "addas",
+      "guest_email": "dasdas",
+      "guest_phone": "dasdasdsa",
+      "check_in_date": "2026-07-06",
+      "check_out_date": "2026-07-16",
+      "room_id": "6",
+      "reservation_id": "3w4eaazb6e"
+    },
+    {
+      "guest_name": "sd",
+      "guest_email": "ddas",
+      "guest_phone": "44",
+      "check_in_date": "2026-07-04",
+      "check_out_date": "2026-07-08",
+      "room_id": "1",
+      "reservation_id": "5hsxp7iy3l"
+    },
+    {
+      "guest_name": "adsdsadas",
+      "guest_email": "dasdas",
+      "guest_phone": "dasasd",
+      "check_in_date": "2026-07-05",
+      "check_out_date": "2026-07-07",
+      "room_id": "1",
+      "reservation_id": "d31ley1vd0"
+    },
+    {
+      "guest_name": "fsdsdd",
+      "guest_email": "dad",
+      "guest_phone": "dsd",
+      "check_in_date": "2026-07-05",
+      "check_out_date": "2026-07-07",
+      "room_id": "8",
+      "reservation_id": "jg2kwhijkh"
+    },
+    {
+      "guest_name": "fdsfds",
+      "guest_email": "jjsfhsd",
+      "guest_phone": "fsjsjdfbjsd",
+      "check_in_date": "2026-07-05",
+      "check_out_date": "2026-07-07",
+      "room_id": "51",
+      "reservation_id": "e2sv0q61f5"
     }
   ],
   "amenities": [
@@ -3409,6 +3724,20 @@
       "payment_date": "2022-02-05",
       "payment_status": "Paid",
       "id": "LQuLcQx1q6k"
+    },
+    {
+      "reservation_id": "jg2kwhijkh",
+      "amount": 708,
+      "payment_date": "2026-07-03",
+      "payment_status": "Paid",
+      "payment_id": "zyw07h8ov7"
+    },
+    {
+      "reservation_id": "e2sv0q61f5",
+      "amount": 354,
+      "payment_date": "2026-07-03",
+      "payment_status": "Paid",
+      "payment_id": "c1zlxof21z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

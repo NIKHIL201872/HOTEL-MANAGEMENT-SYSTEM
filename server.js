@@ -88,6 +88,7 @@ const collections = [
   'hotelAmenities',
   'reviews',
   'payments',
+  'hotelRatings', 
 ];
 
 const idFieldByCollection = {
@@ -100,6 +101,7 @@ const idFieldByCollection = {
   hotelAmenities: 'id',
   reviews: 'review_id',
   payments: 'payment_id',
+  hotelRatings: 'hotel_id',
 };
 
 collections.forEach((collection) => {

@@ -3,7 +3,7 @@ import UserDashboard from "../components/dashboards/UserDashboard";
 import Layout from "./Layout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
-import HotelSearch from "../components/hotel/HotelSearch";
+import HotelSearch from "../components/Hotel/HotelSearch";
 import RoomsDashboard from "../components/rooms/RoomsDashboard";
 import ReservationRegistration from "../pages/ReservationRegistration";
 import Payment from "../components/payment/Payment";

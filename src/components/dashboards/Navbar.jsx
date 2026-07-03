@@ -38,9 +38,9 @@ const Navbar = () => {
             >
               View Hotels
             </NavLink>
-            <a href="#about" className={general}>
+            {/* <a href="#about" className={general}>
               About Us
-            </a>
+            </a> */}
             <button className={logoutHover} onClick={logout} style={{}}>
               Logout
             </button>

@@ -5,8 +5,9 @@ import { FaRegCopyright } from "react-icons/fa";
 import { FaInstagram, FaFacebookSquare, FaHotel } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoHome } from "react-icons/io5";
-import { TfiWrite } from "react-icons/tfi";
+// import { TfiWrite } from "react-icons/tfi";
 import { FcAbout } from "react-icons/fc";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,27 +24,27 @@ const Footer = () => {
 
         <div className="flex flex-col gap-2">
           <h4 className="text-white font-semibold mb-1">Quick Links</h4>
-          <a
-            href="#"
+          <NavLink
+            to="/"
             className="hover:text-white text-sm flex gap-x-2 items-center"
           >
             <IoHome fontSize={17} />
             Home
-          </a>
-          <a
+          </NavLink>
+          {/* <a
             href="#"
             className="hover:text-white text-sm flex gap-x-2 items-center"
           >
             <TfiWrite fontSize={17} />
             Booking
-          </a>
-          <a
-            href="#"
+          </a> */}
+          <NavLink
+            to="/view-hotels"
             className="hover:text-white text-sm flex gap-x-2 items-center"
           >
             <FaHotel fontSize={17} />
             View Hotels
-          </a>
+          </NavLink>
           <a
             href="#about"
             className="hover:text-white text-sm flex gap-x-2 items-center"

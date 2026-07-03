@@ -1,14 +1,14 @@
-import { create } from 'zustand';
-import axios from 'axios';
+import { create } from "zustand";
+import axios from "axios";
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = "http://localhost:3001";
 
 export const useRoomStore = create((set, get) => ({
   rooms: [],
   roomTypes: [],
   amenities: [],
   hotels: [],
-  selectedHotelId: 'all',
+  selectedHotelId: "all",
   loading: false,
   error: null,
 
@@ -25,7 +25,7 @@ export const useRoomStore = create((set, get) => ({
         roomAmenitiesRes,
         reservationsRes,
         reviewsRes,
-        hotelsRes
+        hotelsRes,
       ] = await Promise.all([
         axios.get(`${API_BASE_URL}/rooms`),
         axios.get(`${API_BASE_URL}/roomTypes`),
@@ -33,15 +33,13 @@ export const useRoomStore = create((set, get) => ({
         axios.get(`${API_BASE_URL}/roomAmenities`),
         axios.get(`${API_BASE_URL}/reservations`),
         axios.get(`${API_BASE_URL}/reviews`),
-        axios.get(`${API_BASE_URL}/hotels`)
+        axios.get(`${API_BASE_URL}/hotels`),
       ]);
 
-      const typesMap = new Map(
-        typesRes.data.map((t) => [t.room_type_id, t])
-      );
+      const typesMap = new Map(typesRes.data.map((t) => [t.room_type_id, t]));
 
       const amenitiesMap = new Map(
-        amenitiesRes.data.map((a) => [a.amenity_id, a.name])
+        amenitiesRes.data.map((a) => [a.amenity_id, a.name]),
       );
 
       // Map room_id to amenity names
@@ -61,7 +59,7 @@ export const useRoomStore = create((set, get) => ({
 
       // Map reservation_id to room_id
       const resToRoomMap = new Map(
-        reservationsRes.data.map((r) => [r.reservation_id, r.room_id])
+        reservationsRes.data.map((r) => [r.reservation_id, r.room_id]),
       );
 
       // Group reviews by room
@@ -95,8 +93,7 @@ export const useRoomStore = create((set, get) => ({
           ...room,
           type_name: typeInfo.type_name || "Standard Room",
           description:
-            typeInfo.description ||
-            "Comfortable stay with basic amenities.",
+            typeInfo.description || "Comfortable stay with basic amenities.",
           price_per_night: typeInfo.price_per_night || 0,
           max_occupancy: typeInfo.max_occupancy || 2,
           amenities: roomAmenitiesMap[room.room_id] || ["Wi-Fi"],
@@ -147,17 +144,14 @@ export const useRoomStore = create((set, get) => ({
 
   updateRoom: async (roomId, roomData) => {
     try {
-      const room = get().rooms.find(r => r.room_id === roomId);
+      const room = get().rooms.find((r) => r.room_id === roomId);
 
       if (!room) return;
 
-      await axios.put(
-        `${API_BASE_URL}/rooms/${room.id}`,
-        {
-          ...room,
-          ...roomData,
-        }
-      );
+      await axios.put(`${API_BASE_URL}/rooms/${room.id}`, {
+        ...room,
+        ...roomData,
+      });
 
       await get().fetchModuleData();
     } catch (err) {
@@ -168,7 +162,7 @@ export const useRoomStore = create((set, get) => ({
   },
   deleteRoom: async (roomId) => {
     try {
-      const room = get().rooms.find(r => r.room_id === roomId);
+      const room = get().rooms.find((r) => r.room_id === roomId);
 
       if (!room) return;
 
