@@ -7,10 +7,12 @@ import RoomFilterSidebar from "./RoomFilterSidebar";
 import RoomCard from "./RoomCard";
 import Pagination from "./Pagination";
 import RoomDetailView from "./RoomDetailView";
+import { useNavigate } from "react-router-dom";
 
 const ITEMS_PER_PAGE = 6;
 
 export default function UserRooms() {
+  const navigate = useNavigate();
   const { rooms, loading, selectedHotelId, fetchModuleData } = useRoomStore();
   const filters = useRoomFilters();
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,10 +44,14 @@ export default function UserRooms() {
     setCurrentPage(1);
   }, []);
 
-  const handleRedirectToBooking = useCallback((room) => {
-    // Standard routing redirect action target
-    window.location.href = `/reservations?room=${room.room_id}`;
-  }, []);
+  const handleRedirectToBooking = useCallback(
+    (room) => {
+      // Standard routing redirect action target
+      // window.location.href = `/reservations?room=${room.room_id}`;
+      navigate(`/reservations?room=${room.room_id}`);
+    },
+    [navigate],
+  );
 
   const handleSelectRoom = useCallback((room) => setSelectedRoomView(room), []);
   const handleBack = useCallback(() => setSelectedRoomView(null), []);

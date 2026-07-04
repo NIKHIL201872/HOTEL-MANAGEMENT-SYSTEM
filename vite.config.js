@@ -4,6 +4,14 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    watch: {
+      usePolling: true,
+    },
+    hmr: {
+      overlay: true,
+    },
+  },
   test: {
     environment: "jsdom",
     setupFiles: "./src/test/setup.js",

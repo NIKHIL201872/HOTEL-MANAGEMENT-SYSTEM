@@ -9,8 +9,12 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/routes";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-    {/* <App /> */}
-  </StrictMode>,
+  // <StrictMode>
+
+  (() => {
+    console.log("MAIN RENDERED");
+    return <RouterProvider router={router} />;
+  })(),
+  // {/* <App /> */}
+  // </StrictMode>,
 );
