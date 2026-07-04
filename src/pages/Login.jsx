@@ -9,11 +9,7 @@ const ROLES = [
 
 export default function Login() {
   const navigate = useNavigate();
-  const login = useAuthStore((s) => s.login);
-  const isLoading = useAuthStore((s) => s.isLoading);
-  const error = useAuthStore((s) => s.error);
-  const clearError = useAuthStore((s) => s.clearError);
-
+  const { login, isLoading, error, clearError } = useAuthStore();
   const [role, setRole] = useState("user");
   const [form, setForm] = useState({ email: "", password: "" });
   const [touched, setTouched] = useState(false);

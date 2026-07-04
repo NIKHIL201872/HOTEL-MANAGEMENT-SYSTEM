@@ -56,7 +56,10 @@ const Footer = () => {
 
         <div className="flex flex-col gap-2">
           <h4 className="text-white font-semibold mb-1">Contact</h4>
-          <p className="text-sm text-gray-400 flex gap-x-2 items-center">
+          <p
+            className="text-sm text-gray-400 flex gap-x-2 items-center"
+            style={{ marginBottom: "0" }}
+          >
             <FaLocationDot fontSize={18} />
             Kolkata, West Bengal, India
           </p>

@@ -13,6 +13,7 @@ import PaymentSuccess from "../pages/PaymentSuccess";
 import AllReservations from "../components/dashboards/admin/AllReservations";
 import Transaction from "../components/dashboards/admin/Transaction";
 import Reviews from "../components/dashboards/admin/Reviews";
+import AddSpecialOffers from "../components/dashboards/admin/AddSpecialOffers";
 
 export const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ export const router = createBrowserRouter([
           {
             path: "reviews",
             element: <Reviews />,
+          },
+          {
+            path: "offers",
+            element: <AddSpecialOffers />,
           },
         ],
       },

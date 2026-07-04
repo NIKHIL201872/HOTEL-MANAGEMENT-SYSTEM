@@ -16,7 +16,7 @@ const Navbar = () => {
         <div>
           <NavLink
             to="/"
-            className=" no-underline! font-bold font-mono text-[#3F2E24]!"
+            className=" no-underline! font-bold font-[georgia] text-[#3F2E24]!"
           >
             <p style={{ fontSize: "2rem" }}>Hotel Management</p>
           </NavLink>

@@ -8,6 +8,7 @@ import {
   X,
 } from "lucide-react";
 import { IoLogOutOutline } from "react-icons/io5";
+import { BiSolidOffer } from "react-icons/bi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../../store/authStore";
 
@@ -23,7 +24,12 @@ const navItems = [
     label: "Transaction",
     to: "/admin-dashboard/transactions",
   },
-  { icon: TableOfContents, label: "Reviews", to: "/admin-dashboard//reviews" },
+  { icon: TableOfContents, label: "Reviews", to: "/admin-dashboard/reviews" },
+  {
+    icon: BiSolidOffer,
+    label: "Offers",
+    to: "/admin-dashboard/offers",
+  },
 ];
 
 const Sidebar = () => {

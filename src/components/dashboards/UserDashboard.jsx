@@ -7,7 +7,7 @@ import img from "../../assests/aboutus.png";
 
 const UserDashboard = () => {
   return (
-    <div className="w-full bg-[#FDF2DF] pt-6 flex flex-col items-center gap-y-6">
+    <div className="w-full bg-[#FDF2DF] pt-6 flex flex-col items-center gap-y-6 font-[georgia]">
       <Home />
       <div className="relative mx-auto pt-7 w-[95vw] overflow-hidden rounded-2xl">
         <img

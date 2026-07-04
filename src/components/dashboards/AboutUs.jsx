@@ -2,7 +2,7 @@ const AboutUs = () => {
   return (
     <div
       id="about"
-      className="w-[95vw] mx-auto mt-6 rounded-2xl p-8 flex flex-col gap-6"
+      className="w-[95vw] mx-auto mt-6 rounded-2xl p-8 flex flex-col gap-6 font-[georgia]"
     >
       <h2 className="text-3xl font-bold text-center">About Us</h2>
 
@@ -17,12 +17,12 @@ const AboutUs = () => {
         <p className=" bg-blue-500 px-4 py-1 text-white rounded-lg">
           Location: Kolkata, India
         </p>
-        <p className="text-white rounded-lg bg-blue-500 opacity-90 px-4 py-1">
+        <p className="text-white rounded-lg bg-blue-500 opacity-90 px-4 py-1 font-mono">
           Contact: +91-9876543210
         </p>
-        <button className="border-2 border-gray-400 rounded-2xl px-5 py-2 bg-yellow-200 hover:bg-gray-100">
+        {/* <button className="border-2 border-gray-400 rounded-2xl px-5 py-2 bg-yellow-200 hover:bg-gray-100">
           Map
-        </button>
+        </button> */}
       </div>
     </div>
   );
