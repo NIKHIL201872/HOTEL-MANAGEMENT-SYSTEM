@@ -1,0 +1,139 @@
+@reference "../../index.css";
+
+.admin-payment-page{
+    @apply min-h-screen p-8;
+    background-color:#f2e4cf;
+}
+
+.admin-payment-heading{
+    @apply text-5xl font-bold text-center mb-10;
+    color:#3F2E24;
+}
+
+.payment-summary{
+    @apply max-w-2xl mx-auto rounded-2xl shadow-xl p-6 mb-8 text-center;
+    background-color:#fbf3e7;
+    border:2px solid #d8bfa0;
+}
+
+.payment-summary h2{
+    @apply text-3xl font-bold;
+    color:#3F2E24;
+}
+
+.payment-search{
+    @apply flex justify-center items-center gap-4 mb-8;
+}
+
+.payment-search input{
+    @apply px-4 py-3 rounded-xl w-72 outline-none;
+    border:2px solid #3F2E24;
+    background:white;
+    color:#3F2E24;
+}
+
+.payment-search button{
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    background-color:#3F2E24;
+    color:white;
+}
+
+.payment-search button:hover{
+    background-color:#5a4032;
+}
+
+.payment-details-card{
+    @apply max-w-2xl mx-auto rounded-2xl shadow-xl p-8 mb-10;
+    background-color:#fbf3e7;
+    border:1px solid #d8bfa0;
+}
+
+.payment-details-card h2{
+    @apply text-3xl font-bold text-center mb-6;
+    color:#3F2E24;
+}
+
+.payment-details-card p{
+    @apply text-lg mb-3;
+    color:#3F2E24;
+}
+
+.payment-filters{
+    @apply flex justify-center items-center gap-6 mb-8;
+}
+
+.payment-filters select{
+    @apply px-4 py-2 rounded-lg;
+    border:2px solid #3F2E24;
+    background:white;
+    color:#3F2E24;
+    font-weight:600;
+}
+
+.payment-list{
+    @apply flex flex-col gap-6 max-w-2xl mx-auto;
+}
+
+.payment-section{
+    @apply w-full;
+}
+
+.payment-card{
+    @apply w-full rounded-2xl shadow-xl p-8;
+    background-color:#fbf3e7;
+    border:1px solid #d8bfa0;
+}
+
+.payment-user{
+    @apply text-2xl font-bold mb-4;
+    color:#3F2E24;
+}
+
+.payment-id,
+.reservation-id,
+.payment-amount,
+.payment-status,
+.payment-date{
+    @apply text-lg mb-2;
+    color:#3F2E24;
+}
+
+.pagination{
+    @apply flex justify-center items-center gap-3 mt-10;
+}
+
+.pagination button{
+    @apply px-4 py-2 rounded-lg font-semibold transition-all duration-300;
+    background-color:#3F2E24;
+    color:white;
+}
+
+.pagination button:hover:not(:disabled){
+    background-color:#5a4032;
+}
+
+.pagination button:disabled{
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.active-page{
+    background-color:#ffb347 !important;
+    color:#3F2E24 !important;
+}
+
+.delete-payment-btn{
+    @apply mt-5 w-full py-3 rounded-xl text-white text-lg font-semibold transition-all duration-300;
+    background-color:#a14444;
+}
+
+.delete-payment-btn:hover{
+    background-color:#6b2d2d;
+}
+
+.delete-payment-btn:active{
+    transform:scale(0.98);
+}
+
+.delete-payment-btn:disabled{
+    @apply opacity-50 cursor-not-allowed;
+}
