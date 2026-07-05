@@ -6658,10 +6658,23 @@
     {
       "room_id": 1,
       "room_number": 101,
-      "room_type_id": 1,
+      "room_type_id": 2,
       "is_available": true,
       "id": "c8EY35IU4Vc",
-      "hotel_id": 1
+      "hotel_id": 1,
+      "type_name": "Single",
+      "description": "Single bed room",
+      "price_per_night": 50,
+      "max_occupancy": 1,
+      "amenities": [
+        "Wi-Fi",
+        "Pool",
+        "In-Room Safe",
+        "Private Cinema",
+        "Billiards Room"
+      ],
+      "reviewsCount": 1,
+      "rating": "4.0"
     },
     {
       "room_id": 2,
@@ -31088,47 +31101,35 @@
       "hotel_id": 139
     },
     {
-      "room_number": 505,
-      "room_type_id": 1,
+      "room_number": 899,
+      "room_type_id": 3,
       "is_available": true,
-      "room_id": "jivzasrt5n"
+      "room_id": 501,
+      "hotel_id": 1,
+      "id": "a1b2c3d4e5f"
     },
     {
       "room_number": 809,
       "room_type_id": 2,
       "is_available": true,
-      "room_id": "huocoxf62y"
+      "room_id": 502,
+      "id": "b2c3d4e5f6a"
     },
     {
       "room_number": 899,
       "room_type_id": 1,
       "is_available": true,
       "hotel_id": 1,
-      "room_id": "srioowntp9"
-    },
-    {
-      "room_number": 508,
-      "room_type_id": 1,
-      "is_available": true,
-      "hotel_id": 22,
-      "room_id": null,
-      "id": "eddidggale"
-    },
-    {
-      "room_number": 702,
-      "room_type_id": 1,
-      "is_available": true,
-      "hotel_id": 2,
-      "room_id": null,
-      "id": "04367mn6kx"
+      "room_id": 503,
+      "id": "c3d4e5f6a7b"
     },
     {
       "room_number": 789,
       "room_type_id": 1,
       "is_available": true,
       "hotel_id": 3,
-      "room_id": null,
-      "id": "6w2m307lna"
+      "room_id": 504,
+      "id": "d4e5f6a7b8c"
     }
   ],
   "reservations": [

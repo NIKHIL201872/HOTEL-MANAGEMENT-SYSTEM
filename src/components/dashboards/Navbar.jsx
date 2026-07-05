@@ -18,7 +18,7 @@ const Navbar = () => {
             to="/"
             className=" no-underline! font-bold font-[georgia] text-[#3F2E24]!"
           >
-            <p style={{ fontSize: "2rem" }}>Hotel Management</p>
+            <p style={{ fontSize: "2rem" }}>Smart Stay</p>
           </NavLink>
         </div>
         {isAuthenticated ? (

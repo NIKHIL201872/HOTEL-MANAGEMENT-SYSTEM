@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="flex flex-wrap justify-between gap-8 max-w-6xl mx-auto">
         <div className="flex flex-col gap-2">
           <h2 className="text-white text-2xl font-bold font-mono">
-            Hotel Management
+            Smart Stay
           </h2>
           <p className="text-sm text-gray-400 max-w-xs">
             Luxury stays, handpicked destinations. Your comfort, our priority.
@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-white/70 mt-8 pt-4 text-sm text-gray-500 flex gap-x-2 items-center justify-center">
-        <FaRegCopyright /> 2026 Hotel Management. All rights reserved.
+        <FaRegCopyright /> 2026 Smart Stay. All rights reserved.
       </div>
     </footer>
   );

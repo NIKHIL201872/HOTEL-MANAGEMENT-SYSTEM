@@ -125,8 +125,10 @@ export const useRoomStore = create((set, get) => ({
       // Math.max(...) - same result as before, but no intermediate
       // argument array and no call-stack risk on large datasets.
       const nextRoomId =
-        rooms.reduce((max, room) => Math.max(max, room.room_id || 0), 0) + 1;
-
+        rooms.reduce((max, room) => {
+          const n = Number(room.room_id);
+          return Number.isFinite(n) ? Math.max(max, n) : max;
+        }, 0) + 1;
       const payload = {
         ...roomData,
         room_id: nextRoomId,
@@ -143,23 +145,15 @@ export const useRoomStore = create((set, get) => ({
   },
 
   updateRoom: async (roomId, roomData) => {
-    try {
-      const room = get().rooms.find((r) => r.room_id === roomId);
-
-      if (!room) return;
-
-      await axios.put(`${API_BASE_URL}/rooms/${room.id}`, {
-        ...room,
-        ...roomData,
-      });
-
-      await get().fetchModuleData();
-    } catch (err) {
-      set({
-        error: err.message,
-      });
-    }
-  },
+  try {
+    const room = get().rooms.find((r) => r.room_id === roomId);
+    if (!room) return;
+    await axios.put(`${API_BASE_URL}/rooms/${room.id}`, { ...room, ...roomData });
+    await get().fetchModuleData();   // only runs if the PUT succeeds
+  } catch (err) {
+    set({ error: err.message });     // fails silently — no throw, no alert
+  }
+},
   deleteRoom: async (roomId) => {
     try {
       const room = get().rooms.find((r) => r.room_id === roomId);
