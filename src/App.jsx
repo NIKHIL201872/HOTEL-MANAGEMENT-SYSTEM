@@ -1,19 +1,40 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ReservationRegistration from './pages/ReservationRegistration';
-// Adjust this import path depending on exactly where you saved ProtectedRoute.jsx
+
+
+import UserDashboard from "./components/dashboards/UserDashboard";
+import RoomsDashboard from "./components/rooms/RoomsDashboard";
+import HotelSearch from "./components/hotel/HotelSearch";
+import Payment from "./components/payment/Payment";
+import AdminPayment from './components/payment/AdminPayment';
+
+
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ReservationRegistration from "./pages/ReservationRegistration";
 import ProtectedRoute from './routes/ProtectedRoute'; 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         
-        {/* MODIFIED: Wrapped the reservation route in the security gate */}
+        
+        <Route path="/search" element={<HotelSearch />} />
+        <Route path="/rooms" element={<RoomsDashboard />} />
+        
+        
+        <Route 
+          path="/dashboard" 
+          element={
+            <ProtectedRoute>
+              <UserDashboard />
+            </ProtectedRoute>
+          } 
+        />
         <Route 
           path="/reservations" 
           element={
@@ -22,8 +43,26 @@ export default function App() {
             </ProtectedRoute>
           } 
         />
+        <Route 
+          path="/payment" 
+          element={
+            <ProtectedRoute>
+              <Payment />
+            </ProtectedRoute>
+          } 
+        />
 
-        {/* Temporary: send the root to login until the real landing page lands */}
+       
+        <Route 
+          path="/admin/payments" 
+          element={
+            <ProtectedRoute allowedRole="admin">
+              <AdminPayment />
+            </ProtectedRoute>
+          } 
+        />
+
+        
         <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
