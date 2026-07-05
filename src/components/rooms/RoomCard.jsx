@@ -10,7 +10,7 @@ const ROOM_IMGS = [
 function RoomCard({ room, index, userRole, onSelect, onEdit, onDelete }) {
   const cardBackground = CARD_COLORS[index % CARD_COLORS.length];
   const roomImg = ROOM_IMGS[index % ROOM_IMGS.length];
-
+console.log(room);
   return (
     <div 
       onClick={() => onSelect && onSelect(room)}
@@ -30,7 +30,8 @@ function RoomCard({ room, index, userRole, onSelect, onEdit, onDelete }) {
                 e.stopPropagation(); // Stops parent container click from navigating to item details view
                 onEdit && onEdit(room);
               }}
-              className="absolute top-3 left-3 bg-white text-[#2B1D14] hover:bg-[#2B1D14] hover:text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm transition duration-200 z-10 cursor-pointer"
+              className="absolute top-3 left-3 bg-white/50 text-[#2B1D14] hover:bg-[#2B1D14] hover:text-white text-[10px]
+              font-black text-uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm transition duration-200 z-10 cursor-pointer"
             >
               ✏️ Edit
             </button>
@@ -40,7 +41,8 @@ function RoomCard({ room, index, userRole, onSelect, onEdit, onDelete }) {
                   e.stopPropagation();
                   onDelete && onDelete(room);
               }}
-              className="absolute top-12 left-3 bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm transition duration-200 z-10 cursor-pointer"
+              className="absolute top-12 left-3 bg-red-600 hover:bg-red-700 text-white text-[10px] font-black text-uppercase
+              tracking-wider px-2.5 py-1 rounded-md shadow-sm transition duration-200 z-10 cursor-pointer"
           >
               🗑 Delete
           </button>

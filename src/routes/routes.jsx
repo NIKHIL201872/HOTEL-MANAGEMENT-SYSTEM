@@ -14,6 +14,7 @@ import AllReservations from "../components/dashboards/admin/AllReservations";
 import Transaction from "../components/dashboards/admin/Transaction";
 import Reviews from "../components/dashboards/admin/Reviews";
 import AddSpecialOffers from "../components/dashboards/admin/AddSpecialOffers";
+import AdminRooms from "../components/rooms/AdminRooms.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -96,6 +97,10 @@ export const router = createBrowserRouter([
             path: "offers",
             element: <AddSpecialOffers />,
           },
+          {
+            path:"manage-rooms",
+            element: <AdminRooms />,
+          }
         ],
       },
     ],

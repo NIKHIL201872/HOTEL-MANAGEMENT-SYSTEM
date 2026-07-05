@@ -7,7 +7,7 @@ const SAMPLE_ROOM_ANGLES = [
   "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"  // Balcony/Detail view
 ];
 
-function RoomDetailView({ room, onBack, onRedirectToReservation }) {
+function RoomDetailView({ room, onBack, onRedirectToReservation,role }) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
 
   const handleReserve = useCallback(() => {
@@ -26,11 +26,12 @@ function RoomDetailView({ room, onBack, onRedirectToReservation }) {
   if (!room) return null;
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="max-w-7xl mx-auto space-y-6 pt-9">
       {/* Back Button / Navigation Header */}
       <button 
         onClick={onBack}
-        className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#2B1D14] hover:opacity-70 transition cursor-pointer"
+        className="flex items-center gap-2 text-xs font-black text-uppercase tracking-wider text-white hover:opacity-70
+        transition cursor-pointer mb-4 p-2 rounded-lg! bg-[#3F2E24]"
       >
         ← Back to Catalog Overview
       </button>
@@ -108,19 +109,22 @@ function RoomDetailView({ room, onBack, onRedirectToReservation }) {
           </div>
 
           {/* Action Reservation Panel with Redirection Routine */}
-          <div className="bg-white rounded-2xl p-6 border-2 border-[#2B1D14] space-y-4 shadow-md">
-            <h3 className="text-sm font-black uppercase tracking-wider text-[#2B1D14]">Interested in booking this?</h3>
-            <p className="text-xs font-medium text-gray-500 leading-normal">
-              Secure your slots for this space instantly. Clicking below will route you directly to our dynamic transactional check-out system profile mapping.
-            </p>
-            
-            <button 
-              onClick={handleReserve}
-              className="w-full bg-[#2B1D14] text-[#F3E4C6] hover:opacity-90 active:scale-[0.99] transition font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-sm text-center block cursor-pointer"
-            >
-              Proceed to Booking Window →
-            </button>
-          </div>
+          {
+            role!=='admin' && <div className="bg-white rounded-2xl p-6 border-2 border-[#2B1D14] space-y-4 shadow-md">
+                <h3 className="text-sm font-black uppercase tracking-wider text-[#2B1D14]">Interested in booking this?</h3>
+                <p className="text-xs font-medium text-gray-500 leading-normal">
+                  Secure your slots for this space instantly. Clicking below will route you directly to our dynamic transactional check-out system profile mapping.
+                </p>
+
+                <button
+                    onClick={handleReserve}
+                    className="w-full bg-[#2B1D14] text-[#F3E4C6] hover:opacity-90 active:scale-[0.99] transition font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-sm text-center block cursor-pointer"
+                >
+                  Proceed to Booking Window →
+                </button>
+              </div>
+          }
+
 
         </div>
       </div>

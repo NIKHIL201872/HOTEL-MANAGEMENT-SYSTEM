@@ -8,13 +8,11 @@ import RoomCard from "./RoomCard";
 import RoomManagementModal from "./RoomManagementModal";
 import Pagination from "./Pagination";
 import RoomDetailView from "./RoomDetailView"; // Imported Detail View
-import AdminReview from "../review/AdminReview";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS_PER_PAGE = 6;
 
 export default function AdminRooms() {
-  const navigate = useNavigate();
   const { rooms, loading, selectedHotelId, fetchModuleData } = useRoomStore();
   const filters = useRoomFilters();
   const [currentPage, setCurrentPage] = useState(1);
@@ -49,14 +47,6 @@ export default function AdminRooms() {
     setCurrentPage(1);
   }, []);
 
-  const handleRedirectToBooking = useCallback(
-    (room) => {
-      // Standard routing redirect action target
-      // window.location.href = `/reservations?room=${room.room_id}`;
-      navigate(`/reservations?room=${room.room_id}`);
-    },
-    [navigate],
-  );
 
   const openModalFor = useCallback((mode, room = null) => {
     setModalMode(mode);
@@ -120,13 +110,13 @@ export default function AdminRooms() {
       <RoomDetailView
         room={selectedRoomView}
         onBack={handleBack}
-        onRedirectToReservation={handleRedirectToBooking}
+        role="admin"
       />
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl pt-4">
       <DashboardHeader
         title="Rooms Management Console"
         subtitle="Full operational controls, scheduling status modifications, and profile indexing flags."
@@ -198,7 +188,6 @@ export default function AdminRooms() {
           onClose={handleCloseModal}
         />
       )}
-      <AdminReview></AdminReview>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { FaBed } from "react-icons/fa6";
 import { IoLogOutOutline } from "react-icons/io5";
 import { BiSolidOffer } from "react-icons/bi";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -30,6 +31,11 @@ const navItems = [
     label: "Offers",
     to: "/admin-dashboard/offers",
   },
+  {
+    icon:FaBed,
+    label:"Manage Rooms",
+    to: "/admin-dashboard/manage-rooms",
+  }
 ];
 
 const Sidebar = () => {
@@ -55,7 +61,6 @@ const Sidebar = () => {
         <Menu size={20} />
       </button>
 
-      {/* Overlay — mobile only, shown when sidebar open */}
       {isOpen && (
         <div
           className="lg:hidden fixed inset-0 bg-black/40 z-40"
@@ -64,11 +69,11 @@ const Sidebar = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-60 h-screen xl:h-[979px] bg-white border-r border-gray-200 flex flex-col justify-between py-6 px-4 z-50 transition-transform duration-300
+        className={`fixed top-0 left-0 w-60 h-[screen] xl:h-[950px] bg-white border-r border-gray-200 flex flex-col justify-between py-6 px-4 z-50 transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       >
         <div>
-          <div className="flex items-center justify-between px-2 mb-8">
+          <div className="flex flex-col items-center justify-between px-20 mb-8">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-[#3F2E24] flex items-center justify-center text-white font-bold">
                 H

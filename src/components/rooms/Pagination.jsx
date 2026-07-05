@@ -1,44 +1,84 @@
-import React, { useMemo } from 'react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-function Pagination({ currentPage, totalPages, onPageChange }) {
-  const pageNumbers = useMemo(
-    () => Array.from({ length: totalPages }, (_, i) => i + 1),
-    [totalPages]
-  );
+const getPageNumbers = (currentPage, totalPages, delta = 1) => {
+    const range = [];
+    const rangeWithDots = [];
+    let last;
 
-  if (totalPages <= 1) return null;
+    for (let i = 1; i <= totalPages; i++) {
+        if (
+            i === 1 ||
+            i === totalPages ||
+            (i >= currentPage - delta && i <= currentPage + delta)
+        ) {
+            range.push(i);
+        }
+    }
 
-  return (
-    <div className="flex justify-center items-center gap-2 pt-4">
-      <button 
-        disabled={currentPage === 1}
-        onClick={() => onPageChange(Math.max(currentPage - 1, 1))}
-        className="px-4 py-2 rounded-lg bg-white border border-[#2B1D14]/15 text-[#2B1D14] font-bold text-xs uppercase tracking-wider disabled:opacity-40 hover:bg-[#2B1D14]/5 transition cursor-pointer"
-      >
-        Prev
-      </button>
-      {pageNumbers.map((page) => (
-        <button
-          key={page}
-          onClick={() => onPageChange(page)}
-          className={`w-9 h-9 rounded-lg font-bold text-xs transition cursor-pointer ${
-            currentPage === page
-              ? 'bg-[#2B1D14] text-white shadow-sm'
-              : 'bg-white border border-[#2B1D14]/15 text-[#2B1D14] hover:bg-[#2B1D14]/5'
-          }`}
-        >
-          {page}
-        </button>
-      ))}
-      <button 
-        disabled={currentPage === totalPages}
-        onClick={() => onPageChange(Math.min(currentPage + 1, totalPages))}
-        className="px-4 py-2 rounded-lg bg-white border border-[#2B1D14]/15 text-[#2B1D14] font-bold text-xs uppercase tracking-wider disabled:opacity-40 hover:bg-[#2B1D14]/5 transition cursor-pointer"
-      >
-        Next
-      </button>
-    </div>
-  );
-}
+    for (const i of range) {
+        if (last) {
+            if (i - last === 2) {
+                rangeWithDots.push(last + 1);
+            } else if (i - last > 2) {
+                rangeWithDots.push("...");
+            }
+        }
+        rangeWithDots.push(i);
+        last = i;
+    }
 
-export default React.memo(Pagination);
+    return rangeWithDots;
+};
+
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+    if (totalPages <= 1) return null;
+
+    const goToPage = (p) => onPageChange(Math.min(Math.max(p, 1), totalPages));
+
+    return (
+        <div className="flex items-center justify-center flex-wrap gap-2 pt-2">
+            <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="h-8 px-3 flex items-center justify-center gap-1 rounded-lg border border-gray-200 text-[#3F2E24] text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100"
+            >
+                <ChevronLeft size={16} />
+                Prev
+            </button>
+
+            {getPageNumbers(currentPage, totalPages).map((p, i) =>
+                    p === "..." ? (
+                        <span
+                            key={`dots-${i}`}
+                            className="w-8 h-8 flex items-center justify-center text-gray-400 text-sm"
+                        >
+            ...
+          </span>
+                    ) : (
+                        <button
+                            key={p}
+                            onClick={() => goToPage(p)}
+                            className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition shrink-0 ${
+                                p === currentPage
+                                    ? "bg-[#3F2E24] text-white"
+                                    : "text-gray-600 border border-gray-200 hover:bg-gray-100"
+                            }`}
+                        >
+                            {p}
+                        </button>
+                    ),
+            )}
+
+            <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="h-8 px-3 flex items-center justify-center gap-1 rounded-lg border border-gray-200 text-[#3F2E24] font-bold text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100"
+            >
+                Next
+                <ChevronRight size={16} />
+            </button>
+        </div>
+    );
+};
+
+export default Pagination;
