@@ -22,7 +22,7 @@ function BookingSummary() {
         .catch(() => setHotelName(""));
     }
   }, [room]);
-  console.log(reservation);
+  // console.log(reservation);
   if (!reservation) {
     return (
       <div className="booking-card">

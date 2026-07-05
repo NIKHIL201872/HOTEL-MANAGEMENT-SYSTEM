@@ -1,40 +1,6 @@
 import { useState } from "react";
 import "./UPIForm.css";
 
-<<<<<<< HEAD
-function UPIForm({ onPay, disabled }) {
-  const [upiId, setUpiId] = useState("");
-
-  function upiHandler(e) {
-    setUpiId(e.target.value);
-  }
-
-  function payHandler() {
-    if (!upiId.trim()) return;
-    onPay?.();
-  }
-
-  return (
-    <div className="upi-form">
-      <h2 className="upi-title">UPI Payment</h2>
-
-      <div>
-        <label className="upi-label">Enter your UPI ID</label>
-        <input
-          type="text"
-          value={upiId}
-          onChange={upiHandler}
-          placeholder="example@oksbi"
-          className="upi-input"
-        />
-      </div>
-      <button onClick={payHandler} className="upi-button" disabled={disabled}>
-        {" "}
-        Pay Now{" "}
-      </button>
-    </div>
-  );
-=======
 function UPIForm({ submitPayment }) {
 
     const [upiDetails, setUpiDetails] = useState({
@@ -145,7 +111,6 @@ function UPIForm({ submitPayment }) {
 
         </div>
     );
->>>>>>> 118b66c (Payment and Review completed done with all endpoints)
 }
 
 export default UPIForm;

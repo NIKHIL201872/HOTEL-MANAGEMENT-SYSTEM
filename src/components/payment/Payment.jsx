@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import {useState, useEffect, useMemo} from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import CardForm from "./CardForm";
 import UPIForm from "./UPIForm";
@@ -6,14 +6,47 @@ import BookingSummary from "./BookingSummary";
 import "./Payment.css";
 import UserReview from "../review/UserReview";
 import AdminReview from "../review/AdminReview";
-import {
-    createPayment,
-    getPayments
-} from "../../services/paymentService";
+
+import {useReservationStore} from "../../store/reservationStore.js";
+import {usePaymentStore} from "../../store/paymentStore.js";
+
+function getNights(checkIn, checkOut) {
+    if (!checkIn || !checkOut) return 0;
+    const start = new Date(checkIn);
+    const end = new Date(checkOut);
+    const diff = Math.round((end - start) / (1000 * 60 * 60 * 24));
+    return diff > 0 ? diff : 0;
+}
 
 function Payment() {
 
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const reservationId = searchParams.get("reservation");
+
     const [paymentMethod, setPaymentMethod] = useState("upi");
+    const {reservation,fetchReservation,roomType} = useReservationStore();
+    const createPayment = usePaymentStore((s) => s.createPayment);
+
+    useEffect(() => {
+        if (
+            reservationId &&
+            (!reservation ||
+                String(reservation.reservation_id) !== String(reservationId))
+        ) {
+            fetchReservation(reservationId);
+        }
+    }, [reservationId, reservation, fetchReservation]);
+
+    const amount = useMemo(() => {
+        if (!reservation) return 0;
+        const nights = getNights(
+            reservation.check_in_date,
+            reservation.check_out_date,
+        );
+        const roomTotal = nights * (roomType?.price_per_night || 0);
+        return Number((roomTotal * 1.18).toFixed(2));
+    }, [reservation, roomType]);
 
     function paymentMethodHandler(newMethod) {
         setPaymentMethod(newMethod);
@@ -21,34 +54,18 @@ function Payment() {
 
     async function submitPayment(paymentData) {
 
-        try {
+        if (!reservation) return;
 
-            const response = await getPayments();
+        const result = await createPayment({
+            reservation_id: reservation.reservation_id,
+            amount,
+            payment_method: paymentMethod === "upi" ? "UPI" : "Card",
+        });
 
-            const payments = response.data;
-
-            const nextPaymentId =
-                payments.length === 0
-                    ? 1
-                    : Math.max(...payments.map(payment => payment.payment_id)) + 1;
-
-            const payment = {
-                payment_id: nextPaymentId,
-                ...paymentData
-            };
-
-            await createPayment(payment);
-
-            alert("Payment Successful!");
-
-            console.log(payment);
-
-        }
-        catch (error) {
-
-            console.log(error);
-            alert("Payment Failed!");
-
+        if (result.success) {
+            navigate(
+                `/payment-success?payment=${result.payment.payment_id}&reservation=${reservation.reservation_id}`,
+            );
         }
 
     }

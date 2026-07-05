@@ -1,112 +1,32 @@
 import { useState } from "react";
 import "./CardForm.css";
 
-<<<<<<< HEAD
 function CardForm({ onPay, disabled }) {
-  const [cardDetails, setCardDetails] = useState({
-    cardNumber: "",
-    holderName: "",
-    expiryDate: "",
-    cvv: "",
-  });
-
-  function cardHandler(e) {
-    setCardDetails({
-      ...cardDetails,
-      [e.target.name]: e.target.value,
-=======
-function CardForm({ submitPayment }) {
-
     const [cardDetails, setCardDetails] = useState({
         cardNumber: "",
         holderName: "",
         expiryDate: "",
         cvv: "",
-        amount: ""
->>>>>>> 118b66c (Payment and Review completed done with all endpoints)
     });
-  }
 
-<<<<<<< HEAD
-  function payHandler() {
-    const { cardNumber, holderName, expiryDate, cvv } = cardDetails;
-    if (
-      !cardNumber.trim() ||
-      !holderName.trim() ||
-      !expiryDate.trim() ||
-      !cvv.trim()
-    )
-      return;
-    onPay?.();
-  }
-
-  return (
-    <div className="card-form">
-      <h2 className="card-title">Card Payment</h2>
-      <div>
-        <label className="card-label"> Card Number </label>
-        <input
-          name="cardNumber"
-          type="text"
-          value={cardDetails.cardNumber}
-          onChange={cardHandler}
-          placeholder="1234 5678 9012 3456"
-          className="card-input"
-        />
-      </div>
-
-      <div>
-        <label className="card-label"> Card Holder Name </label>
-        <input
-          name="holderName"
-          type="text"
-          value={cardDetails.holderName}
-          onChange={cardHandler}
-          placeholder="Enter card holder name"
-          className="card-input"
-        />
-      </div>
-
-      <div className="card-grid">
-        <div>
-          <label className="card-label"> Expiry Date </label>
-          <input
-            name="expiryDate"
-            type="text"
-            value={cardDetails.expiryDate}
-            onChange={cardHandler}
-            placeholder="MM/YY"
-            className="card-input"
-          />
-=======
     function cardHandler(e) {
-
         const { name, value } = e.target;
 
         setCardDetails({
             ...cardDetails,
-            [name]: value
+            [name]: value,
         });
-
     }
 
     function payHandler() {
+        const { cardNumber, holderName, expiryDate, cvv } = cardDetails;
 
-        const {
-            cardNumber,
-            holderName,
-            expiryDate,
-            cvv,
-            amount
-        } = cardDetails;
-
-        // Empty field validation
+        // Empty validation
         if (
             !cardNumber ||
             !holderName ||
             !expiryDate ||
-            !cvv ||
-            !amount
+            !cvv
         ) {
             alert("Please fill all fields.");
             return;
@@ -118,13 +38,13 @@ function CardForm({ submitPayment }) {
             return;
         }
 
-        // Card Holder Name Validation
+        // Holder Name Validation
         if (!/^[A-Za-z ]+$/.test(holderName)) {
             alert("Card Holder Name should contain only alphabets.");
             return;
         }
 
-        // Expiry Date Validation
+        // Expiry Validation
         if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate)) {
             alert("Expiry Date must be in MM/YY format.");
             return;
@@ -136,43 +56,22 @@ function CardForm({ submitPayment }) {
             return;
         }
 
-        // Amount Validation
-        if (Number(amount) <= 0) {
-            alert("Please enter a valid amount.");
-            return;
-        }
+        onPay?.();
 
-        const payment = {
-            reservation_id: 1,
-            amount: Number(amount),
-            payment_date: new Date().toISOString().split("T")[0],
-            payment_status: "Paid"
-        };
-
-        submitPayment(payment);
-
-        // Optional: Clear the form after successful payment
         setCardDetails({
             cardNumber: "",
             holderName: "",
             expiryDate: "",
             cvv: "",
-            amount: ""
         });
-
     }
 
     return (
         <div className="card-form">
-
-            <h2 className="card-title">
-                Card Payment
-            </h2>
+            <h2 className="card-title">Card Payment</h2>
 
             <div>
-                <label className="card-label">
-                    Card Number
-                </label>
+                <label className="card-label">Card Number</label>
 
                 <input
                     name="cardNumber"
@@ -186,9 +85,7 @@ function CardForm({ submitPayment }) {
             </div>
 
             <div>
-                <label className="card-label">
-                    Card Holder Name
-                </label>
+                <label className="card-label">Card Holder Name</label>
 
                 <input
                     name="holderName"
@@ -201,11 +98,8 @@ function CardForm({ submitPayment }) {
             </div>
 
             <div className="card-grid">
-
                 <div>
-                    <label className="card-label">
-                        Expiry Date
-                    </label>
+                    <label className="card-label">Expiry Date</label>
 
                     <input
                         name="expiryDate"
@@ -219,9 +113,7 @@ function CardForm({ submitPayment }) {
                 </div>
 
                 <div>
-                    <label className="card-label">
-                        CVV
-                    </label>
+                    <label className="card-label">CVV</label>
 
                     <input
                         name="cvv"
@@ -233,55 +125,17 @@ function CardForm({ submitPayment }) {
                         maxLength={3}
                     />
                 </div>
-
-            </div>
-
-            <div>
-
-                <label className="card-label">
-                    Amount to Pay
-                </label>
-
-                <input
-                    name="amount"
-                    type="number"
-                    min="1"
-                    value={cardDetails.amount}
-                    onChange={cardHandler}
-                    placeholder="Enter amount"
-                    className="card-input"
-                />
-
             </div>
 
             <button
                 onClick={payHandler}
                 className="card-button"
+                disabled={disabled}
             >
                 Pay Now
             </button>
-
->>>>>>> 118b66c (Payment and Review completed done with all endpoints)
         </div>
-
-        <div>
-          <label className="card-label"> CVV </label>
-          <input
-            name="cvv"
-            type="password"
-            value={cardDetails.cvv}
-            onChange={cardHandler}
-            placeholder="***"
-            className="card-input"
-          />
-        </div>
-      </div>
-
-      <button onClick={payHandler} className="card-button" disabled={disabled}>
-        Pay Now
-      </button>
-    </div>
-  );
+    );
 }
 
 export default CardForm;

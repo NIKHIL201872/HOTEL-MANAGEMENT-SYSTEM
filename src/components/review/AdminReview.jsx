@@ -9,51 +9,52 @@ import {
 import { renderStars } from "../review/helper/renderStars";
 
 function AdminReview() {
-  const rating = 4.5;
-  const comment = "Good Hotel and Excellent Services";
-  const username = "MS Dhoni";
+  // const rating = 4.5;
+  // const comment = "Good Hotel and Excellent Services";
+  // const username = "MS Dhoni";
+  //
+  // return (
+  //   <div className="admin-review-page">
+  //     <div className="admin-review-card">
+  //       <h2 className="admin-review-title">Customer Review</h2>
+  //       <h4 className="admin-review-user">{username}</h4>
+  //       <p className="admin-review-date">Date & Time</p>
+  //       <p className="admin-review-rating">Rating : {rating}/5</p>
+  //       <p className="admin-review-comment">{comment}</p>
+  //     </div>
+  //   </div>
+  // );
 
-<<<<<<< HEAD
-  return (
-    <div className="admin-review-page">
-      <div className="admin-review-card">
-        <h2 className="admin-review-title">Customer Review</h2>
-        <h4 className="admin-review-user">{username}</h4>
-        <p className="admin-review-date">Date & Time</p>
-        <p className="admin-review-rating">Rating : {rating}/5</p>
-        <p className="admin-review-comment">{comment}</p>
-      </div>
-    </div>
-  );
-=======
     const [reviews, setReviews] = useState([]);
     const [selectedRating, setSelectedRating] = useState("all");
     const [reviewId, setReviewId] = useState("");
     const [selectedReview, setSelectedReview] = useState(null);
 
+
     useEffect(() => {
+        async function fetchReviews(rating = "all") {
+
+            try {
+
+                let response;
+
+                if (rating === "all") {
+                    response = await getReviews();
+                } else {
+                    response = await getReviewsByRating(rating);
+                }
+
+                setReviews(response.data);
+
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
         fetchReviews(selectedRating);
     }, [selectedRating]);
 
-    async function fetchReviews(rating = "all") {
 
-        try {
-
-            let response;
-
-            if (rating === "all") {
-                response = await getReviews();
-            } else {
-                response = await getReviewsByRating(rating);
-            }
-
-            setReviews(response.data);
-
-        } catch (error) {
-            console.log(error);
-        }
-
-    }
 
     async function fetchReviewById() {
 
@@ -141,7 +142,6 @@ function AdminReview() {
 
         </div>
     );
->>>>>>> 118b66c (Payment and Review completed done with all endpoints)
 }
 
 export default AdminReview;
