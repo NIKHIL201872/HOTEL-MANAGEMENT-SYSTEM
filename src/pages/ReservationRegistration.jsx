@@ -31,6 +31,7 @@ export default function ReservationForm() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [apiError, setApiError] = useState(null);
 
   useEffect(() => {
     if (roomId) {
@@ -46,7 +47,7 @@ export default function ReservationForm() {
 
   const nights = useMemo(
     () => getNights(formData.check_in_date, formData.check_out_date),
-    [formData.check_in_date, formData.check_out_date],
+    [formData.check_in_date, formData.check_out_date]
   );
   
   const dateOrderInvalid = formData.check_in_date && formData.check_out_date && nights === 0;
@@ -58,6 +59,7 @@ export default function ReservationForm() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setSubmitted(false);
+    if (apiError) setApiError(null);
   };
 
   const handleSubmit = async (e) => {
