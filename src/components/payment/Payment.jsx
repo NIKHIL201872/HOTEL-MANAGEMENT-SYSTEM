@@ -125,11 +125,11 @@ function Payment() {
 
             </div>
 
-            <Receipt />
+            {/* <Receipt />
 
             <UserReview />
 
-            <AdminReview />
+            <AdminReview /> */}
 
         </div>
     );

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/reviews";
+const API = "http://localhost:3001/reviews";
 
 export function getReviews() {
     return axios.get(API);
