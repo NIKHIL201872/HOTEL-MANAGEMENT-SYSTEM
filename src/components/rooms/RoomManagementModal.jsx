@@ -55,7 +55,7 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
 
     if (mode === "edit") {
       await updateRoom(roomToEdit.room_id, payload);
-      onClose();
+      
     } else {
       await addRoom(payload);
     }
