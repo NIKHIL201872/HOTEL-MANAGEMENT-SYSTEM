@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import TopRatedHCards from "../../../components/TopRatedHCards";
+import TopRatedHCards from "../../../components/dashboards/TopRatedHCards";
 
 const mockHotel = {
   hotel_id: 1,

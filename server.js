@@ -95,7 +95,7 @@ const collections = [
 const idFieldByCollection = {
   hotels: 'hotel_id',
   roomTypes: 'room_type_id',
-  rooms: 'room_id',
+  rooms: 'id',
   reservations: 'reservation_id',
   amenities: 'amenity_id',
   roomAmenities: 'id',

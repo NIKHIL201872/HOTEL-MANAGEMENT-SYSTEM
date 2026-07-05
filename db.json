@@ -1,30 +1,30 @@
 {
   "users": [
-  {
-    "id": 1,
-    "name": "Admin",
-    "email": "admin@hotel.com",
-    "phone": "9876543210",
-    "password": "$2b$08$mANYl4.wibFn8WH4tnJ7xeZlhItxALZyLrwOyBBQXaXAAoIfURh7.",
-    "role": "admin"
-  },
-  {
-    "id": 2,
-    "name": "Test User",
-    "phone": "1234567890",
-    "email": "test@test.com",
-    "password": "$2b$08$Eqz70Kgc2fHfYwOz4nA42Or1gV25wlNBTQ9dskEhtAz8WP3BpbpjS",
-    "role": "user"
-  },
-  {
-    "id": "idovmavpbw",
-    "name": "Satayu Nanda",
-    "phone": "1234567890",
-    "email": "satayunanda2002@gmail.com",
-    "password": "$2a$08$n/uq01nPoCU5PYu5j/3FvuTjOLv9l6aNp26ifxs.ylMORVIauGiyq",
-    "role": "user"
-  }
-],
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@hotel.com",
+      "phone": "9876543210",
+      "password": "$2b$08$mANYl4.wibFn8WH4tnJ7xeZlhItxALZyLrwOyBBQXaXAAoIfURh7.",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Test User",
+      "phone": "1234567890",
+      "email": "test@test.com",
+      "password": "$2b$08$Eqz70Kgc2fHfYwOz4nA42Or1gV25wlNBTQ9dskEhtAz8WP3BpbpjS",
+      "role": "user"
+    },
+    {
+      "id": "idovmavpbw",
+      "name": "Satayu Nanda",
+      "phone": "1234567890",
+      "email": "satayunanda2002@gmail.com",
+      "password": "$2a$08$n/uq01nPoCU5PYu5j/3FvuTjOLv9l6aNp26ifxs.ylMORVIauGiyq",
+      "role": "user"
+    }
+  ],
   "hotelRatings": [
     {
       "hotel_id": 1,
@@ -31086,6 +31086,49 @@
       "is_available": true,
       "id": "eGYYB-uaQ_2",
       "hotel_id": 139
+    },
+    {
+      "room_number": 505,
+      "room_type_id": 1,
+      "is_available": true,
+      "room_id": "jivzasrt5n"
+    },
+    {
+      "room_number": 809,
+      "room_type_id": 2,
+      "is_available": true,
+      "room_id": "huocoxf62y"
+    },
+    {
+      "room_number": 899,
+      "room_type_id": 1,
+      "is_available": true,
+      "hotel_id": 1,
+      "room_id": "srioowntp9"
+    },
+    {
+      "room_number": 508,
+      "room_type_id": 1,
+      "is_available": true,
+      "hotel_id": 22,
+      "room_id": null,
+      "id": "eddidggale"
+    },
+    {
+      "room_number": 702,
+      "room_type_id": 1,
+      "is_available": true,
+      "hotel_id": 2,
+      "room_id": null,
+      "id": "04367mn6kx"
+    },
+    {
+      "room_number": 789,
+      "room_type_id": 1,
+      "is_available": true,
+      "hotel_id": 3,
+      "room_id": null,
+      "id": "6w2m307lna"
     }
   ],
   "reservations": [
@@ -66795,6 +66838,15 @@
       "check_out_date": "2026-07-06",
       "room_id": "3",
       "reservation_id": "2z6o1uxc1w"
+    },
+    {
+      "guest_name": "NIKHIL SHARMA",
+      "guest_email": "nik@21.com",
+      "guest_phone": "09007210617",
+      "check_in_date": "2026-07-05",
+      "check_out_date": "2026-07-08",
+      "room_id": "1",
+      "reservation_id": "890bcs4w3k"
     }
   ],
   "amenities": [

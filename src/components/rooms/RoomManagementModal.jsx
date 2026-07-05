@@ -2,13 +2,21 @@ import React, { useState, useCallback } from 'react';
 import { useRoomStore } from '../../store/roomStore';
 
 export default function RoomManagementModal({ onClose, roomToEdit = null, mode = "create" }) {
-  const { addRoom, updateRoom, deleteRoom, roomTypes } = useRoomStore();
+  const { addRoom, updateRoom, deleteRoom, roomTypes, hotels, selectedHotelId } = useRoomStore();
 
-  // Pre-populate if editing an existing room entry
+  // Pre-populate if editing an existing room entry.
+  // hotel_id defaults to whichever hotel context is currently selected
+  // (falls back to the first hotel in the list if "all" is selected),
+  // since a room can't be created without one.
   const [formData, setFormData] = useState({
     room_number: roomToEdit ? roomToEdit.room_number : '',
     room_type_id: roomToEdit ? roomToEdit.room_type_id : '1',
-    is_available: roomToEdit ? roomToEdit.is_available : true
+    is_available: roomToEdit ? roomToEdit.is_available : true,
+    hotel_id: roomToEdit
+      ? roomToEdit.hotel_id
+      : selectedHotelId !== 'all'
+        ? selectedHotelId
+        : (hotels[0]?.hotel_id ?? '')
   });
 
   const handleRoomNumberChange = useCallback((e) => {
@@ -17,6 +25,10 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
 
   const handleRoomTypeChange = useCallback((e) => {
     setFormData(prev => ({ ...prev, room_type_id: e.target.value }));
+  }, []);
+
+  const handleHotelChange = useCallback((e) => {
+    setFormData(prev => ({ ...prev, hotel_id: e.target.value }));
   }, []);
 
   const handleAvailabilityChange = useCallback((e) => {
@@ -35,7 +47,8 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
     const payload = {
       room_number: Number(formData.room_number),
       room_type_id: Number(formData.room_type_id),
-      is_available: Boolean(formData.is_available)
+      is_available: Boolean(formData.is_available),
+      hotel_id: Number(formData.hotel_id)
     };
 
     if (mode === "edit") {
@@ -132,6 +145,25 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
         {roomTypes.map((type) => (
           <option key={type.room_type_id} value={type.room_type_id}>
             {type.type_name} — (${type.price_per_night}/night)
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div>
+      <label className="block text-[11px] font-black uppercase tracking-widest mb-2 text-[#2B1D14]">
+        Assigned Property
+      </label>
+      <select
+        required
+        value={formData.hotel_id}
+        onChange={handleHotelChange}
+        className="w-full px-4 py-3 rounded-xl border border-[#2B1D14]/30 focus:ring-2 focus:ring-[#2B1D14] focus:outline-none transition text-sm font-bold bg-white text-gray-800 cursor-pointer"
+      >
+        <option value="" disabled>Select a hotel…</option>
+        {hotels.map((hotel) => (
+          <option key={hotel.hotel_id} value={hotel.hotel_id}>
+            {hotel.name} — {hotel.location}
           </option>
         ))}
       </select>

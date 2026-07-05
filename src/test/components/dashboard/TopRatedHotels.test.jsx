@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import TopRatedHotels from "../../../components/TopRatedHotels";
+import TopRatedHotels from "../../../components/dashboards/TopRatedHotels";
 
 describe("TopRatedHotels", () => {
   it("renders section heading", () => {

@@ -4,7 +4,7 @@ import { useRoomStore } from '../../../store/roomStore';
 
 vi.mock('axios');
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'http://localhost:3001';
 
 const mockEndpoints = ({
   rooms = [],

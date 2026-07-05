@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Home from "../../../components/Home";
+import Home from "../../../components/dashboards/Home";
 
 describe("Home (Carousel)", () => {
   it("renders carousel container with correct id", () => {
