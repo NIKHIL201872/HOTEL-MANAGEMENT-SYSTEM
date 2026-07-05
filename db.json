@@ -1,30 +1,30 @@
 {
   "users": [
-    {
-      "id": 1,
-      "name": "Admin",
-      "email": "admin@hotel.com",
-      "phone": "9876543210",
-      "password": "$2a$08$Y4JcpzeepoCByz9DubvnAu3sTi8affbX66SNn6HawHj.Pfhd4V5Zq",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "name": "John Doe",
-      "email": "user@hotel.com",
-      "phone": "9123456789",
-      "password": "$2a$08$Oz38gScDdtjHqSRR.MPvPeyIElKV5ZbrFPcRRp18LVMEV.tD.RzCy",
-      "role": "user"
-    },
-    {
-      "id": "st8r2qq7sc",
-      "name": "animesh",
-      "phone": "9876543210",
-      "email": "animesh@gmail.com",
-      "password": "$2a$08$OA.usLjFcrJGk7iKGK1K/e5sXOSySI6p1oXW.CcPeMSi2Qdsn8tIm",
-      "role": "user"
-    }
-  ],
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@hotel.com",
+    "phone": "9876543210",
+    "password": "$2b$08$mANYl4.wibFn8WH4tnJ7xeZlhItxALZyLrwOyBBQXaXAAoIfURh7.",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Test User",
+    "phone": "1234567890",
+    "email": "test@test.com",
+    "password": "$2b$08$Eqz70Kgc2fHfYwOz4nA42Or1gV25wlNBTQ9dskEhtAz8WP3BpbpjS",
+    "role": "user"
+  },
+  {
+    "id": "idovmavpbw",
+    "name": "Satayu Nanda",
+    "phone": "1234567890",
+    "email": "satayunanda2002@gmail.com",
+    "password": "$2a$08$n/uq01nPoCU5PYu5j/3FvuTjOLv9l6aNp26ifxs.ylMORVIauGiyq",
+    "role": "user"
+  }
+],
   "hotelRatings": [
     {
       "hotel_id": 1,
@@ -66786,6 +66786,15 @@
       "check_out_date": "2026-07-23",
       "room_id": "195",
       "reservation_id": "1vdeba6uxi"
+    },
+    {
+      "guest_name": "Satayu Nanda",
+      "guest_email": "satayunanda2002@gmail.com",
+      "guest_phone": "413531351",
+      "check_in_date": "2026-07-05",
+      "check_out_date": "2026-07-06",
+      "room_id": "3",
+      "reservation_id": "2z6o1uxc1w"
     }
   ],
   "amenities": [
@@ -118759,6 +118768,14 @@
       "payment_date": "2026-07-05",
       "payment_status": "Paid",
       "payment_id": "nuilbvvkom"
+    },
+    {
+      "reservation_id": "2z6o1uxc1w",
+      "amount": 177,
+      "payment_method": "UPI",
+      "payment_date": "2026-07-05",
+      "payment_status": "Paid",
+      "payment_id": "ieaib2jfzq"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json",
@@ -118972,16 +118989,6 @@
       "discount": "Flat 500 OFF",
       "desc": "Limited time flash discount on select hotels.",
       "status": "Expired"
-    }
-  ],
-  "users": [
-    {
-      "email": "test@test.com",
-      "password": "$2a$10$3cl3RPhvg3MUWlx.x0YPC.wrzT8Rcd3pWAXvTRod7fbKnHOlPwqFa",
-      "name": "Test User",
-      "phone": "1234567890",
-      "role": "user",
-      "id": 1
     }
   ]
 }
