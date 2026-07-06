@@ -66857,6 +66857,15 @@
       "check_out_date": "2026-07-22",
       "room_id": "8",
       "reservation_id": "tt9hdo0edc"
+    },
+    {
+      "guest_name": "asdas",
+      "guest_email": "dsadad",
+      "guest_phone": "dsasd",
+      "check_in_date": "2026-07-08",
+      "check_out_date": "2026-07-09",
+      "room_id": "504",
+      "reservation_id": "lbtjd09n3k"
     }
   ],
   "amenities": [
@@ -118846,6 +118855,14 @@
       "payment_date": "2026-07-05",
       "payment_status": "Paid",
       "payment_id": "q68uz8g9of"
+    },
+    {
+      "reservation_id": "lbtjd09n3k",
+      "amount": 59,
+      "payment_method": "Card",
+      "payment_date": "2026-07-06",
+      "payment_status": "Paid",
+      "payment_id": "kuxzhidlid"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json",
