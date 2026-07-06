@@ -63,7 +63,8 @@ const Footer = () => {
             <FaLocationDot fontSize={18} />
             Kolkata, West Bengal, India
           </p>
-          <p className="text-sm text-gray-400 flex gap-x-2 items-center">
+          <p className="text-sm text-gray-400 flex gap-x-2 items-center"
+             style={{ marginBottom: "0" }}>
             <IoCall fontSize={18} />
             +91-9876543210
           </p>
