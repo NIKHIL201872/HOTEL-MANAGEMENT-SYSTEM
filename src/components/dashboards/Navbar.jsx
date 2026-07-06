@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const logoutHover =
     "px-6 py-2 rounded-lg text-[#3F2E24]! font-serif no-underline! cursor-pointer hover:text-[#f1d096] active:bg-[#2a1f18] transition duration-300 hover:bg-red-400!";
-  if (role !== "admin") {
     return (
       <div className="flex w-full items-center justify-between px-6 py-2 bg-[#f1d096]">
         <div>
@@ -63,7 +62,6 @@ const Navbar = () => {
         )}
       </div>
     );
-  }
-};
+  };
 
 export default Navbar;
