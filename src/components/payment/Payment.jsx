@@ -53,15 +53,15 @@ function Payment() {
     }
 
     async function submitPayment(paymentData) {
-        console.log("Before")
+
         if (!reservation) return;
-        console.log("After")
+
         const result = await createPayment({
             reservation_id: reservation.reservation_id,
             amount,
             payment_method: paymentMethod === "upi" ? "UPI" : "Card",
         });
-        console.log(result);
+
         if (result.success) {
             navigate(
                 `/payment-success?payment=${result.payment.payment_id}&reservation=${reservation.reservation_id}`,
