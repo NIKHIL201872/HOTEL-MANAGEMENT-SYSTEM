@@ -133,7 +133,7 @@ export const useRoomStore = create((set, get) => ({
         ...roomData,
         room_id: nextRoomId,
       };
-
+      //console.log("add ",payload)
       await axios.post(`${API_BASE_URL}/rooms`, payload);
 
       await get().fetchModuleData();

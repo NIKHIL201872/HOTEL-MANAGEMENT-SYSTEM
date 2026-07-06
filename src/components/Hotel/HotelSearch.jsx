@@ -61,7 +61,7 @@ function HotelDetails({ hotel, amenityList, hotelAmenityList, ratingList }) {
 
   const handleViewRooms = () => {
     setSelectedHotelId(hotel.hotel_id);
-    console.log("hotel_id: ", hotel.hotel_id);
+    //console.log("hotel_id: ", hotel.hotel_id);
     navigate("/rooms");
   };
 
@@ -139,14 +139,14 @@ function HotelSearch() {
           getHotelAmenityLinks(),
           getHotelRatings(),
         ]);
-        console.log(hotelsResponse);
+        //console.log(hotelsResponse);
         setHotels(hotelsResponse.data);
         setAmenityList(amenitiesResponse.data);
         setHotelAmenityList(linksResponse.data);
         setRatingList(ratingsResponse.data);
         setLoading(false);
       } catch (error) {
-        console.log("could not load data from json-server:", error);
+        //console.log("could not load data from json-server:", error);
         setLoadError(true);
         setLoading(false);
       }

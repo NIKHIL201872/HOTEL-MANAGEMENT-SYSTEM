@@ -10693,14 +10693,6 @@
       "hotel_id": 205
     },
     {
-      "room_id": 504,
-      "room_number": 1129,
-      "room_type_id": 10,
-      "is_available": false,
-      "id": "67noan8eGzs",
-      "hotel_id": 364
-    },
-    {
       "room_id": 505,
       "room_number": 212,
       "room_type_id": 10,
@@ -31130,6 +31122,14 @@
       "hotel_id": 3,
       "room_id": 504,
       "id": "d4e5f6a7b8c"
+    },
+    {
+      "room_number": 2356,
+      "room_type_id": 1,
+      "is_available": true,
+      "hotel_id": 1,
+      "room_id": 3055,
+      "id": "9dauwh96ey"
     }
   ],
   "reservations": [

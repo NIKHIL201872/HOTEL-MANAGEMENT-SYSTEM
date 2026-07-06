@@ -10,7 +10,7 @@ const ROOM_IMGS = [
 function RoomCard({ room, index, userRole, onSelect, onEdit, onDelete }) {
   const cardBackground = CARD_COLORS[index % CARD_COLORS.length];
   const roomImg = ROOM_IMGS[index % ROOM_IMGS.length];
-console.log(room);
+//console.log(room);
   return (
     <div 
       onClick={() => onSelect && onSelect(room)}
@@ -26,6 +26,7 @@ console.log(room);
           {userRole === 'admin' && (
             <>
             <button
+            type="button"
               onClick={(e) => {
                 e.stopPropagation(); // Stops parent container click from navigating to item details view
                 onEdit && onEdit(room);
@@ -37,6 +38,7 @@ console.log(room);
             </button>
             
             <button
+            type="button"
               onClick={(e) => {
                   e.stopPropagation();
                   onDelete && onDelete(room);

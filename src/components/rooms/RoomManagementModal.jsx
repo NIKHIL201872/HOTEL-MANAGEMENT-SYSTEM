@@ -44,7 +44,11 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
       return;
     }
 
-    const payload = {
+    //console.log("room", roomToEdit)
+    
+
+    if (mode === "edit") {
+      const payload = {
       room_id: roomToEdit.room_id,
       hotel_id: roomToEdit.hotel_id,
       room_number: Number(formData.room_number),
@@ -52,12 +56,17 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
       is_available: Boolean(formData.is_available),
       hotel_id: Number(formData.hotel_id)
     };
-
-    if (mode === "edit") {
       await updateRoom(roomToEdit.room_id, payload);
       
     } else {
-      await addRoom(payload);
+      const payload2 = {
+        room_number: Number(formData.room_number),
+        room_type_id: Number(formData.room_type_id),
+        is_available: Boolean(formData.is_available),
+        hotel_id: Number(formData.hotel_id)
+      };
+
+      await addRoom(payload2);
     }
     onClose();
   }, [mode, roomToEdit, formData, addRoom, updateRoom, deleteRoom, onClose]);
@@ -92,7 +101,7 @@ export default function RoomManagementModal({ onClose, roomToEdit = null, mode =
                   </p>
 
                   <p className="text-lg font-black mt-2">
-                    Room #{roomToEdit?.room_number}
+                    Room {roomToEdit?.room_number}
                   </p>
 
                   <p className="mt-4 text-sm text-red-500">
