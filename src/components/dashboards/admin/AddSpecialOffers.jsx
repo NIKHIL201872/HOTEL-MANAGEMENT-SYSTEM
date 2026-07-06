@@ -48,8 +48,8 @@ const AddSpecialOffers = () => {
 
   return (
     <div className="w-full flex flex-col gap-6 pt-12 font-[georgia]">
-      <h4 className="text-2xl font-semibold text-[#3F2E24]">
-        Add Special Offers
+      <h4 className="text-2xl font-semibold text-[#3F2E24] sticky top-0 backdrop-blur-[2px] p-4">
+        Special Offers
       </h4>
 
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">

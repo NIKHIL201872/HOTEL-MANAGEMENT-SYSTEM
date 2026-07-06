@@ -9,8 +9,9 @@ import {
 
 // import { MdOutlineDateRange } from "react-icons/md";
 import { useAdminStore } from "../../../store/adminStore";
+import {memo} from "react";
 
-const RevenueChart = () => {
+const RevenueChart = ({render}) => {
   const payments = useAdminStore((s) => s.payments);
 
   //storing the payment as payment_data:amount
@@ -20,7 +21,7 @@ const RevenueChart = () => {
     totalsByDate.set(p.payment_date, current + Number(p.amount));
   });
 
-  //comverting the map to Array of [{day:date,value:value}] of last 7 days
+  //converting the map to Array of [{day:date,value:value}] of last 7 days
   const data = Array.from(totalsByDate.entries())
     .sort((a, b) => new Date(a[0]) - new Date(b[0]))
     .slice(-7)
@@ -39,7 +40,7 @@ const RevenueChart = () => {
       </div>
 
       <div className="flex items-baseline gap-3 mb-4">
-        <span className="text-3xl font-bold text-[#3F2E24]">
+        <span className="text-3xl font-bold font-mono text-[#3F2E24]">
           ${totalRevenue.toLocaleString()}
         </span>
       </div>
@@ -61,4 +62,4 @@ const RevenueChart = () => {
   );
 };
 
-export default RevenueChart;
+export default memo(RevenueChart);

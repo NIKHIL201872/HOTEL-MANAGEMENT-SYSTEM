@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import {memo, useCallback, useEffect, useMemo, useState} from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useAdminStore } from "../../../store/adminStore";
 
@@ -32,11 +32,10 @@ const getPageNumbers = (currentPage, totalPages, delta = 1) => {
   return rangeWithDots;
 };
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-  if (totalPages <= 1) return null;
+export const Pagination = memo(({ currentPage, totalPages, onPageChange }) => {
+  // if (totalPages <= 1) return null;
 
-  const goToPage = (p) => onPageChange(Math.min(Math.max(p, 1), totalPages));
-
+  const goToPage = useCallback((p) => onPageChange(Math.min(Math.max(p, 1), totalPages)),[totalPages,onPageChange]);
   return (
       <div className="flex items-center justify-center flex-wrap gap-2 pt-2">
         <button
@@ -81,7 +80,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         </button>
       </div>
   );
-};
+});
 
 const ReservationCardAdmin = ({ name, img, roomNumber, checkIn, checkOut }) => {
   const today = new Date();

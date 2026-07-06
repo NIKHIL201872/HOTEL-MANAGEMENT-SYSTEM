@@ -1,7 +1,8 @@
 import { MdOutlineDateRange } from "react-icons/md";
 import { useAdminStore } from "../../../store/adminStore";
+import {memo} from "react";
 
-const BookingsCard = () => {
+const BookingsCard = ({render}) => {
   const rooms = useAdminStore((s) => s.rooms);
   const reservations = useAdminStore((s) => s.reservations);
 
@@ -44,4 +45,4 @@ const BookingsCard = () => {
   );
 };
 
-export default BookingsCard;
+export default memo(BookingsCard);

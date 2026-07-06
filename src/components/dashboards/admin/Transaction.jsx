@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import {memo, useEffect, useMemo, useState} from "react";
 import { useAdminStore } from "../../../store/adminStore";
 import StatCard from "./StatCard";
 
 import { MdOutlineDownloadDone } from "react-icons/md";
 import { FaHourglassHalf, FaCoins } from "react-icons/fa6";
 
-const TransactionCard = ({ tx }) => {
+const TransactionCard = memo(({ tx }) => {
   const statusColor =
     tx.payment_status === "Paid"
       ? "bg-[#ACE872]/30 text-[#3F2E24]"
@@ -79,7 +79,7 @@ const TransactionCard = ({ tx }) => {
       </div>
     </div>
   );
-};
+});
 
 const Transaction = () => {
   const { reservations, rooms, payments, fetchDashboardData, loading } =
@@ -90,53 +90,67 @@ const Transaction = () => {
     if (!payments.length) fetchDashboardData();
   }, [fetchDashboardData, payments.length]);
 
-  const reservationMap = new Map(
-    reservations.map((r) => [r.reservation_id, r]),
-  );
-  const roomMap = new Map(rooms.map((r) => [r.room_id, r]));
+  const reservationMap = useMemo(() => new Map(
+      reservations.map((r) => [r.reservation_id, r]),
+  ),[reservations]);
+
+  const roomMap = useMemo(()=>
+      new Map(rooms.map((r) => [r.room_id, r]))
+      ,[rooms]);
+
   const today = new Date();
 
-  const transactions = payments
-    .map((p) => {
-      const reservation = reservationMap.get(p.reservation_id);
-      const room = reservation ? roomMap.get(reservation.room_id) : null;
+  const transactions = useMemo(()=>
+      payments
+          .map((p) => {
+              const reservation = reservationMap.get(p.reservation_id);
+              const room = reservation ? roomMap.get(reservation.room_id) : null;
 
-      const checkIn = reservation ? new Date(reservation.check_in_date) : null;
-      const checkOut = reservation
-        ? new Date(reservation.check_out_date)
-        : null;
-      let stayStatus = "Upcoming";
-      if (checkIn && checkOut) {
-        if (checkOut < today) stayStatus = "Checked Out";
-        else if (checkIn <= today && today <= checkOut)
-          stayStatus = "Checked In";
-      }
+              const checkIn = reservation ? new Date(reservation.check_in_date) : null;
+              const checkOut = reservation
+                  ? new Date(reservation.check_out_date)
+                  : null;
+              let stayStatus = "Upcoming";
+              if (checkIn && checkOut) {
+                  if (checkOut < today) stayStatus = "Checked Out";
+                  else if (checkIn <= today && today <= checkOut)
+                      stayStatus = "Checked In";
+              }
 
-      return {
-        id: p.payment_id,
-        name: reservation?.guest_name || "—",
-        phone: reservation?.guest_phone || "—",
-        room_number: room?.room_number ?? "—",
-        room_is_available: room?.is_available ?? false,
-        amount: p.amount,
-        date: p.payment_date,
-        payment_status: p.payment_status,
-        stayStatus,
-      };
-    })
-    .filter((tx) => (dateFilter ? tx.date === dateFilter : true))
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+              return {
+                  id: p.payment_id,
+                  name: reservation?.guest_name || "—",
+                  phone: reservation?.guest_phone || "—",
+                  room_number: room?.room_number ?? "—",
+                  room_is_available: room?.is_available ?? false,
+                  amount: p.amount,
+                  date: p.payment_date,
+                  payment_status: p.payment_status,
+                  stayStatus,
+              };
+          })
+          .filter((tx) => (dateFilter ? tx.date === dateFilter : true))
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+  , [dateFilter,payments,reservationMap,today,roomMap]);
 
-  const totalRevenue = transactions.reduce(
-    (sum, t) => sum + Number(t.amount),
-    0,
-  );
-  const paidCount = transactions.filter(
-    (t) => t.payment_status === "Paid",
-  ).length;
-  const pendingCount = transactions.filter(
-    (t) => t.payment_status === "Pending",
-  ).length;
+  const totalRevenue = useMemo(()=>
+      transactions.reduce(
+          (sum, t) => sum + Number(t.amount),
+          0,
+      ),
+      [transactions]);
+
+  const paidCount = useMemo(()=>
+      transactions.filter(
+          (t) => t.payment_status === "Paid",
+      ).length
+  , [transactions]);
+
+  const pendingCount = useMemo(()=>
+      transactions.filter(
+          (t) => t.payment_status === "Pending",
+      ).length
+  , [transactions]);
 
   return (
     <div className="w-full flex flex-col gap-6 pt-6">

@@ -27,6 +27,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//checks whether email already exists
 app.post('/register', async (req, res) => {
   const { name, phone, email, password, role } = req.body;
   const db = readDb();
@@ -55,6 +56,7 @@ app.post('/register', async (req, res) => {
   const { password: _omit, ...safeUser } = user;
   res.status(201).json({ user: safeUser, accessToken });
 });
+
 
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;

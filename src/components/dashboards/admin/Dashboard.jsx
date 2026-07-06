@@ -9,8 +9,7 @@ import { useAdminStore } from "../../../store/adminStore";
 import { Outlet, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
-  const fetchDashboardData = useAdminStore((s) => s.fetchDashboardData);
-  const loading = useAdminStore((s) => s.loading);
+  const {fetchDashboardData,loading} = useAdminStore();
   const { pathname } = useLocation();
   const isAdminHome = pathname === "/admin-dashboard";
 
@@ -42,13 +41,13 @@ const Dashboard = () => {
               ) : (
                 <>
                   <div className="grid grid-cols-2 gap-6">
-                    <StatsGrid />
-                    <RevenueChart />
+                    <StatsGrid render={fetchDashboardData} />
+                    <RevenueChart render={fetchDashboardData} />
                   </div>
 
                   <div className="grid grid-cols-2 gap-6">
-                    <RecentActivities />
-                    <BookingsCard />
+                    <RecentActivities render={fetchDashboardData} />
+                    <BookingsCard render={fetchDashboardData} />
                   </div>
                 </>
               )}

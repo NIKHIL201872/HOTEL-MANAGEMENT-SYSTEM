@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import {memo, useEffect, useMemo, useState} from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useAdminStore } from "../../../store/adminStore";
 
 const ITEMS_PER_PAGE = 16;
 
-const StarRating = ({ rating }) => (
+const StarRating = memo(({ rating }) => (
     <div className="flex items-center gap-0.5">
         {Array.from({ length: 5 }).map((_, i) => (
             <Star
@@ -18,9 +18,9 @@ const StarRating = ({ rating }) => (
             />
         ))}
     </div>
-);
+));
 
-const ReviewCard = ({ review }) => {
+const ReviewCard = memo(({ review }) => {
     const initial = review.guest_name?.charAt(0)?.toUpperCase() || "?";
 
     return (
@@ -54,7 +54,7 @@ const ReviewCard = ({ review }) => {
             </p>
         </div>
     );
-};
+});
 
 const Reviews = () => {
     const { reviews, reservations, rooms, fetchDashboardData, loading } =
@@ -95,11 +95,13 @@ const Reviews = () => {
         currentPage * ITEMS_PER_PAGE,
     );
 
-    const avgRating = data.length
-        ? (
-            data.reduce((sum, r) => sum + Number(r.rating), 0) / data.length
-        ).toFixed(1)
-        : "0.0";
+    const avgRating = useMemo(()=>
+        data.length
+            ? (
+                data.reduce((sum, r) => sum + Number(r.rating), 0) / data.length
+            ).toFixed(1)
+            : "0.0"
+    ,[data]);
 
     const goToPage = (p) => setPage(Math.min(Math.max(p, 1), totalPages));
 
@@ -136,9 +138,9 @@ const Reviews = () => {
 
     return (
         <div className="w-full flex flex-col flex-wrap gap-6 pt-12 font-[georgia]">
+            <h2 className="text-lg font-semibold text-[#3F2E24] sticky top-0 backdrop-blur-[2px] p-4">Reviews</h2>
             <div className="flex items-center justify-between">
                 <div>
-                    <h2 className="text-lg font-semibold text-[#3F2E24]">Reviews</h2>
                     <p className="text-sm text-gray-500">
                         {data.length} reviews · Avg rating {avgRating}
                     </p>

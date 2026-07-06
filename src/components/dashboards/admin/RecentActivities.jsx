@@ -1,22 +1,27 @@
 import { useAdminStore } from "../../../store/adminStore";
 import { NavLink } from "react-router-dom";
-const RecentActivities = () => {
+import {memo, useMemo} from "react";
+const RecentActivities = ({render}) => {
   const { reservations, rooms } = useAdminStore();
 
-  const roomMap = new Map(rooms.map((r) => [r.room_id, r]));
+  const roomMap = useMemo(() => {
+      return new Map(rooms.map((r) => [r.room_id, r]))
+  },[rooms])
 
-  const activities = [...reservations]
-    .sort((a, b) => new Date(b.check_in_date) - new Date(a.check_in_date))
-    .slice(0, 4)
-    .map((res, idx) => {
-      const room = roomMap.get(res.room_id);
-      return {
-        name: res.guest_name,
-        desc: `Room #${room ? room.room_number : res.room_id}, Check-in ${res.check_in_date}`,
-        time: res.check_out_date,
-        img: `https://i.pravatar.cc/40?img=${(idx % 8) + 1}`,
-      };
-    });
+  const activities = useMemo(() => {
+      return [...reservations]
+          .sort((a, b) => new Date(b.check_in_date) - new Date(a.check_in_date))
+          .slice(0, 4)
+          .map((res, idx) => {
+              const room = roomMap.get(res.room_id);
+              return {
+                  name: res.guest_name,
+                  desc: `Room #${room ? room.room_number : res.room_id}, Check-in ${res.check_in_date}`,
+                  time: res.check_out_date,
+                  img: `https://i.pravatar.cc/40?img=${(idx % 8) + 1}`,
+              };
+          })
+  },[reservations,roomMap]);
 
   return (
     <div className="bg-white rounded-2xl p-5 border border-gray-100">
@@ -48,4 +53,4 @@ const RecentActivities = () => {
   );
 };
 
-export default RecentActivities;
+export default memo(RecentActivities);

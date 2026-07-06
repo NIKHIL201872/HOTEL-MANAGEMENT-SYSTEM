@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import {memo} from "react";
 
 const getPageNumbers = (currentPage, totalPages, delta = 1) => {
     const range = [];
@@ -81,4 +82,4 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     );
 };
 
-export default Pagination;
+export default memo(Pagination);

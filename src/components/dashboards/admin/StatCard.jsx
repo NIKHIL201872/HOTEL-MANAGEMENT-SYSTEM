@@ -1,3 +1,5 @@
+import {memo} from "react";
+
 const StatCard = ({ icon, value, label, bgColor, trend }) => {
   return (
     <div className="bg-white rounded-2xl p-4 flex flex-col gap-3 border border-gray-100">
@@ -18,4 +20,4 @@ const StatCard = ({ icon, value, label, bgColor, trend }) => {
   );
 };
 
-export default StatCard;
+export default memo(StatCard);

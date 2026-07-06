@@ -8,8 +8,9 @@ import {
   TrendingUp,
   TrendingDown,
 } from "lucide-react";
+import {memo} from "react";
 
-const StatsGrid = () => {
+const StatsGrid = ({render}) => {
   const { rooms, reservations } = useAdminStore();
 
   const today = new Date();
@@ -27,7 +28,7 @@ const StatsGrid = () => {
     {
       icon: <CalendarPlus size={20} />,
       value: reservations.length,
-      label: "New Booking",
+      label: "All Bookings",
       bgColor: "#ACE872",
       trend: <TrendingUp size={16} className="text-green-600" />,
     },
@@ -63,4 +64,4 @@ const StatsGrid = () => {
   );
 };
 
-export default StatsGrid;
+export default memo(StatsGrid);
